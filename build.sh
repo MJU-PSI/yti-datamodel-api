@@ -1,4 +1,4 @@
 #!/bin/bash
 
-gradle build -x test
+./gradlew build -x test
 docker build $* -t yti-datamodel-api .
