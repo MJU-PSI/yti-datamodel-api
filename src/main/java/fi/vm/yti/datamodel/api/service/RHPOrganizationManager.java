@@ -127,12 +127,13 @@ public class RHPOrganizationManager {
                 JsonObject prefLabel = org.getJsonObject("prefLabel");
                 JsonObject description = org.getJsonObject("description");
 
-                String preflabel_fi = prefLabel.containsKey("fi") && prefLabel.get("fi").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("fi") : null;
-                String preflabel_en = prefLabel.containsKey("en") && prefLabel.get("en").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("en") : null;
-                String preflabel_sv = prefLabel.containsKey("sv") && prefLabel.get("sv").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("sv") : null;
-                String description_fi = description.containsKey("fi") && description.get("fi").getValueType() != JsonValue.ValueType.NULL ? description.getString("fi") : null;
-                String description_en = description.containsKey("en") && description.get("en").getValueType() != JsonValue.ValueType.NULL ? description.getString("en") : null;
-                String description_sv = description.containsKey("sv") && description.get("sv").getValueType() != JsonValue.ValueType.NULL ? description.getString("sv") : null;
+                // String preflabel_fi = prefLabel.containsKey("fi") && prefLabel.get("fi").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("fi") : null;
+                // String preflabel_en = prefLabel.containsKey("en") && prefLabel.get("en").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("en") : null;
+                // String preflabel_sv = prefLabel.containsKey("sv") && prefLabel.get("sv").getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString("sv") : null;
+                // String description_fi = description.containsKey("fi") && description.get("fi").getValueType() != JsonValue.ValueType.NULL ? description.getString("fi") : null;
+                // String description_en = description.containsKey("en") && description.get("en").getValueType() != JsonValue.ValueType.NULL ? description.getString("en") : null;
+                // String description_sv = description.containsKey("sv") && description.get("sv").getValueType() != JsonValue.ValueType.NULL ? description.getString("sv") : null;
+
                 String url = org.containsKey("url") && org.get("url").getValueType() != JsonValue.ValueType.NULL ? org.getString("url") : null;
 
                 String parentId = org.containsKey("parentId") && org.get("parentId").getValueType() != JsonValue.ValueType.NULL ? org.getString("parentId") : null;
@@ -140,23 +141,45 @@ public class RHPOrganizationManager {
                 Resource res = model.createResource("urn:uuid:" + uuid);
                 res.addProperty(RDF.type, FOAF.Organization);
 
-                if (preflabel_fi != null && preflabel_fi.length() > 1)
-                    res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_fi, "fi"));
+                JsonObject prefLabelObject = prefLabel.asJsonObject();
+                Set<String> prefLabelKeys = prefLabelObject.keySet();
+                Iterator<String> prefLabelIterator = prefLabelKeys.iterator();
+                while(prefLabelIterator.hasNext()) {
+                    String lang = prefLabelIterator.next();
+                    String prefLabelLang = prefLabel.containsKey(lang) && prefLabel.get(lang).getValueType() != JsonValue.ValueType.NULL ? prefLabel.getString(lang) : null;
+                    if (prefLabelLang != null && prefLabelLang.length() > 1) {
+                        res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(prefLabelLang, lang));
+                    }
+                }
 
-                if (preflabel_en != null && preflabel_en.length() > 1)
-                    res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_en, "en"));
+                JsonObject descriptionObject = description.asJsonObject();
+                Set<String> descriptionKeys = descriptionObject.keySet();
+                Iterator<String> descriptionIterator = descriptionKeys.iterator();
+                while(descriptionIterator.hasNext()) {
+                    String lang = descriptionIterator.next();
+                    String descriptionLang = description.containsKey(lang) && description.get(lang).getValueType() != JsonValue.ValueType.NULL ? description.getString(lang) : null;
+                    if (descriptionLang != null && descriptionLang.length() > 1) {
+                        res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(descriptionLang, lang));
+                    }
+                }
 
-                if (preflabel_sv != null && preflabel_sv.length() > 1)
-                    res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_sv, "sv"));
+                // if (preflabel_fi != null && preflabel_fi.length() > 1)
+                //     res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_fi, "fi"));
 
-                if (description_fi != null && description_fi.length() > 1)
-                    res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_fi, "fi"));
+                // if (preflabel_en != null && preflabel_en.length() > 1)
+                //     res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_en, "en"));
 
-                if (description_en != null && description_en.length() > 1)
-                    res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_en, "en"));
+                // if (preflabel_sv != null && preflabel_sv.length() > 1)
+                //     res.addLiteral(SKOS.prefLabel, ResourceFactory.createLangLiteral(preflabel_sv, "sv"));
 
-                if (description_sv != null && description_sv.length() > 1)
-                    res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_sv, "sv"));
+                // if (description_fi != null && description_fi.length() > 1)
+                //     res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_fi, "fi"));
+
+                // if (description_en != null && description_en.length() > 1)
+                //     res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_en, "en"));
+
+                // if (description_sv != null && description_sv.length() > 1)
+                //     res.addLiteral(DCTerms.description, ResourceFactory.createLangLiteral(description_sv, "sv"));
 
                 if (url != null && url.length() > 1)
                     res.addLiteral(FOAF.homepage, url);

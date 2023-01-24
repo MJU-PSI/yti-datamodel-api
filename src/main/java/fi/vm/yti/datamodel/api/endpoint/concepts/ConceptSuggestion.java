@@ -67,7 +67,7 @@ public class ConceptSuggestion {
         @Parameter(description = "Terminology uri", required = true) @QueryParam("terminologyUri") String terminologyUri,
         @Parameter(description = "Label", required = true) @QueryParam("label") String label,
         @Parameter(description = "Comment", required = true) @QueryParam("comment") String comment,
-        @Parameter(description = "Initial language", required = true, schema = @Schema(allowableValues = {"fi","en"})) @QueryParam("lang") String lang) {
+        @Parameter(description = "Initial language", required = true) @QueryParam("lang") String lang) {
 
         if (!authorizationManager.hasRightToSuggestConcept()) {
             return jerseyResponseManager.unauthorized();

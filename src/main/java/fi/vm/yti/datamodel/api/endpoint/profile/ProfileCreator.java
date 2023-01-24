@@ -77,7 +77,7 @@ public class ProfileCreator {
         @QueryParam("orgList") String orgString,
         @Parameter(description = "Service URIs", required = true)
         @QueryParam("serviceList") String servicesString,
-        @Parameter(description = "Label language", required = true, schema = @Schema(allowableValues = {"fi","en"})) @QueryParam("lang") String lang,
+        @Parameter(description = "Label language", required = true, schema = @Schema(defaultValue = "en")) @QueryParam("lang") String lang,
         @Parameter(description = "Allowed languages as space list: 'en sv pl'. Default 'fi en'") @QueryParam("langList") String allowedLang) {
 
         List<String> serviceList = Arrays.asList(servicesString.split(" "));
@@ -91,7 +91,7 @@ public class ProfileCreator {
         }
 
         if (allowedLang == null || allowedLang.equals("undefined") || allowedLang.length() == 0) {
-            allowedLang = "fi";
+            allowedLang = "en";
         }
 
         prefix = LDHelper.modelName(prefix);
