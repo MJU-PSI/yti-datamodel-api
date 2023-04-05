@@ -3,7 +3,7 @@
  */
 package fi.vm.yti.datamodel.api.endpoint.model;
 
-import fi.vm.yti.datamodel.api.config.ApplicationProperties;
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.model.DataModel;
 import fi.vm.yti.datamodel.api.model.ServiceCategory;
 import fi.vm.yti.datamodel.api.service.*;
@@ -46,7 +46,7 @@ public class ModelCreator {
     private final JerseyClient jerseyClient;
     private final IDManager idManager;
     private final EndpointServices endpointServices;
-    private final ApplicationProperties applicationProperties;
+    private final UriProperties uriProperties;
 
     @Autowired
     ModelCreator(JerseyResponseManager jerseyResponseManager,
@@ -55,7 +55,7 @@ public class ModelCreator {
                  JerseyClient jerseyClient,
                  IDManager idManager,
                  EndpointServices endpointServices,
-                 ApplicationProperties applicationProperties) {
+                 UriProperties uriProperties) {
 
         this.jerseyResponseManager = jerseyResponseManager;
         this.graphManager = graphManager;
@@ -63,7 +63,7 @@ public class ModelCreator {
         this.jerseyClient = jerseyClient;
         this.idManager = idManager;
         this.endpointServices = endpointServices;
-        this.applicationProperties = applicationProperties;
+        this.uriProperties = uriProperties;
     }
 
     @GET
@@ -107,7 +107,7 @@ public class ModelCreator {
             return jerseyResponseManager.invalidParameter();
         }
 
-        String namespace = applicationProperties.getDefaultNamespace() + prefix;
+        String namespace = uriProperties.getUriHostPathAddress() + prefix;
 
         IRI namespaceIRI;
 

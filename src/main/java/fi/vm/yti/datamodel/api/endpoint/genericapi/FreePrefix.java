@@ -1,6 +1,7 @@
 package fi.vm.yti.datamodel.api.endpoint.genericapi;
 
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.service.IDManager;
 import fi.vm.yti.datamodel.api.service.JerseyResponseManager;
@@ -30,18 +31,18 @@ public class FreePrefix {
     private final IDManager idManager;
     private final JerseyResponseManager jerseyResponseManager;
     private final GraphManager graphManager;
-    private final ApplicationProperties applicationProperties;
+    private final UriProperties uriProperties;
     private static final Logger logger = LoggerFactory.getLogger(FreePrefix.class.getName());
 
     @Autowired
     FreePrefix(IDManager idManager,
            JerseyResponseManager jerseyResponseManager,
            GraphManager graphManager,
-           ApplicationProperties applicationProperties) {
+           UriProperties uriProperties) {
         this.idManager = idManager;
         this.jerseyResponseManager = jerseyResponseManager;
         this.graphManager = graphManager;
-        this.applicationProperties = applicationProperties;
+        this.uriProperties = uriProperties;
     }
 
     @GET
@@ -56,7 +57,7 @@ public class FreePrefix {
             return jerseyResponseManager.sendBoolean(false);
         }
 
-        String namespace = applicationProperties.getDefaultNamespace()+prefix;
+        String namespace = uriProperties.getUriHostPathAddress() + prefix;
 
         if (idManager.isInvalid(namespace)) {
             return jerseyResponseManager.sendBoolean(false);

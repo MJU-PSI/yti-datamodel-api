@@ -3,7 +3,7 @@
  */
 package fi.vm.yti.datamodel.api.service;
 
-import fi.vm.yti.datamodel.api.config.ApplicationProperties;
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.model.AbstractModel;
 import fi.vm.yti.datamodel.api.model.AbstractResource;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
@@ -48,7 +48,7 @@ public class GraphManager {
     private final JenaClient jenaClient;
     private final TerminologyManager terminologyManager;
     private final ModelManager modelManager;
-    private final ApplicationProperties properties;
+    private final UriProperties uriProperties;
     private final ServiceDescriptionManager serviceDescriptionManager;
     private final String versionGraphURI = "urn:yti:metamodel:version";
     private final ExecutorService executor = Executors.newFixedThreadPool(1);
@@ -59,14 +59,14 @@ public class GraphManager {
                  TerminologyManager terminologyManager,
                  ModelManager modelManager,
                  ServiceDescriptionManager serviceDescriptionManager,
-                 ApplicationProperties properties) {
+                 UriProperties uriProperties) {
 
         this.endpointServices = endpointServices;
         this.jenaClient = jenaClient;
         this.terminologyManager = terminologyManager;
         this.modelManager = modelManager;
         this.serviceDescriptionManager = serviceDescriptionManager;
-        this.properties = properties;
+        this.uriProperties = uriProperties;
     }
 
     public static UpdateRequest renameIDRequest(IRI oldID,
@@ -346,7 +346,7 @@ public class GraphManager {
      */
     public void setVersionNumber(int version) {
         Model versionModel = ModelFactory.createDefaultModel().addLiteral(ResourceFactory.createResource(versionGraphURI), LDHelper.curieToProperty("iow:version"), version);
-        versionModel.setNsPrefix("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
+        versionModel.setNsPrefix("iow", LDHelper.PREFIX_MAP.get("iow"));
         jenaClient.putModelToCore(versionGraphURI, versionModel);
     }
 
@@ -480,7 +480,7 @@ public class GraphManager {
         pss.setNsPrefixes(LDHelper.PREFIX_MAP);
         pss.setCommandText(queryString);
         pss.setLiteral("prefix", prefix);
-        pss.setIri("graph", properties.getDefaultNamespace() + prefix);
+        pss.setIri("graph", uriProperties.getUriHostPathAddress() + prefix);
 
         Query query = pss.asQuery();
 

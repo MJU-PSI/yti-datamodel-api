@@ -1,6 +1,7 @@
 package fi.vm.yti.datamodel.api.endpoint.genericapi;
 
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.service.JerseyResponseManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
@@ -36,20 +37,20 @@ import java.util.Locale;
 public class Resolve {
 
     private static final Logger logger = LoggerFactory.getLogger(Resolve.class);
-    private static final String SUOMI_URI_HOST = "uri.suomi.fi";
-    private static final String API_PATH_DATAMODEL = "/datamodel/ns/";
     private final GraphManager graphManager;
     private final JerseyResponseManager jerseyResponseManager;
     private final ApplicationProperties applicationProperties;
+    private final UriProperties uriProperties;
 
     @Autowired
     Resolve(GraphManager graphManager,
             JerseyResponseManager jerseyResponseManager,
-            ApplicationProperties applicationProperties) {
+            ApplicationProperties applicationProperties,
+            UriProperties uriProperties) {
         this.graphManager = graphManager;
         this.jerseyResponseManager = jerseyResponseManager;
         this.applicationProperties = applicationProperties;
-
+        this.uriProperties = uriProperties;
     }
 
     @Context
@@ -69,13 +70,13 @@ public class Resolve {
                                @Parameter(description = "Content-type as format") @QueryParam("format") String format,
                                @Parameter(description = "Resource URI.", required = true) @QueryParam("uri") final String uri) {
         final URI resolveUri = parseUriFromString(uri);
-        ensureSuomiFiUriHost(resolveUri.getHost());
+        ensureUriHost(resolveUri.getHost());
 
         final String uriPath = resolveUri.getPath();
         checkResourceValidity(uriPath);
 
         final String uriFragment = resolveUri.getFragment();
-        final String graphPrefix = uriPath.substring(API_PATH_DATAMODEL.length());
+        final String graphPrefix = uriPath.substring(applicationProperties.getPublicDatamodelFrontend().length());
 
         logger.debug("Resolving: " + uri);
 
@@ -104,7 +105,7 @@ public class Resolve {
         Locale locale = acceptLang == null ? null : Locale.forLanguageTag(acceptLang);
         String language = locale == null ? null : locale.getDefault().toString().substring(0, 2).toLowerCase();
 
-        final URI htmlRedirectUrl = URI.create(uriInfo.getBaseUri().toString().replace("/datamodel-api/api/", "/model/") + graphPrefix + (uriFragment != null ? "#"+uriFragment : ""));
+        final URI htmlRedirectUrl = URI.create(applicationProperties.getPublicDatamodelFrontend().concat("/model/") + graphPrefix + (uriFragment != null ? "#"+uriFragment : ""));
 
         if (format != null && format.length() > 5) {
             accept = format;
@@ -127,10 +128,10 @@ public class Resolve {
             Lang rdfLang = RDFLanguages.contentTypeToLang(acceptHeader);
 
             if (acceptHeader.contains("application/schema+json") || acceptHeader.contains("application/xml")) {
-                final URI schemaWithLangURI = URI.create(uriInfo.getBaseUri().toString() + "v1/exportModel?graph=" + graphName + "&content-type=" + acceptHeader + (language == null ? "" : "&lang=" + language) + "&raw=" + raw);
+                final URI schemaWithLangURI = URI.create(applicationProperties.getPublicDatamodelFrontend().concat("/datamodel-api/api/") + "v1/exportModel?graph=" + graphName + "&content-type=" + acceptHeader + (language == null ? "" : "&lang=" + language) + "&raw=" + raw);
                 return Response.seeOther(schemaWithLangURI).build();
             } else if (rdfLang != null) {
-                final URI rdfUrl = URI.create(uriInfo.getBaseUri().toString() + "v1/exportModel?graph=" + graphName + "&content-type=" + rdfLang.getHeaderString() + "&raw=" + raw);
+                final URI rdfUrl = URI.create(applicationProperties.getPublicDatamodelFrontend().concat("/datamodel-api/api/")  + "v1/exportModel?graph=" + graphName + "&content-type=" + rdfLang.getHeaderString() + "&raw=" + raw);
                 logger.debug("Resolving to RDF: " + rdfUrl);
                 return Response.seeOther(rdfUrl).build();
             }
@@ -141,8 +142,8 @@ public class Resolve {
 
     }
 
-    private void ensureSuomiFiUriHost(final String host) {
-        if (!SUOMI_URI_HOST.equalsIgnoreCase(host)) {
+    private void ensureUriHost(final String host) {
+        if(!uriProperties.getHost().equalsIgnoreCase(host)){
             logger.warn("This URI is not resolvable as a datamodel resource, wrong host.");
             throw new BadRequestException("This URI is not resolvable as a datamodel resource.");
         }
@@ -158,11 +159,11 @@ public class Resolve {
     }
 
     private void checkResourceValidity(final String uriPath) {
-        if (!uriPath.toLowerCase().startsWith(API_PATH_DATAMODEL)) {
+        if (!uriPath.toLowerCase().startsWith(uriProperties.getContextPath())) {
             logger.warn("Datamodel resource URI not resolvable, wrong context path!");
             throw new BadRequestException("Datamodel resource URI not resolvable, wrong context path!");
         } else {
-            if (!LDHelper.isValidPrefix(uriPath.substring(API_PATH_DATAMODEL.length()))) {
+            if (!LDHelper.isValidPrefix(uriPath.substring(uriProperties.getContextPath().length()))) {
                 logger.warn("Could not parse path: " + uriPath);
                 throw new BadRequestException("Could not parse graph from uri path");
             }

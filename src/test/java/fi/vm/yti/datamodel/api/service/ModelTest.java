@@ -27,7 +27,7 @@ import javax.ws.rs.core.Response;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.test.context.junit4.SpringRunner;
-import fi.vm.yti.datamodel.api.config.ApplicationProperties;
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.model.DataModel;
 import fi.vm.yti.datamodel.api.model.ReusableClass;
 import fi.vm.yti.datamodel.api.model.ReusablePredicate;
@@ -49,7 +49,7 @@ public class ModelTest  {
     private static IRI testModelId;
 
     @Autowired
-    private ApplicationProperties applicationProperties;
+    private UriProperties uriProperties;
 
     @Autowired
     private ModelManager modelManager;
@@ -85,7 +85,7 @@ public class ModelTest  {
     @Test
     public void test2_createNewModel() {
 
-        testModelId = LDHelper.toIRI(applicationProperties.getDefaultNamespace()+"junit5");
+        testModelId = LDHelper.toIRI(uriProperties.getUriHostPathAddress()+"junit5");
 
         rhpOrganizationManager.initTestOrganizations();
 

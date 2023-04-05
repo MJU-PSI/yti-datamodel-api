@@ -319,15 +319,49 @@ public final class NamespaceManager {
 
                 try { // IOException
 
-                    connection = (HttpURLConnection) url.openConnection();
-                    // 2,5 seconds
-                    connection.setConnectTimeout(8000);
-                    // 2,5 minutes
-                    connection.setReadTimeout(30000);
-                    connection.setInstanceFollowRedirects(true);
-                    //,text/rdf+n3,application/turtle,application/rdf+n3
-                    //"application/rdf+xml,application/xml,text/html");
-                    connection.setRequestProperty("Accept", "application/rdf+xml;q=1,application/turtle;q=0.8,application/x-turtle;q=0.8,text/turtle;q=0.8,text/rdf+n3;q=0.5,application/n3;q=0.5,text/n3;q=0.5");
+                    // connection = (HttpURLConnection) url.openConnection();
+                    // // 2,5 seconds
+                    // connection.setConnectTimeout(8000);
+                    // // 2,5 minutes
+                    // connection.setReadTimeout(30000);
+                    // connection.setInstanceFollowRedirects(true);
+                    // //,text/rdf+n3,application/turtle,application/rdf+n3
+                    // //"application/rdf+xml,application/xml,text/html");
+                    // connection.setRequestProperty("Accept", "application/rdf+xml;q=1,application/turtle;q=0.8,application/x-turtle;q=0.8,text/turtle;q=0.8,text/rdf+n3;q=0.5,application/n3;q=0.5,text/n3;q=0.5");
+
+                    Map<String, Integer> visited = new HashMap<>();
+                    int times;
+                    URL resourceUrl, base, next;
+                    String location;
+                    while (true)
+                    {
+                       times = visited.compute(namespace, (key, count) -> count == null ? 1 : count + 1);
+                  
+                       if (times > 3)
+                          throw new IOException("Stuck in redirect loop");
+                  
+                       resourceUrl = new URL(namespace);
+                       connection  = (HttpURLConnection) resourceUrl.openConnection();
+                  
+                       connection.setConnectTimeout(8000);
+                       connection.setReadTimeout(30000);
+                       connection.setInstanceFollowRedirects(false);   // Make the logic below easier to detect redirections
+                       connection.setRequestProperty("Accept", "application/rdf+xml;q=1,application/turtle;q=0.8,application/x-turtle;q=0.8,text/turtle;q=0.8,text/rdf+n3;q=0.5,application/n3;q=0.5,text/n3;q=0.5");
+                  
+                       switch (connection.getResponseCode())
+                       {
+                          case HttpURLConnection.HTTP_MOVED_PERM:
+                          case HttpURLConnection.HTTP_MOVED_TEMP:
+                             location  = connection.getHeaderField("Location");
+                             location  = URLDecoder.decode(location, "UTF-8");
+                             base      = new URL(namespace);               
+                             next      = new URL(base, location);  // Deal with relative URLs
+                             namespace = next.toExternalForm();
+                             continue;
+                       }
+                  
+                       break;
+                    }
 
                     try { // SocketTimeOut
 

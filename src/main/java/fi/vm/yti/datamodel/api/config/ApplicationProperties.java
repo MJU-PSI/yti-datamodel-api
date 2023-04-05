@@ -3,13 +3,12 @@ package fi.vm.yti.datamodel.api.config;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-@ConfigurationProperties
+@ConfigurationProperties("")
 public final class ApplicationProperties {
 
     private String endpoint;
     private String fusekiPassword;
     private String fusekiUser;
-    private String defaultNamespace;
     private boolean provenance;
     private String defaultGroupManagementAPI;
     private String privateGroupManagementAPI;
@@ -29,6 +28,7 @@ public final class ApplicationProperties {
     private boolean devMode;
     private boolean messagingEnabled;
     private String env;
+    private String publicDatamodelFrontend;
 
     public String getEndpoint() {
         return endpoint;
@@ -52,14 +52,6 @@ public final class ApplicationProperties {
 
     public void setFusekiUser(final String fusekiUser) {
         this.fusekiUser = fusekiUser;
-    }
-
-    public String getDefaultNamespace() {
-        return defaultNamespace;
-    }
-
-    public void setDefaultNamespace(String defaultNamespace) {
-        this.defaultNamespace = defaultNamespace;
     }
 
     public boolean isProvenance() {
@@ -212,5 +204,13 @@ public final class ApplicationProperties {
 
     public void setMessagingEnabled(final boolean messagingEnabled) {
         this.messagingEnabled = messagingEnabled;
+    }
+
+    public String getPublicDatamodelFrontend() {
+        return this.publicDatamodelFrontend;
+    }
+
+    public void setPublicDatamodelFrontend(String publicDatamodelFrontend) {
+        this.publicDatamodelFrontend = publicDatamodelFrontend;
     }
 }
