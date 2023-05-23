@@ -124,7 +124,8 @@ public class LDHelper {
         "uri",
         "versionInfo",
         "vertexXY",
-        "xor" };
+        "xor",
+        "value" };
 
     public static boolean isReservedWord(String item) {
         return Arrays.stream(RESERVEDWORDS).anyMatch(item::equals);

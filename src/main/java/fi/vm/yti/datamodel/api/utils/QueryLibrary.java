@@ -398,7 +398,7 @@ public class QueryLibrary {
             + "GRAPH ?property { ?property rdfs:label ?label . "
             + "?property owl:versionInfo ?versionInfo . "
             + "OPTIONAL { ?property rdfs:comment ?description . } "
-            + "VALUES ?type { owl:ObjectProperty owl:DatatypeProperty } "
+            + "VALUES ?type { owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty } "
             + "?property a ?type . "
             + "?property rdfs:isDefinedBy ?source . "
             + "OPTIONAL {?property dcterms:modified ?date . } "
@@ -442,7 +442,7 @@ public class QueryLibrary {
             + " ?required rdfs:label ?label . }"
             + "GRAPH ?graph {"
             + "?graph a ?ptype . "
-            + "VALUES ?ptype { owl:ObjectProperty owl:DatatypeProperty } "
+            + "VALUES ?ptype { owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty } "
             + "?graph rdfs:isDefinedBy ?required . "
             + "?graph rdfs:label ?plabel . "
             + "} "
@@ -511,7 +511,7 @@ public class QueryLibrary {
             + "FILTER NOT EXISTS { ?predicate a owl:DatatypeProperty }"
             + "BIND(owl:ObjectProperty as ?propertyType) "
             + "} UNION {"
-            /* Treat owl:AnnotationProperty as DatatypeProperty */
+            /* Treat owl:AnnotationProperty as DatatypeProperty */  // TODO annotation
             + "?predicate a owl:AnnotationProperty. "
             + "?predicate rdfs:label ?atLeastSomeLabel . "
             + "FILTER NOT EXISTS { ?predicate a owl:DatatypeProperty }"

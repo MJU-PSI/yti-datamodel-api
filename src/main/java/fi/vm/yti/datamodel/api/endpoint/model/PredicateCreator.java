@@ -66,7 +66,7 @@ public class PredicateCreator {
         @Parameter(description = "Model ID", required = true) @QueryParam("modelID") String modelID,
         @Parameter(description = "Predicate label", required = true) @QueryParam("predicateLabel") String predicateLabel,
         @Parameter(description = "Concept URI") @QueryParam("conceptID") String conceptUri,
-        @Parameter(description = "Predicate type", required = true, schema = @Schema(allowableValues = {"owl:DatatypeProperty","owl:ObjectProperty"})) @QueryParam("type") String type,
+        @Parameter(description = "Predicate type", required = true, schema = @Schema(allowableValues = {"owl:DatatypeProperty","owl:ObjectProperty","owl:AnnotationProperty"})) @QueryParam("type") String type,
         @Parameter(description = "Language", required = true, schema = @Schema(defaultValue = "en")) @QueryParam("lang") String lang) {
 
         IRI conceptIRI = null;
