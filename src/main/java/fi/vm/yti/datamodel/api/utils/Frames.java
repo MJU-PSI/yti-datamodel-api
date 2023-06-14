@@ -66,7 +66,9 @@ public class Frames {
     public static final LinkedHashMap<String, Object> shapeType;
     public static final LinkedHashMap<String, Object> attributeType;
     public static final LinkedHashMap<String, Object> associationType;
+    public static final LinkedHashMap<String, Object> annotationType;
     public static final LinkedHashMap<String, Object> languageSet;
+    public static final LinkedHashMap<String, Object> value;
 
     static {
 
@@ -125,6 +127,12 @@ public class Frames {
         associationType = new LinkedHashMap<String, Object>() {
             {
                 put("@id", "http://www.w3.org/2002/07/owl#ObjectProperty");
+            }
+        };
+
+        annotationType = new LinkedHashMap<String, Object>() {
+            {
+                put("@id", "http://www.w3.org/2002/07/owl#AnnotationProperty");
             }
         };
 
@@ -433,6 +441,13 @@ public class Frames {
             }
         };
 
+        value = new LinkedHashMap<String, Object>() {
+            {
+                put("@id", "http://www.w3.org/ns/shacl#value");
+                put("@container", "@language");
+            }
+        };
+
         predicateContext = new LinkedHashMap<String, Object>() {
             {
                 putAll(coreContext);
@@ -457,6 +472,16 @@ public class Frames {
                     }
                 });
                 put("subject", subject);
+                put("value", value);
+                put("property", property);
+                put("path", path);
+                put("node", new LinkedHashMap<String, Object>() {
+                    {
+                        put("@id", "http://www.w3.org/ns/shacl#node");
+                        put("@type", "@id");
+                    }
+                });
+                put("label", label);
             }
         };
 
@@ -579,7 +604,8 @@ public class Frames {
                         put("@id", "http://schema.org/readonlyValue");
                     }
                 });
-
+                put("value", value);
+                put("property", property);
             }
         };
 
@@ -814,6 +840,7 @@ public class Frames {
             {
                 put("attribute",attributeType);
                 put("association",associationType);
+                put("annotation",annotationType);
                 put("label", label);
                 put("comment", comment);
                 put("modified", modified);

@@ -65,7 +65,7 @@ public class ClassPropertyCreator {
     })
     public Response createClassProperty(
         @Parameter(description = "Predicate ID", required = true) @QueryParam("predicateID") String predicateID,
-        @Parameter(description = "Predicate type", schema = @Schema(allowableValues = {"owl:DatatypeProperty","owl:ObjectProperty"})) @QueryParam("type") String type) {
+        @Parameter(description = "Predicate type", schema = @Schema(allowableValues = {"owl:DatatypeProperty","owl:ObjectProperty","owl:AnnotationProperty"})) @QueryParam("type") String type) {
 
         IRI predicateIRI, typeIRI;
 
@@ -112,6 +112,8 @@ public class ClassPropertyCreator {
                     + "OPTIONAL{ ?predicate rdfs:comment ?comment . } "
                     + "OPTIONAL{ ?predicate a owl:DatatypeProperty . "
                     + "?predicate rdfs:range ?datatype . } "
+                    + "OPTIONAL{ ?predicate a owl:AnnotationProperty . "
+                    + "?predicate rdfs:range ?datatype . } "
                     + "OPTIONAL { ?predicate a owl:ObjectProperty . "
                     + "?predicate rdfs:range ?valueClass . }}}}";
 
@@ -150,6 +152,9 @@ public class ClassPropertyCreator {
                     + "OPTIONAL { ?predicate ?commentPred ?commentStr . FILTER(LANG(?commentStr) = '') BIND(STRLANG(STR(?commentStr),'en') as ?comment) } "
                     + "OPTIONAL { ?predicate ?commentPred ?comment . FILTER(LANG(?comment)!='') }"
                     + "OPTIONAL { ?predicate a owl:DatatypeProperty . "
+                    + "?predicate rdfs:range ?datatype . "
+                    + "BIND(IF(?datatype=rdfs:Literal,xsd:string,?datatype) as ?prefDatatype) } "
+                    + "OPTIONAL { ?predicate a owl:AnnotationProperty . "
                     + "?predicate rdfs:range ?datatype . "
                     + "BIND(IF(?datatype=rdfs:Literal,xsd:string,?datatype) as ?prefDatatype) } "
                     + "OPTIONAL { ?predicate a owl:ObjectProperty . ?predicate rdfs:range ?valueClass . } "

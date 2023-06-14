@@ -90,7 +90,7 @@ public abstract class AbstractPredicate extends AbstractResource {
 
             while (subjects.hasNext()) {
                 Resource res = subjects.next();
-                if (res.hasProperty(RDF.type, OWL.ObjectProperty) || res.hasProperty(RDF.type, OWL.DatatypeProperty)) {
+                if (res.hasProperty(RDF.type, OWL.ObjectProperty) || res.hasProperty(RDF.type, OWL.DatatypeProperty) || res.hasProperty(RDF.type, OWL.AnnotationProperty)) {
                     if (predicateResource != null) {
                         throw new IllegalArgumentException("Multiple class resources");
                     } else {
@@ -100,7 +100,7 @@ public abstract class AbstractPredicate extends AbstractResource {
             }
 
             if (predicateResource == null) {
-                throw new IllegalArgumentException("Expected 1 ObjectProperty or DatatypeProperty");
+                throw new IllegalArgumentException("Expected 1 ObjectProperty or DatatypeProperty or AnnotationProperty");
             }
 
             Statement isDefinedBy = predicateResource.getRequiredProperty(RDFS.isDefinedBy);

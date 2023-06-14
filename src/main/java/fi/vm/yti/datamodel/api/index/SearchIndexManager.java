@@ -518,7 +518,7 @@ public class SearchIndexManager {
             "?predicate owl:versionInfo ?status . " +
             "?predicate iow:statusModified ?statusModified . " +
             "} WHERE { " +
-            "GRAPH ?predicate { ?predicate a ?predicateType . VALUES ?predicateType { owl:ObjectProperty owl:DatatypeProperty }" +
+            "GRAPH ?predicate { ?predicate a ?predicateType . VALUES ?predicateType { owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty }" +
             "?predicate rdfs:isDefinedBy ?model . " +
             "?predicate rdfs:label ?prefLabel . " +
             "OPTIONAL { ?predicate rdfs:range ?range . } " +
@@ -555,7 +555,7 @@ public class SearchIndexManager {
             "?predicate owl:versionInfo ?status . " +
             "?predicate iow:statusModified ?statusModified . " +
             "} WHERE { " +
-            "GRAPH ?predicate { ?predicate a ?predicateType . VALUES ?predicateType { owl:ObjectProperty owl:DatatypeProperty }" +
+            "GRAPH ?predicate { ?predicate a ?predicateType . VALUES ?predicateType { owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty }" +
             "?predicate rdfs:isDefinedBy ?model . " +
             "?predicate rdfs:label ?prefLabel . " +
             "OPTIONAL { ?predicate rdfs:range ?range . } " +

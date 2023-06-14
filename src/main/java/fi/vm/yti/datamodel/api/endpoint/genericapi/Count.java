@@ -64,7 +64,7 @@ public class Count {
             "VALUES ?type { " +
             "dcap:DCAP dcap:MetadataVocabulary " +
             "rdfs:Class sh:NodeShape " +
-            "owl:ObjectProperty owl:DatatypeProperty } " +
+            "owl:ObjectProperty owl:DatatypeProperty owl:AnnotationProperty } " +
             "}} GROUP BY ?type";
 
         Query query = QueryFactory.create(queryString);
@@ -76,6 +76,7 @@ public class Count {
         mapping.put(LDHelper.curieToURI("sh:NodeShape"),"shapes");
         mapping.put(LDHelper.curieToURI("owl:ObjectProperty"),"associations");
         mapping.put(LDHelper.curieToURI("owl:DatatypeProperty"),"attributes");
+        mapping.put(LDHelper.curieToURI("owl:AnnotationProperty"),"annotations");
 
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(endpointServices.getCoreSparqlAddress(), query)) {
             ResultSet results = qexec.execSelect();
