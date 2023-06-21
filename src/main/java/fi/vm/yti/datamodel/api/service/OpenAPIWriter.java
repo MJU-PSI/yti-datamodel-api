@@ -8,6 +8,7 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.Locale;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -30,11 +31,14 @@ import org.apache.jena.sparql.resultset.ResultSetPeekable;
 import org.apache.jena.util.SplitIRI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
 import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import fi.vm.yti.datamodel.api.config.ApplicationProperties;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
 @Service
@@ -72,13 +76,19 @@ public class OpenAPIWriter {
     private final EndpointServices endpointServices;
     private final JsonWriterFactory jsonWriterFactory;
     private final GraphManager graphManager;
+    private final ApplicationProperties config;
+
+    @Autowired
+    private MessageSource messageSource;
 
     OpenAPIWriter(EndpointServices endpointServices,
                   JsonWriterFactory jsonWriterFactory,
-                  GraphManager graphManager) {
+                  GraphManager graphManager,
+                  ApplicationProperties config) {
         this.endpointServices = endpointServices;
         this.jsonWriterFactory = jsonWriterFactory;
         this.graphManager = graphManager;
+        this.config = config;
     }
 
     public String jsonObjectToPrettyString(JsonObject object) {
@@ -222,7 +232,7 @@ public class OpenAPIWriter {
         }
 
         if (lang == null) {
-            lang = "fi";
+            lang = config.getDefaultLanguage();
         }
 
         pss.setLiteral("lang", lang);
@@ -719,7 +729,7 @@ public class OpenAPIWriter {
         pss.setIri("modelID", modelID);
 
         if (lang==null) {
-            lang = "fi";
+            lang = config.getDefaultLanguage();
         }
 
         pss.setLiteral("lang", lang);
@@ -746,7 +756,7 @@ public class OpenAPIWriter {
 
                 if (soln.contains("description")) {
                     String description = soln.getLiteral("description").getString();
-                    infoObject.add("description", (lang.equals("fi") ? "Automaattisesti generoitu Open API rajapintakuvaus. Huom! Rajapintakuvauksen voi tuottaa useammalla eri kielellä. Tietomallin kuvaus kielellä fi: " : "Automatically generated Open API specification. Notice that this specification can be generated in multiple languages! Datamodel description in " + lang + ": ") + description);
+                    infoObject.add("description", messageSource.getMessage("l1", new Object[] {lang, description}, Locale.forLanguageTag(config.getDefaultLanguage())));
                 }
                 
                 /*
@@ -772,7 +782,7 @@ public class OpenAPIWriter {
             }
 
             externalDocs.add("url", modelID);
-            externalDocs.add("description", lang.equals("fi") ? "Rajapinnan tietomalli" : "Datamodel for the API");
+            externalDocs.add("description", messageSource.getMessage("l2", null, Locale.forLanguageTag(config.getDefaultLanguage())));
 
             schema.add("openapi", "3.0.0");
             schema.add("info", infoObject.build());
@@ -805,11 +815,11 @@ public class OpenAPIWriter {
 
         String className = SplitIRI.localname(classID);
         infoObject.add("title", className);
-        infoObject.add("description", "Automatically generated Open API skeleton from " + className + " in " + lang + ". Notice that this spec can be exported in different languages. Full spec including all classes can be exported under datamodel export.");
+        infoObject.add("description", messageSource.getMessage("l3", new Object[] {className, lang}, Locale.forLanguageTag(config.getDefaultLanguage())));
         infoObject.add("version", "0.01");
 
         externalDocs.add("url", classID);
-        externalDocs.add("description", lang.equals("fi") ? "Rajapinnan tietomalli" : "Datamodel for the API");
+        externalDocs.add("description", messageSource.getMessage("l4", null, Locale.forLanguageTag(config.getDefaultLanguage())));
 
         schema.add("openapi", "3.0.0");
         schema.add("info", infoObject.build());

@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
+import org.springframework.context.support.ResourceBundleMessageSource;
 
 @Configuration
 public class AjpConfig {
@@ -39,5 +40,15 @@ public class AjpConfig {
         }
 
         return tomcat;
+    }
+
+    @Bean
+    public ResourceBundleMessageSource messageSource() {
+
+        var source = new ResourceBundleMessageSource();
+        source.setBasenames("messages/labels");
+        source.setUseCodeAsDefaultMessage(true);
+
+        return source;
     }
 }

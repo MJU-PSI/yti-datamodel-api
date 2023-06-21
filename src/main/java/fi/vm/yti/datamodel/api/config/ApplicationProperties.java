@@ -29,6 +29,7 @@ public final class ApplicationProperties {
     private boolean messagingEnabled;
     private String env;
     private String publicDatamodelFrontend;
+    private String defaultLanguage;
 
     public String getEndpoint() {
         return endpoint;
@@ -212,5 +213,13 @@ public final class ApplicationProperties {
 
     public void setPublicDatamodelFrontend(String publicDatamodelFrontend) {
         this.publicDatamodelFrontend = publicDatamodelFrontend;
+    }
+
+    public String getDefaultLanguage() {
+        return this.defaultLanguage != null ? this.defaultLanguage : "en";
+    }
+
+    public void setDefaultLanguage(String defaultLanguage) {
+        this.defaultLanguage = defaultLanguage;
     }
 }
