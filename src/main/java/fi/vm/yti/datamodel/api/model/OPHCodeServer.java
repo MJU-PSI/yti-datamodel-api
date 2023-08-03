@@ -12,6 +12,8 @@ import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Iterables;
+
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
@@ -263,7 +265,10 @@ public class OPHCodeServer {
             jsonReader.close();
 
             Iterator<JsonValue> codeIterator = codeListArray.iterator();
-
+            if (Iterables.size((Iterable<?>) codeIterator) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
+    
             while (codeIterator.hasNext()) {
 
                 JsonObject codeObj = (JsonObject) codeIterator.next();

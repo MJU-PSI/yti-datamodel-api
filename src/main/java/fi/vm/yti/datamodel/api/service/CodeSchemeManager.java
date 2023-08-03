@@ -15,6 +15,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.google.common.collect.Iterables;
+
 import java.util.Date;
 
 @Service
@@ -64,6 +66,9 @@ public class CodeSchemeManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getSchemesSparqlAddress(), pss.asQuery());
 
         Date modified = null;
+        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
 
         while (results.hasNext()) {
             QuerySolution soln = results.nextSolution();

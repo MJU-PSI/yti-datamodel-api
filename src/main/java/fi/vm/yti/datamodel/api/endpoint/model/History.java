@@ -31,6 +31,8 @@ import org.apache.jena.rdf.model.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.google.common.collect.Iterables;
+
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.PUT;
@@ -154,6 +156,9 @@ public class History {
 
                 NodeIterator uuidIter = provModel.listObjectsOfProperty(wasAttributedTo);
                 List<String> userUuids = new ArrayList<>();
+                if (Iterables.size((Iterable<?>) uuidIter) > Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
 
                 while (uuidIter.hasNext()) {
                     String userUuid = uuidIter.next().asResource().getURI().replace("urn:uuid:", "");

@@ -33,6 +33,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.collect.Iterables;
 
 import fi.vm.yti.datamodel.api.index.SearchIndexManager;
 import fi.vm.yti.datamodel.api.model.DataModel;
@@ -189,6 +190,10 @@ public class Models {
 
         if (!user.isSuperuser()) {
             ResIterator rem = modelList.listSubjectsWithProperty(status, "INCOMPLETE");
+            if (Iterables.size((Iterable<?>) rem) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
+
             while (rem.hasNext()) {
                 Resource modelResource = rem.nextResource();
                 if (user.isAnonymous()) {

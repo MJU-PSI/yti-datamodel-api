@@ -20,6 +20,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
 
+import com.google.common.collect.Iterables;
+
 @Service
 public class XMLSchemaWriter {
 
@@ -113,6 +115,9 @@ public class XMLSchemaWriter {
             if (!results.hasNext()) {
                 logger.debug("Resource results is null");
                 return null;
+            }
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
             }
 
             Map<String, LocalizedData> localizedData = new HashMap<>();
@@ -234,9 +239,11 @@ public class XMLSchemaWriter {
                 logger.info("No model found:" + modelID);
                 return null;
             }
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             Map<String, LocalizedData> dataModelLocalizedData = new HashMap<>();
-
             while (results.hasNext()) {
                 QuerySolution soln = results.nextSolution();
                 String language = soln.getLiteral("label").getLanguage();

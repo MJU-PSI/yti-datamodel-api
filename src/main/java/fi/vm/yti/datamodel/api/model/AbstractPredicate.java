@@ -19,6 +19,8 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Iterables;
+
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
@@ -54,6 +56,10 @@ public abstract class AbstractPredicate extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
+            if (Iterables.size((Iterable<?>) props) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
+
             while (props.hasNext()) {
                 logger.info(props.next().getPredicate().getURI());
             }
@@ -85,7 +91,10 @@ public abstract class AbstractPredicate extends AbstractResource {
             if (!subjects.hasNext()) {
                 throw new IllegalArgumentException("Expected at least 1 typed resource");
             }
-
+            if (Iterables.size((Iterable<?>) subjects) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
+    
             Resource predicateResource = null;
 
             while (subjects.hasNext()) {

@@ -38,6 +38,8 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.google.common.collect.Iterables;
+
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
@@ -159,6 +161,9 @@ public class OpenAPIWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (results.hasNext()) {
                 QuerySolution soln = results.next();
@@ -247,6 +252,9 @@ public class OpenAPIWriter {
 
             if (!pResults.hasNext()) {
                 return null;
+            }
+            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
             }
 
             JsonObjectBuilder paths = Json.createObjectBuilder();
@@ -741,7 +749,9 @@ public class OpenAPIWriter {
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(endpointServices.getCoreSparqlAddress(), pss.toString())) {
 
             ResultSet results = qexec.execSelect();
-
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             if (!results.hasNext()) {
                 logger.debug("No results from model: " + modelID);
                 return null;

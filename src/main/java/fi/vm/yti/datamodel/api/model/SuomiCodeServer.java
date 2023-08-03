@@ -34,6 +34,8 @@ import org.apache.jena.web.DatasetGraphAccessorHTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Iterables;
+
 import fi.vm.yti.datamodel.api.service.CodeSchemeManager;
 import fi.vm.yti.datamodel.api.service.EndpointServices;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
@@ -227,6 +229,9 @@ public class SuomiCodeServer {
 
             JsonArray codeSchemeArr = codeListResponse.getJsonArray("results");
             Iterator<JsonValue> codeIterator = codeSchemeArr.iterator();
+            if (Iterables.size((Iterable<?>) codeIterator) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (codeIterator.hasNext()) {
 

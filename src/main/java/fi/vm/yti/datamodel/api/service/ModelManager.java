@@ -43,6 +43,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jsonldjava.core.JsonLdOptions;
 import com.github.jsonldjava.utils.JsonUtils;
+import com.google.common.collect.Iterables;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
@@ -150,6 +151,9 @@ public class ModelManager {
                     } else {
                         // If object is Anon such as sh:constraint
                         StmtIterator anonIterator = removeStatement.getObject().asResource().listProperties();
+                        if (Iterables.size((Iterable<?>) anonIterator) > Integer.MAX_VALUE) {
+                            throw new RuntimeException("Too many items for iteration");
+                        }
                         while (anonIterator.hasNext()) {
                             Statement anonStatement = anonIterator.next();
                             RDFNode anonSubObject = anonStatement.getObject();

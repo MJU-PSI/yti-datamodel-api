@@ -12,6 +12,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.topbraid.shacl.vocabulary.SH;
 
+import com.google.common.collect.Iterables;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -55,6 +57,10 @@ public abstract class AbstractShape extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
+            if (Iterables.size((Iterable<?>) props) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
+
             while (props.hasNext()) {
                 logger.info(props.next().getPredicate().getURI());
             }

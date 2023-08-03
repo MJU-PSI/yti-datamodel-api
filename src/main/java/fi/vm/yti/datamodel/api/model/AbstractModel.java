@@ -12,6 +12,8 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import com.google.common.collect.Iterables;
+
 import java.util.*;
 
 public abstract class AbstractModel extends AbstractResource {
@@ -109,6 +111,9 @@ public abstract class AbstractModel extends AbstractResource {
         if (!orgList.hasNext()) {
             logger.warn("Expected at least 1 organization");
             throw new IllegalArgumentException("Expected at least 1 organization");
+        }
+        if (Iterables.size((Iterable<?>) orgList) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
         }
 
         while (orgList.hasNext()) {

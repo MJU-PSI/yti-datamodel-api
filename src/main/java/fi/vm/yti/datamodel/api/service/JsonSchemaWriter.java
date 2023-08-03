@@ -36,6 +36,8 @@ import javax.json.JsonWriterFactory;
 import org.apache.jena.util.SplitIRI;
 import org.springframework.stereotype.Service;
 
+import com.google.common.collect.Iterables;
+
 @Service
 public class JsonSchemaWriter {
 
@@ -119,6 +121,9 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (results.hasNext()) {
 
@@ -377,6 +382,9 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (results.hasNext()) {
                 QuerySolution soln = results.next();
@@ -415,6 +423,9 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (results.hasNext()) {
                 QuerySolution soln = results.next();
@@ -544,6 +555,9 @@ public class JsonSchemaWriter {
 
             if (!pResults.hasNext()) {
                 return null;
+            }
+            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
             }
 
             JsonObjectBuilder definitions = Json.createObjectBuilder();
@@ -852,6 +866,9 @@ public class JsonSchemaWriter {
                 logger.debug("No results from model: " + modelID);
                 return null;
             }
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             while (results.hasNext()) {
 
@@ -945,6 +962,9 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
+            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
             JsonObjectBuilder titleObject = Json.createObjectBuilder();
             JsonObjectBuilder descriptionObject = null;
@@ -1020,6 +1040,9 @@ public class JsonSchemaWriter {
 
             if (!pResults.hasNext()) {
                 return null;
+            }
+            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
             }
 
             JsonObjectBuilder definitions = Json.createObjectBuilder();

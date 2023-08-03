@@ -39,6 +39,8 @@ import java.util.concurrent.Executors;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+import com.google.common.collect.Iterables;
+
 @Service
 public class GraphManager {
 
@@ -635,6 +637,9 @@ public class GraphManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
 
         String graphUri = null;
+        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
 
         while (results.hasNext()) {
             QuerySolution soln = results.nextSolution();
@@ -674,6 +679,9 @@ public class GraphManager {
         pss.setIri("resource", resource);
 
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
+        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
 
         while (results.hasNext()) {
             QuerySolution soln = results.nextSolution();
@@ -719,6 +727,10 @@ public class GraphManager {
         pss.setCommandText(selectResources);
 
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
+        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
+
         String newQuery = "DROP SILENT GRAPH <" + model + ">; ";
         newQuery += "DROP SILENT GRAPH <" + model + "#HasPartGraph>; ";
         newQuery += "DROP SILENT GRAPH <" + model + "#ExportGraph>; ";
@@ -1322,6 +1334,10 @@ public class GraphManager {
                         LDHelper.rewriteResourceReference(oldResourceGraph, newResource, LDHelper.curieToProperty("prov:wasRevisionOf"), ResourceFactory.createResource(oldGraph));
 
                         NodeIterator propertyNodes = oldResourceGraph.listObjectsOfProperty(SH.property);
+                        if (Iterables.size((Iterable<?>) propertyNodes) > Integer.MAX_VALUE) {
+                            throw new RuntimeException("Too many items for iteration");
+                        }
+           
                         while (propertyNodes.hasNext()) {
                             Resource propertyShape = propertyNodes.next().asResource();
                             LDHelper.rewriteLiteral(oldResourceGraph, propertyShape, DCTerms.created, created);
@@ -1342,6 +1358,9 @@ public class GraphManager {
                                              String oldNS,
                                              String newNS) {
         NodeIterator objectList = model.listObjects();
+        if (Iterables.size((Iterable<?>) objectList) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
         while (objectList.hasNext()) {
             RDFNode objectNode = objectList.next();
             if (objectNode.isURIResource()) {
@@ -1713,6 +1732,9 @@ public class GraphManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
 
         Date modified = null;
+        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
 
         while (results.hasNext()) {
             QuerySolution soln = results.nextSolution();

@@ -20,6 +20,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.topbraid.shacl.vocabulary.SH;
 
+import com.google.common.collect.Iterables;
+
 import fi.vm.yti.datamodel.api.service.EndpointServices;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.service.ModelManager;
@@ -101,9 +103,13 @@ public class Shape extends AbstractShape {
             // Rename property UUIDs
             StmtIterator nodes = shape.listProperties(SH.property);
             List<Statement> propertyShapeList = nodes.toList();
+            Iterator<Statement> propertyIter = propertyShapeList.iterator();
+            if (Iterables.size((Iterable<?>) propertyIter) > Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
 
-            for (Iterator<Statement> i = propertyShapeList.iterator(); i.hasNext(); ) {
-                Resource propertyShape = i.next().getObject().asResource();
+            while (propertyIter.hasNext()) {
+                Resource propertyShape = propertyIter.next().getObject().asResource();
                 ResourceUtils.renameResource(propertyShape, "urn:uuid:" + UUID.randomUUID().toString());
             }
 

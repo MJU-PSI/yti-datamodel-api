@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jsonldjava.utils.JsonUtils;
+import com.google.common.collect.Iterables;
 
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.WordUtils;
@@ -196,6 +197,9 @@ public class LDHelper {
                                       Property prop) {
         Selector literalSelector = new SimpleSelector(res, prop, (Literal) null);
         Iterator<Statement> statements = model.listStatements(literalSelector).toList().iterator();
+        if (Iterables.size((Iterable<?>) statements) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
 
         while (statements.hasNext()) {
             model.remove(statements.next());
@@ -205,6 +209,9 @@ public class LDHelper {
     public static void removePredicates(Model model,
                                      Property prop) {
         ResIterator resIter = model.listResourcesWithProperty(prop);
+        if (Iterables.size((Iterable<?>) resIter) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
         while (resIter.hasNext()) {
             resIter.next().removeAll(prop);
         }
@@ -383,6 +390,9 @@ public class LDHelper {
                                            String replace) {
         StringBuilder sb = new StringBuilder();
         Iterator<UUID> orgIt = orgs.iterator();
+        if (Iterables.size((Iterable<?>) orgIt) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
         while (orgIt.hasNext()) {
             String orgID = orgIt.next().toString();
 
@@ -411,6 +421,9 @@ public class LDHelper {
                                           String wrap) {
         StringBuilder sb = new StringBuilder();
         Iterator<String> seIt = services.iterator();
+        if (Iterables.size((Iterable<?>) seIt) > Integer.MAX_VALUE) {
+            throw new RuntimeException("Too many items for iteration");
+        }
         while (seIt.hasNext()) {
             sb.append(wrap + seIt.next() + wrap);
             if (seIt.hasNext()) sb.append(sep);
