@@ -3,6 +3,8 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.service.RHPOrganizationManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
+
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;
@@ -11,8 +13,6 @@ import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
-import com.google.common.collect.Iterables;
 
 import java.util.*;
 
@@ -112,7 +112,7 @@ public abstract class AbstractModel extends AbstractResource {
             logger.warn("Expected at least 1 organization");
             throw new IllegalArgumentException("Expected at least 1 organization");
         }
-        if (Iterables.size((Iterable<?>) orgList) > Integer.MAX_VALUE) {
+        if (IteratorUtils.size(orgList) > Integer.MAX_VALUE) {
             throw new RuntimeException("Too many items for iteration");
         }
 

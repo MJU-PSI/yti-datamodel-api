@@ -21,17 +21,15 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.NodeIterator;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.Resource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
-
-import com.google.common.collect.Iterables;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -156,7 +154,7 @@ public class History {
 
                 NodeIterator uuidIter = provModel.listObjectsOfProperty(wasAttributedTo);
                 List<String> userUuids = new ArrayList<>();
-                if (Iterables.size((Iterable<?>) uuidIter) > Integer.MAX_VALUE) {
+                if (IteratorUtils.size(uuidIter) > Integer.MAX_VALUE) {
                     throw new RuntimeException("Too many items for iteration");
                 }
 

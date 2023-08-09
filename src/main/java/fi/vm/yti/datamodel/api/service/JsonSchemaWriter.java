@@ -5,6 +5,7 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -35,8 +36,6 @@ import javax.json.JsonWriterFactory;
 
 import org.apache.jena.util.SplitIRI;
 import org.springframework.stereotype.Service;
-
-import com.google.common.collect.Iterables;
 
 @Service
 public class JsonSchemaWriter {
@@ -121,7 +120,7 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -382,7 +381,7 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -423,7 +422,7 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -556,7 +555,7 @@ public class JsonSchemaWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -866,7 +865,7 @@ public class JsonSchemaWriter {
                 logger.debug("No results from model: " + modelID);
                 return null;
             }
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -962,7 +961,7 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -1041,7 +1040,7 @@ public class JsonSchemaWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 

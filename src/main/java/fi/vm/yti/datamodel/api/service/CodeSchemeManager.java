@@ -6,6 +6,7 @@ package fi.vm.yti.datamodel.api.service;
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.datatypes.xsd.XSDDateTime;
 import org.apache.jena.query.*;
@@ -14,8 +15,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.google.common.collect.Iterables;
 
 import java.util.Date;
 
@@ -66,7 +65,7 @@ public class CodeSchemeManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getSchemesSparqlAddress(), pss.asQuery());
 
         Date modified = null;
-        if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
             throw new RuntimeException("Too many items for iteration");
         }
 

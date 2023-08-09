@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.Resource;
@@ -19,8 +20,6 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.topbraid.shacl.vocabulary.SH;
-
-import com.google.common.collect.Iterables;
 
 import fi.vm.yti.datamodel.api.service.EndpointServices;
 import fi.vm.yti.datamodel.api.service.GraphManager;
@@ -104,7 +103,7 @@ public class Shape extends AbstractShape {
             StmtIterator nodes = shape.listProperties(SH.property);
             List<Statement> propertyShapeList = nodes.toList();
             Iterator<Statement> propertyIter = propertyShapeList.iterator();
-            if (Iterables.size((Iterable<?>) propertyIter) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(propertyIter) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 

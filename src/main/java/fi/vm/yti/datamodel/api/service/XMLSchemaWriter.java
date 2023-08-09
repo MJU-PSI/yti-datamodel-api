@@ -6,6 +6,7 @@ package fi.vm.yti.datamodel.api.service;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 import fi.vm.yti.datamodel.api.utils.XMLSchemaBuilder;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.jena.query.*;
 import org.apache.jena.sparql.resultset.ResultSetPeekable;
@@ -19,8 +20,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.w3c.dom.Element;
-
-import com.google.common.collect.Iterables;
 
 @Service
 public class XMLSchemaWriter {
@@ -116,7 +115,7 @@ public class XMLSchemaWriter {
                 logger.debug("Resource results is null");
                 return null;
             }
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -239,7 +238,7 @@ public class XMLSchemaWriter {
                 logger.info("No model found:" + modelID);
                 return null;
             }
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 

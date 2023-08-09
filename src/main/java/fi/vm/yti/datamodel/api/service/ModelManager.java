@@ -17,6 +17,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.graph.Graph;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -151,7 +152,7 @@ public class ModelManager {
                     } else {
                         // If object is Anon such as sh:constraint
                         StmtIterator anonIterator = removeStatement.getObject().asResource().listProperties();
-                        if (Iterables.size((Iterable<?>) anonIterator) > Integer.MAX_VALUE) {
+                        if (IteratorUtils.size(anonIterator) > Integer.MAX_VALUE) {
                             throw new RuntimeException("Too many items for iteration");
                         }
                         while (anonIterator.hasNext()) {

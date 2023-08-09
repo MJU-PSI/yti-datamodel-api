@@ -12,8 +12,6 @@ import java.util.Iterator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.google.common.collect.Iterables;
-
 import javax.json.Json;
 import javax.json.JsonArray;
 import javax.json.JsonArrayBuilder;
@@ -26,6 +24,7 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
@@ -265,7 +264,7 @@ public class OPHCodeServer {
             jsonReader.close();
 
             Iterator<JsonValue> codeIterator = codeListArray.iterator();
-            if (Iterables.size((Iterable<?>) codeIterator) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(codeIterator) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
     

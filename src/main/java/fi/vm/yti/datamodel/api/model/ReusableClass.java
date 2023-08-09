@@ -3,6 +3,7 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.*;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.*;
@@ -15,8 +16,6 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.topbraid.shacl.vocabulary.SH;
-
-import com.google.common.collect.Iterables;
 
 import java.util.Iterator;
 import java.util.List;
@@ -144,7 +143,7 @@ public class ReusableClass extends AbstractClass {
         StmtIterator nodes = relatedClass.listProperties(SH.property);
         List<Statement> propertyShapeList = nodes.toList();
         Iterator<Statement> propertyIter = propertyShapeList.iterator();
-        if (Iterables.size((Iterable<?>) propertyIter) > Integer.MAX_VALUE) {
+        if (IteratorUtils.size(propertyIter) > Integer.MAX_VALUE) {
             throw new RuntimeException("Too many items for iteration");
         }
 

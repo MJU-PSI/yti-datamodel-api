@@ -21,6 +21,7 @@ import javax.json.JsonObjectBuilder;
 import javax.json.JsonWriter;
 import javax.json.JsonWriterFactory;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -37,8 +38,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.MultiValueMap;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
-
-import com.google.common.collect.Iterables;
 
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
@@ -161,7 +160,7 @@ public class OpenAPIWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -253,7 +252,7 @@ public class OpenAPIWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (Iterables.size((Iterable<?>) pResults) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -749,7 +748,7 @@ public class OpenAPIWriter {
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(endpointServices.getCoreSparqlAddress(), pss.toString())) {
 
             ResultSet results = qexec.execSelect();
-            if (Iterables.size((Iterable<?>) results) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
             if (!results.hasNext()) {

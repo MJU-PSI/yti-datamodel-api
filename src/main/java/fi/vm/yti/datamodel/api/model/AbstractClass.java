@@ -3,6 +3,7 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;
@@ -11,8 +12,6 @@ import org.apache.jena.vocabulary.RDFS;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.topbraid.shacl.vocabulary.SH;
-
-import com.google.common.collect.Iterables;
 
 import java.util.List;
 import java.util.Map;
@@ -55,7 +54,7 @@ public abstract class AbstractClass extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
-            if (Iterables.size((Iterable<?>) props) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(props) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
@@ -91,7 +90,7 @@ public abstract class AbstractClass extends AbstractResource {
             if (!subjects.hasNext()) {
                 throw new IllegalArgumentException("Expected at least 1 typed resource");
             }
-            if (Iterables.size((Iterable<?>) subjects) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(subjects) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
     

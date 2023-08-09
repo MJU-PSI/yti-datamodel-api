@@ -15,6 +15,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
+import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
 import org.apache.jena.query.DatasetAccessor;
@@ -190,7 +191,7 @@ public class Models {
 
         if (!user.isSuperuser()) {
             ResIterator rem = modelList.listSubjectsWithProperty(status, "INCOMPLETE");
-            if (Iterables.size((Iterable<?>) rem) > Integer.MAX_VALUE) {
+            if (IteratorUtils.size(rem) > Integer.MAX_VALUE) {
                 throw new RuntimeException("Too many items for iteration");
             }
 
