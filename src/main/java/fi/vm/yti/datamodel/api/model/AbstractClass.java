@@ -3,7 +3,6 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;
@@ -54,11 +53,11 @@ public abstract class AbstractClass extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
-            if (IteratorUtils.size(props) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (props.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 logger.info(props.next().getPredicate().getURI());
             }
 
@@ -90,13 +89,13 @@ public abstract class AbstractClass extends AbstractResource {
             if (!subjects.hasNext()) {
                 throw new IllegalArgumentException("Expected at least 1 typed resource");
             }
-            if (IteratorUtils.size(subjects) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
     
             Resource classResource = null;
-
+            int i = 0;
             while (subjects.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 Resource res = subjects.next();
                 if (res.hasProperty(RDF.type, RDFS.Class) || res.hasProperty(RDF.type, SH.NodeShape)) {
                     if (classResource != null) {

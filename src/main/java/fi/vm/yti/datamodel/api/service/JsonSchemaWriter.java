@@ -5,7 +5,6 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -120,12 +119,12 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
 
                 if (soln.contains("description")) {
@@ -381,11 +380,12 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.next();
                 if (soln.contains("value")) {
                     builder.add(soln.getLiteral("value").getString());
@@ -422,11 +422,12 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.next();
                 if (soln.contains("value")) {
                     builder.add(soln.getLiteral("value").getString());
@@ -555,9 +556,6 @@ public class JsonSchemaWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             JsonObjectBuilder definitions = Json.createObjectBuilder();
             JsonObjectBuilder properties = Json.createObjectBuilder();
@@ -577,7 +575,11 @@ public class JsonSchemaWriter {
             String predicateID = null;
             String className;
 
+            int i = 0;
             while (pResults.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = pResults.nextSolution();
 
                 if (!soln.contains("className")) {
@@ -750,10 +752,10 @@ public class JsonSchemaWriter {
 
                             if (!exampleSet.isEmpty()) {
 
-                                Iterator<String> i = exampleSet.iterator();
+                                Iterator<String> iter = exampleSet.iterator();
 
-                                while (i.hasNext()) {
-                                    String ex = i.next();
+                                while (iter.hasNext()) {
+                                    String ex = iter.next();
                                     exampleList.add(ex);
                                 }
 
@@ -865,12 +867,12 @@ public class JsonSchemaWriter {
                 logger.debug("No results from model: " + modelID);
                 return null;
             }
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
                 String title = soln.getLiteral("label").getString();
 
@@ -961,14 +963,15 @@ public class JsonSchemaWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             JsonObjectBuilder titleObject = Json.createObjectBuilder();
             JsonObjectBuilder descriptionObject = null;
 
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
                 String lang = soln.getLiteral("lang").getString();
                 String title = soln.getLiteral("title").getString();
@@ -1040,9 +1043,6 @@ public class JsonSchemaWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             JsonObjectBuilder definitions = Json.createObjectBuilder();
 
@@ -1057,8 +1057,11 @@ public class JsonSchemaWriter {
             JsonObjectBuilder propertyTitleObject = Json.createObjectBuilder();
             JsonObjectBuilder propertyDescriptionObject = Json.createObjectBuilder();
 
+            int i = 0;
             while (pResults.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = pResults.nextSolution();
 
                 if (!soln.contains("className")) return null;

@@ -6,7 +6,6 @@ package fi.vm.yti.datamodel.api.service;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 import fi.vm.yti.datamodel.api.utils.XMLSchemaBuilder;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.apache.jena.query.*;
 import org.apache.jena.sparql.resultset.ResultSetPeekable;
@@ -115,14 +114,14 @@ public class XMLSchemaWriter {
                 logger.debug("Resource results is null");
                 return null;
             }
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             Map<String, LocalizedData> localizedData = new HashMap<>();
 
+            int i = 0;
             while (results.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
 
                 String labelLanguage = soln.getLiteral("label").getLanguage();
@@ -238,12 +237,13 @@ public class XMLSchemaWriter {
                 logger.info("No model found:" + modelID);
                 return null;
             }
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             Map<String, LocalizedData> dataModelLocalizedData = new HashMap<>();
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
                 String language = soln.getLiteral("label").getLanguage();
                 dataModelLocalizedData.put(language, getLocalizedData(dataModelLocalizedData, soln, language, "label"));

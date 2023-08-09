@@ -3,7 +3,6 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.*;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;
@@ -56,11 +55,11 @@ public abstract class AbstractShape extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
-            if (IteratorUtils.size(props) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (props.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 logger.info(props.next().getPredicate().getURI());
             }
 

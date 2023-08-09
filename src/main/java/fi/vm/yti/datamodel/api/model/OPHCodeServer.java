@@ -24,7 +24,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
@@ -264,12 +263,11 @@ public class OPHCodeServer {
             jsonReader.close();
 
             Iterator<JsonValue> codeIterator = codeListArray.iterator();
-            if (IteratorUtils.size(codeIterator) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-    
+            int i = 0;
             while (codeIterator.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 JsonObject codeObj = (JsonObject) codeIterator.next();
                 Resource codeRes = model.createResource(codeObj.getString("resourceUri"));
                 codeRes.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCode"));

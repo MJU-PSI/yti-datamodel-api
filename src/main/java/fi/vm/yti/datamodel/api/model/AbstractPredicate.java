@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -55,11 +54,11 @@ public abstract class AbstractPredicate extends AbstractResource {
             }
 
             StmtIterator props = abstractResource.listProperties();
-            if (IteratorUtils.size(props) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (props.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 logger.info(props.next().getPredicate().getURI());
             }
 
@@ -90,13 +89,13 @@ public abstract class AbstractPredicate extends AbstractResource {
             if (!subjects.hasNext()) {
                 throw new IllegalArgumentException("Expected at least 1 typed resource");
             }
-            if (IteratorUtils.size(subjects) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
     
             Resource predicateResource = null;
-
+            int i = 0;
             while (subjects.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 Resource res = subjects.next();
                 if (res.hasProperty(RDF.type, OWL.ObjectProperty) || res.hasProperty(RDF.type, OWL.DatatypeProperty) || res.hasProperty(RDF.type, OWL.AnnotationProperty)) {
                     if (predicateResource != null) {

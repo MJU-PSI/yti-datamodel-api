@@ -21,7 +21,6 @@ import javax.json.JsonObjectBuilder;
 import javax.json.JsonWriter;
 import javax.json.JsonWriterFactory;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.query.QueryExecution;
 import org.apache.jena.query.QueryExecutionFactory;
@@ -160,11 +159,12 @@ public class OpenAPIWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.next();
                 if (soln.contains("value")) {
                     builder.add(soln.getLiteral("value").getString());
@@ -252,9 +252,6 @@ public class OpenAPIWriter {
             if (!pResults.hasNext()) {
                 return null;
             }
-            if (IteratorUtils.size(pResults) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
             JsonObjectBuilder paths = Json.createObjectBuilder();
             JsonArrayBuilder tags = Json.createArrayBuilder();
@@ -276,7 +273,11 @@ public class OpenAPIWriter {
             String predicateID = null;
             String className = null;
 
+            int i = 0;
             while (pResults.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = pResults.nextSolution();
 
                 if (!soln.contains("className")) {
@@ -445,10 +446,10 @@ public class OpenAPIWriter {
 
                             if (!exampleSet.isEmpty()) {
 
-                                Iterator<String> i = exampleSet.iterator();
+                                Iterator<String> iter = exampleSet.iterator();
 
-                                while (i.hasNext()) {
-                                    String ex = i.next();
+                                while (iter.hasNext()) {
+                                    String ex = iter.next();
                                     exampleList.add(ex);
                                 }
 
@@ -524,12 +525,12 @@ public class OpenAPIWriter {
 
                             tags.add(tagObject.build());
 
-                            Iterator<String> i = pathSet.iterator();
+                            Iterator<String> iter = pathSet.iterator();
 
-                            while (i.hasNext()) {
+                            while (iter.hasNext()) {
 
                                 JsonArrayBuilder paramList = Json.createArrayBuilder();
-                                String pathString = i.next();
+                                String pathString = iter.next();
                                 if (!pathString.startsWith("/")) pathString = "/" + pathString;
                                 JsonObjectBuilder pathObject = Json.createObjectBuilder();
 
@@ -748,16 +749,16 @@ public class OpenAPIWriter {
         try (QueryExecution qexec = QueryExecutionFactory.sparqlService(endpointServices.getCoreSparqlAddress(), pss.toString())) {
 
             ResultSet results = qexec.execSelect();
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
             if (!results.hasNext()) {
                 logger.debug("No results from model: " + modelID);
                 return null;
             }
 
+            int i = 0;
             while (results.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
                 String title = soln.getLiteral("label").getString();
 

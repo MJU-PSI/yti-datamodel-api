@@ -3,7 +3,6 @@ package fi.vm.yti.datamodel.api.model;
 import fi.vm.yti.datamodel.api.service.*;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.*;
@@ -143,11 +142,11 @@ public class ReusableClass extends AbstractClass {
         StmtIterator nodes = relatedClass.listProperties(SH.property);
         List<Statement> propertyShapeList = nodes.toList();
         Iterator<Statement> propertyIter = propertyShapeList.iterator();
-        if (IteratorUtils.size(propertyIter) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
-
+        int i = 0;
         while (propertyIter.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             Resource propertyShape = propertyIter.next().getObject().asResource();
             ResourceUtils.renameResource(propertyShape, "urn:uuid:" + UUID.randomUUID().toString());
         }

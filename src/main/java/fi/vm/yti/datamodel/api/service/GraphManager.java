@@ -8,7 +8,6 @@ import fi.vm.yti.datamodel.api.model.AbstractModel;
 import fi.vm.yti.datamodel.api.model.AbstractResource;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.datatypes.xsd.XSDDateTime;
@@ -637,11 +636,11 @@ public class GraphManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
 
         String graphUri = null;
-        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
-
+        int i = 0;
         while (results.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             QuerySolution soln = results.nextSolution();
             if (soln.contains("graph")) {
                 Resource resType = soln.getResource("graph");
@@ -679,11 +678,12 @@ public class GraphManager {
         pss.setIri("resource", resource);
 
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
-        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
 
+        int i = 0;
         while (results.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             QuerySolution soln = results.nextSolution();
             if (!soln.contains("prefix") || !soln.contains("namespace")) {
                 throw new IllegalArgumentException("No model found for " + resource);
@@ -727,16 +727,17 @@ public class GraphManager {
         pss.setCommandText(selectResources);
 
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
-        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
 
         String newQuery = "DROP SILENT GRAPH <" + model + ">; ";
         newQuery += "DROP SILENT GRAPH <" + model + "#HasPartGraph>; ";
         newQuery += "DROP SILENT GRAPH <" + model + "#ExportGraph>; ";
         newQuery += "DROP SILENT GRAPH <" + model + "#PositionGraph>; ";
 
+        int i = 0;
         while (results.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             QuerySolution soln = results.nextSolution();
             newQuery += "DROP SILENT GRAPH <" + soln.getResource("graph").toString() + ">; ";
         }
@@ -1334,11 +1335,12 @@ public class GraphManager {
                         LDHelper.rewriteResourceReference(oldResourceGraph, newResource, LDHelper.curieToProperty("prov:wasRevisionOf"), ResourceFactory.createResource(oldGraph));
 
                         NodeIterator propertyNodes = oldResourceGraph.listObjectsOfProperty(SH.property);
-                        if (IteratorUtils.size(propertyNodes) > Integer.MAX_VALUE) {
-                            throw new RuntimeException("Too many items for iteration");
-                        }
            
+                        int i = 0;
                         while (propertyNodes.hasNext()) {
+                            if (++i == Integer.MAX_VALUE) {
+                                throw new RuntimeException("Too many items for iteration");
+                            }
                             Resource propertyShape = propertyNodes.next().asResource();
                             LDHelper.rewriteLiteral(oldResourceGraph, propertyShape, DCTerms.created, created);
                             ResourceUtils.renameResource(propertyShape, "urn:uuid:" + UUID.randomUUID().toString());
@@ -1358,10 +1360,12 @@ public class GraphManager {
                                              String oldNS,
                                              String newNS) {
         NodeIterator objectList = model.listObjects();
-        if (IteratorUtils.size(objectList) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
+
+        int i = 0;
         while (objectList.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             RDFNode objectNode = objectList.next();
             if (objectNode.isURIResource()) {
                 Resource objectResource = objectNode.asResource();
@@ -1732,11 +1736,11 @@ public class GraphManager {
         ResultSet results = jenaClient.selectQuery(endpointServices.getCoreSparqlAddress(), pss.asQuery());
 
         Date modified = null;
-        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
-
+        int i = 0;
         while (results.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             QuerySolution soln = results.nextSolution();
             if (soln.contains("date")) {
                 Literal liteDate = soln.getLiteral("date");

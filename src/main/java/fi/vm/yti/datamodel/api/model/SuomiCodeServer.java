@@ -21,7 +21,6 @@ import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.datatypes.xsd.XSDDatatype;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -228,12 +227,11 @@ public class SuomiCodeServer {
 
             JsonArray codeSchemeArr = codeListResponse.getJsonArray("results");
             Iterator<JsonValue> codeIterator = codeSchemeArr.iterator();
-            if (IteratorUtils.size(codeIterator) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (codeIterator.hasNext()) {
-
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 JsonObject codeObj = (JsonObject) codeIterator.next();
                 String codeURI = codeObj.getString("uri");
 

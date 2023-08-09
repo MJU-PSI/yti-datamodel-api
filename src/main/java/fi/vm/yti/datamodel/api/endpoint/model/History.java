@@ -21,7 +21,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
 import org.apache.jena.query.ParameterizedSparqlString;
@@ -154,11 +153,11 @@ public class History {
 
                 NodeIterator uuidIter = provModel.listObjectsOfProperty(wasAttributedTo);
                 List<String> userUuids = new ArrayList<>();
-                if (IteratorUtils.size(uuidIter) > Integer.MAX_VALUE) {
-                    throw new RuntimeException("Too many items for iteration");
-                }
-
+                int i = 0;
                 while (uuidIter.hasNext()) {
+                    if (++i == Integer.MAX_VALUE) {
+                        throw new RuntimeException("Too many items for iteration");
+                    }
                     String userUuid = uuidIter.next().asResource().getURI().replace("urn:uuid:", "");
                     userUuids.add(userUuid);
                 }

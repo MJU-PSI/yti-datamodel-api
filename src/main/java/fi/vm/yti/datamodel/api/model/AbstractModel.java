@@ -4,7 +4,6 @@ import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.datamodel.api.service.RHPOrganizationManager;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.vocabulary.DCTerms;
@@ -112,11 +111,12 @@ public abstract class AbstractModel extends AbstractResource {
             logger.warn("Expected at least 1 organization");
             throw new IllegalArgumentException("Expected at least 1 organization");
         }
-        if (IteratorUtils.size(orgList) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
 
+        int i = 0;
         while (orgList.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             RDFNode orgRes = orgList.next();
             if (!orgModel.containsResource(orgRes)) {
                 logger.warn("Organization does not exists!");

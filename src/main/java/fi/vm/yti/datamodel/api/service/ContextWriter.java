@@ -5,7 +5,6 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.query.*;
 import org.apache.jena.vocabulary.RDFS;
 import org.springframework.stereotype.Service;
@@ -81,11 +80,12 @@ public class ContextWriter {
             ResultSet results = qexec.execSelect();
 
             if (!results.hasNext()) return null;
-            if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
 
+            int i = 0;
             while (results.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 QuerySolution soln = results.nextSolution();
                 String resourceURI = soln.contains("targetClass") ? soln.getResource("targetClass").toString() : soln.getResource("resource").toString();
                 String resourceName = soln.getLiteral("resourceName").toString();
@@ -163,11 +163,12 @@ public class ContextWriter {
         ResultSet results = qexec.execSelect();
 
         if (!results.hasNext()) return null;
-        if (IteratorUtils.size(results) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
 
+        int i = 0;
         while (results.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             QuerySolution soln = results.nextSolution();
             String resourceURI = soln.getResource("resource").toString();
             String resourceName = soln.getLiteral("resourceName").toString();

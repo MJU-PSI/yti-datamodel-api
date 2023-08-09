@@ -15,7 +15,6 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
 import org.apache.jena.query.DatasetAccessor;
@@ -34,7 +33,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.google.common.collect.Iterables;
 
 import fi.vm.yti.datamodel.api.index.SearchIndexManager;
 import fi.vm.yti.datamodel.api.model.DataModel;
@@ -191,11 +189,11 @@ public class Models {
 
         if (!user.isSuperuser()) {
             ResIterator rem = modelList.listSubjectsWithProperty(status, "INCOMPLETE");
-            if (IteratorUtils.size(rem) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (rem.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 Resource modelResource = rem.nextResource();
                 if (user.isAnonymous()) {
                     modelList = modelList.remove(modelResource.listProperties());

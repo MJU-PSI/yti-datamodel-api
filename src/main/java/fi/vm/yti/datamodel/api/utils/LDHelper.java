@@ -5,7 +5,6 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.jsonldjava.utils.JsonUtils;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.text.WordUtils;
 import org.apache.jena.iri.IRI;
@@ -197,11 +196,12 @@ public class LDHelper {
                                       Property prop) {
         Selector literalSelector = new SimpleSelector(res, prop, (Literal) null);
         Iterator<Statement> statements = model.listStatements(literalSelector).toList().iterator();
-        if (IteratorUtils.size(statements) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
 
+        int i = 0;
         while (statements.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             model.remove(statements.next());
         }
     }
@@ -209,10 +209,11 @@ public class LDHelper {
     public static void removePredicates(Model model,
                                      Property prop) {
         ResIterator resIter = model.listResourcesWithProperty(prop);
-        if (IteratorUtils.size(resIter) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
+        int i = 0;
         while (resIter.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             resIter.next().removeAll(prop);
         }
     }
@@ -390,10 +391,12 @@ public class LDHelper {
                                            String replace) {
         StringBuilder sb = new StringBuilder();
         Iterator<UUID> orgIt = orgs.iterator();
-        if (IteratorUtils.size(orgIt) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
+
+        int i = 0;
         while (orgIt.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             String orgID = orgIt.next().toString();
 
             sb.append(replace.replaceAll("@this", orgID));
@@ -421,10 +424,12 @@ public class LDHelper {
                                           String wrap) {
         StringBuilder sb = new StringBuilder();
         Iterator<String> seIt = services.iterator();
-        if (IteratorUtils.size(seIt) > Integer.MAX_VALUE) {
-            throw new RuntimeException("Too many items for iteration");
-        }
+
+        int i = 0;
         while (seIt.hasNext()) {
+            if (++i == Integer.MAX_VALUE) {
+                throw new RuntimeException("Too many items for iteration");
+            }
             sb.append(wrap + seIt.next() + wrap);
             if (seIt.hasNext()) sb.append(sep);
         }

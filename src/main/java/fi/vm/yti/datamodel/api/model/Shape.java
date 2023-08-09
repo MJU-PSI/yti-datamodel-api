@@ -4,7 +4,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
-import org.apache.commons.collections4.IteratorUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.Resource;
@@ -103,11 +102,11 @@ public class Shape extends AbstractShape {
             StmtIterator nodes = shape.listProperties(SH.property);
             List<Statement> propertyShapeList = nodes.toList();
             Iterator<Statement> propertyIter = propertyShapeList.iterator();
-            if (IteratorUtils.size(propertyIter) > Integer.MAX_VALUE) {
-                throw new RuntimeException("Too many items for iteration");
-            }
-
+            int i = 0;
             while (propertyIter.hasNext()) {
+                if (++i == Integer.MAX_VALUE) {
+                    throw new RuntimeException("Too many items for iteration");
+                }
                 Resource propertyShape = propertyIter.next().getObject().asResource();
                 ResourceUtils.renameResource(propertyShape, "urn:uuid:" + UUID.randomUUID().toString());
             }
