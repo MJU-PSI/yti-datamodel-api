@@ -9,13 +9,13 @@ endpointPassword=admin
 provenance=true
 defaultGroupManagementAPI=https://rhp.dev.yti.cloud.dvv.fi/public-api/
 privateGroupManagementAPI=https://rhp.dev.yti.cloud.dvv.fi/private-api/
-defaultSuomiCodeServerAPI=https://koodistot.dev.yti.cloud.dvv.fi/codelist-api/api/
+defaultLocalCodeServerAPI=https://koodistot.dev.yti.cloud.dvv.fi/codelist-api/api/
 defaultTerminologyAPI=https://sanastot.dev.yti.cloud.dvv.fi/terminology-api/api/
 privateTerminologyAPI=https://sanastot.dev.yti.cloud.dvv.fi/terminology-api/private/
 publicGroupManagementAPI=https://rhp.dev.yti.cloud.dvv.fi
 
 publicGroupManagementFrontend=https://rhp.dev.yti.cloud.dvv.fi
-publicSuomiCodeServerFrontend=https://koodistot.dev.yti.cloud.dvv.fi
+publicLocalCodeServerFrontend=https://koodistot.dev.yti.cloud.dvv.fi
 publicTerminologyFrontend=https://sanastot.dev.yti.cloud.dvv.fi
 messagingEnabled=false
 

@@ -34,13 +34,14 @@ import org.apache.jena.web.DatasetGraphAccessorHTTP;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import fi.vm.yti.datamodel.api.config.UriProperties;
 import fi.vm.yti.datamodel.api.service.CodeSchemeManager;
 import fi.vm.yti.datamodel.api.service.EndpointServices;
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-public class SuomiCodeServer {
+public class LocalCodeServer {
 
-    static final private Logger logger = LoggerFactory.getLogger(SuomiCodeServer.class.getName());
+    static final private Logger logger = LoggerFactory.getLogger(LocalCodeServer.class.getName());
 
     static private Property name = ResourceFactory.createProperty("http://purl.org/dc/terms/", "title");
     static private Property description = ResourceFactory.createProperty("http://purl.org/dc/terms/", "description");
@@ -48,7 +49,7 @@ public class SuomiCodeServer {
     static private Property isPartOf = ResourceFactory.createProperty("http://purl.org/dc/terms/", "isPartOf");
     static private Property id = ResourceFactory.createProperty("http://purl.org/dc/terms/", "identifier");
     static private Property creator = ResourceFactory.createProperty("http://purl.org/dc/terms/", "creator");
-    static private Property status = ResourceFactory.createProperty("http://uri.suomi.fi/datamodel/ns/iow#", "status");
+    static private Property status;
 
     private final EndpointServices endpointServices;
     private String uri;
@@ -56,27 +57,36 @@ public class SuomiCodeServer {
     private DatasetGraphAccessorHTTP accessor;
     private DatasetAdapter adapter;
     private CodeSchemeManager codeSchemeManager;
+    private UriProperties uriProperties;
     private SimpleDateFormat fmt = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
     private DateTimeFormatter dfmt = DateTimeFormatter.ofPattern("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
 
-    public SuomiCodeServer(EndpointServices endpointServices,
-                           CodeSchemeManager codeSchemeManager) {
+    public LocalCodeServer(EndpointServices endpointServices,
+                           CodeSchemeManager codeSchemeManager,
+                           UriProperties uriProperties) {
         this.accessor = new DatasetGraphAccessorHTTP(endpointServices.getSchemesReadWriteAddress());
         this.adapter = new DatasetAdapter(accessor);
         this.endpointServices = endpointServices;
         this.codeSchemeManager = codeSchemeManager;
+        this.uriProperties = uriProperties;
+
+        status = ResourceFactory.createProperty("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#", "status");
     }
 
-    public SuomiCodeServer(String uri,
+    public LocalCodeServer(String uri,
                            String url,
                            EndpointServices endpointServices,
-                           CodeSchemeManager codeSchemeManager) {
+                           CodeSchemeManager codeSchemeManager,
+                           UriProperties uriProperties) {
         this.accessor = new DatasetGraphAccessorHTTP(endpointServices.getSchemesReadWriteAddress());
         this.adapter = new DatasetAdapter(accessor);
         this.endpointServices = endpointServices;
         this.uri = uri;
         this.url = url;
         this.codeSchemeManager = codeSchemeManager;
+        this.uriProperties = uriProperties;
+
+        status = ResourceFactory.createProperty("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#", "status");
     }
 
     public static void addLangLiteral(Resource res,
@@ -99,7 +109,7 @@ public class SuomiCodeServer {
 
         Model model = ModelFactory.createDefaultModel();
         model.setNsPrefix("dcterms", "http://purl.org/dc/terms/");
-        model.setNsPrefix("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
+        model.setNsPrefix("iow", "http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#");
 
         Client client = ClientBuilder.newClient();
 
@@ -143,7 +153,7 @@ public class SuomiCodeServer {
                     addLangLiteral(group, registryDescription, description);
                 }
 
-                group.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeGroup"));
+                group.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeGroup"));
 
                 WebTarget schemeTarget = client.target(groupUrl + "/codeschemes/").queryParam("format", "application/json");
                 Response schemeResponse = schemeTarget.request("application/json").get();
@@ -170,7 +180,7 @@ public class SuomiCodeServer {
                         }
 
                         Resource valueScheme = model.createResource(codeListUri);
-                        valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeScheme"));
+                        valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeScheme"));
 
                         valueScheme.addProperty(isPartOf, group);
 
@@ -209,7 +219,7 @@ public class SuomiCodeServer {
                                          String codeSchemeModified) {
         Model model = ModelFactory.createDefaultModel();
         model.setNsPrefix("dcterms", "http://purl.org/dc/terms/");
-        model.setNsPrefix("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
+        model.setNsPrefix("iow", "http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#");
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url + "v1/integration/resources").queryParam("includeIncomplete", "true").queryParam("container", containerUri).queryParam("format", "application/json");
@@ -218,7 +228,7 @@ public class SuomiCodeServer {
         if (response.getStatusInfo().getFamily() == Response.Status.Family.SUCCESSFUL) {
 
             Resource valueScheme = model.createResource(containerUri);
-            valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeScheme"));
+            valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeScheme"));
             valueScheme.addLiteral(modified, ResourceFactory.createTypedLiteral(codeSchemeModified, XSDDatatype.XSDdateTime));
 
             JsonReader jsonReader = Json.createReader(response.readEntity(InputStream.class));
@@ -242,7 +252,7 @@ public class SuomiCodeServer {
 
                 Resource codeRes = model.createResource(codeURI);
 
-                codeRes.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCode"));
+                codeRes.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCode"));
                 codeRes.addLiteral(id, ResourceFactory.createPlainLiteral(codeObj.getString("localName")));
 
                 JsonObject codeName = codeObj.getJsonObject("prefLabel");

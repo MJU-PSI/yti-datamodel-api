@@ -5,72 +5,81 @@ package fi.vm.yti.datamodel.api.utils;
 
 import java.util.LinkedHashMap;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import fi.vm.yti.datamodel.api.config.UriProperties;
+
 /**
  * @author jkesanie
  */
+@Service
 public class Frames {
 
-    public static final LinkedHashMap<String, Object> jsonLdKeys;
-    public static final LinkedHashMap<String, Object> inScheme;
-    public static final LinkedHashMap<String, Object> isDefinedBy;
-    public static final LinkedHashMap<String, Object> label;
-    public static final LinkedHashMap<String, Object> name;
-    public static final LinkedHashMap<String, Object> title;
-    public static final LinkedHashMap<String, Object> modified;
-    public static final LinkedHashMap<String, Object> created;
-    public static final LinkedHashMap<String, Object> contentModified;
-    public static final LinkedHashMap<String, Object> statusModified;
-    public static final LinkedHashMap<String, Object> contributor;
-    public static final LinkedHashMap<String, Object> isPartOf;
-    public static final LinkedHashMap<String, Object> contributorID;
-    public static final LinkedHashMap<String, Object> isPartOfID;
-    public static final LinkedHashMap<String, Object> comment;
-    public static final LinkedHashMap<String, Object> range;
-    public static final LinkedHashMap<String, Object> prefLabel;
-    public static final LinkedHashMap<String, Object> subject;
-    public static final LinkedHashMap<String, Object> description;
-    public static final LinkedHashMap<String, Object> preferredXMLNamespaceName;
-    public static final LinkedHashMap<String, Object> preferredXMLNamespacePrefix;
-    public static final LinkedHashMap<String, Object> shDescription;
-    public static final LinkedHashMap<String, Object> path;
-    public static final LinkedHashMap<String, Object> property;
-    public static final LinkedHashMap<String, Object> versionInfo;
-    public static final LinkedHashMap<String, Object> useContext;
-    public static final LinkedHashMap<String, Object> coreContext;
-    public static final LinkedHashMap<String, Object> vocabularyContext;
-    public static final LinkedHashMap<String, Object> conceptContext;
-    public static final LinkedHashMap<String, Object> classificationContext;
-    public static final LinkedHashMap<String, Object> organizationContext;
-    public static final LinkedHashMap<String, Object> referenceDataServerContext;
-    public static final LinkedHashMap<String, Object> referenceDataContext;
-    public static final LinkedHashMap<String, Object> referenceDataCodeContext;
-    public static final LinkedHashMap<String, Object> predicateContext;
-    public static final LinkedHashMap<String, Object> propertyContext;
-    public static final LinkedHashMap<String, Object> namespaceContext;
-    public static final LinkedHashMap<String, Object> classContext;
-    public static final LinkedHashMap<String, Object> esClassContext;
-    public static final LinkedHashMap<String, Object> esModelContext;
-    public static final LinkedHashMap<String, Object> esPredicateContext;
-    public static final LinkedHashMap<String, Object> modelContext;
-    public static final LinkedHashMap<String, Object> modelPositionContext;
-    public static final LinkedHashMap<String, Object> conceptFrame;
-    public static final LinkedHashMap<String, Object> esClassFrame;
-    public static final LinkedHashMap<String, Object> esModelFrame;
-    public static final LinkedHashMap<String, Object> esPredicateFrame;
-    public static final LinkedHashMap<String, Object> origClassContext;
-    public static final LinkedHashMap<String, Object> origClassFrame;
-    public static final LinkedHashMap<String, Object> libraryType;
-    public static final LinkedHashMap<String, Object> profileType;
-    public static final LinkedHashMap<String, Object> externalClassType;
-    public static final LinkedHashMap<String, Object> classType;
-    public static final LinkedHashMap<String, Object> shapeType;
-    public static final LinkedHashMap<String, Object> attributeType;
-    public static final LinkedHashMap<String, Object> associationType;
-    public static final LinkedHashMap<String, Object> annotationType;
-    public static final LinkedHashMap<String, Object> languageSet;
-    public static final LinkedHashMap<String, Object> value;
+    public LinkedHashMap<String, Object> jsonLdKeys;
+    public LinkedHashMap<String, Object> inScheme;
+    public LinkedHashMap<String, Object> isDefinedBy;
+    public LinkedHashMap<String, Object> label;
+    public LinkedHashMap<String, Object> name;
+    public LinkedHashMap<String, Object> title;
+    public LinkedHashMap<String, Object> modified;
+    public LinkedHashMap<String, Object> created;
+    public LinkedHashMap<String, Object> contentModified;
+    public LinkedHashMap<String, Object> statusModified;
+    public LinkedHashMap<String, Object> contributor;
+    public LinkedHashMap<String, Object> isPartOf;
+    public LinkedHashMap<String, Object> contributorID;
+    public LinkedHashMap<String, Object> isPartOfID;
+    public LinkedHashMap<String, Object> comment;
+    public LinkedHashMap<String, Object> range;
+    public LinkedHashMap<String, Object> prefLabel;
+    public LinkedHashMap<String, Object> subject;
+    public LinkedHashMap<String, Object> description;
+    public LinkedHashMap<String, Object> preferredXMLNamespaceName;
+    public LinkedHashMap<String, Object> preferredXMLNamespacePrefix;
+    public LinkedHashMap<String, Object> shDescription;
+    public LinkedHashMap<String, Object> path;
+    public LinkedHashMap<String, Object> property;
+    public LinkedHashMap<String, Object> versionInfo;
+    public LinkedHashMap<String, Object> useContext;
+    public LinkedHashMap<String, Object> coreContext;
+    public LinkedHashMap<String, Object> vocabularyContext;
+    public LinkedHashMap<String, Object> conceptContext;
+    public LinkedHashMap<String, Object> classificationContext;
+    public LinkedHashMap<String, Object> organizationContext;
+    public LinkedHashMap<String, Object> referenceDataServerContext;
+    public LinkedHashMap<String, Object> referenceDataContext;
+    public LinkedHashMap<String, Object> referenceDataCodeContext;
+    public LinkedHashMap<String, Object> predicateContext;
+    public LinkedHashMap<String, Object> propertyContext;
+    public LinkedHashMap<String, Object> namespaceContext;
+    public LinkedHashMap<String, Object> classContext;
+    public LinkedHashMap<String, Object> esClassContext;
+    public LinkedHashMap<String, Object> esModelContext;
+    public LinkedHashMap<String, Object> esPredicateContext;
+    public LinkedHashMap<String, Object> modelContext;
+    public LinkedHashMap<String, Object> modelPositionContext;
+    public LinkedHashMap<String, Object> conceptFrame;
+    public LinkedHashMap<String, Object> esClassFrame;
+    public LinkedHashMap<String, Object> esModelFrame;
+    public LinkedHashMap<String, Object> esPredicateFrame;
+    public LinkedHashMap<String, Object> origClassContext;
+    public LinkedHashMap<String, Object> origClassFrame;
+    public LinkedHashMap<String, Object> libraryType;
+    public LinkedHashMap<String, Object> profileType;
+    public LinkedHashMap<String, Object> externalClassType;
+    public LinkedHashMap<String, Object> classType;
+    public LinkedHashMap<String, Object> shapeType;
+    public LinkedHashMap<String, Object> attributeType;
+    public LinkedHashMap<String, Object> associationType;
+    public LinkedHashMap<String, Object> annotationType;
+    public LinkedHashMap<String, Object> languageSet;
+    public LinkedHashMap<String, Object> value;
 
-    static {
+
+    @Autowired
+    public Frames(UriProperties uriProperties) {
+        String uriHost = uriProperties.getHost();
 
         jsonLdKeys = new LinkedHashMap<String, Object>() {
             {
@@ -108,7 +117,7 @@ public class Frames {
 
         externalClassType = new LinkedHashMap<String, Object>() {
             {
-                put("@id", "http://uri.suomi.fi/datamodel/ns/iow#ExternalClass");
+                put("@id", "http://" + uriHost + "/datamodel/ns/iow#ExternalClass");
             }
         };
 
@@ -219,14 +228,14 @@ public class Frames {
 
         contentModified = new LinkedHashMap<String, Object>() {
             {
-                put("@id", "http://uri.suomi.fi/datamodel/ns/iow#contentModified");
+                put("@id", "http://" + uriHost + "/datamodel/ns/iow#contentModified");
                 put("@type", "http://www.w3.org/2001/XMLSchema#dateTime");
             }
         };
 
         statusModified = new LinkedHashMap<String, Object>() {
             {
-                put("@id", "http://uri.suomi.fi/datamodel/ns/iow#statusModified");
+                put("@id", "http://" + uriHost + "/datamodel/ns/iow#statusModified");
                 put("@type", "http://www.w3.org/2001/XMLSchema#dateTime");
             }
         };
@@ -269,7 +278,7 @@ public class Frames {
 
         useContext = new LinkedHashMap<String, Object>() {
             {
-                put("@id", "http://uri.suomi.fi/datamodel/ns/iow#useContext");
+                put("@id", "http://" + uriHost + "/datamodel/ns/iow#useContext");
             }
         };
 
@@ -352,7 +361,7 @@ public class Frames {
                 });
                 put("localName", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#localName");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#localName");
                     }
                 });
             }
@@ -579,7 +588,7 @@ public class Frames {
                 });
                 put("isResourceIdentifier", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#isResourceIdentifier");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#isResourceIdentifier");
                     }
                 });
                 put("uniqueLang", new LinkedHashMap<String, Object>() {
@@ -589,12 +598,12 @@ public class Frames {
                 });
                 put("isXmlWrapper", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#isXmlWrapper");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#isXmlWrapper");
                     }
                 });
                 put("isXmlAttribute", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#isXmlAttribute");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#isXmlAttribute");
                     }
                 });
                 put("name", name);
@@ -664,12 +673,12 @@ public class Frames {
                 });
                 put("minProperties", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#minProperties");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#minProperties");
                     }
                 });
                 put("maxProperties", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#maxProperties");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#maxProperties");
                     }
                 });
                 put("subject", subject);
@@ -716,7 +725,7 @@ public class Frames {
                 });
                 put("codeLists", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#codeLists");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#codeLists");
                         put("@type", "@id");
                     }
                 });
@@ -747,12 +756,12 @@ public class Frames {
                 });
                 put("pointXY", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#pointXY");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#pointXY");
                     }
                 });
                 put("vertexXY", new LinkedHashMap<String, Object>() {
                     {
-                        put("@id", "http://uri.suomi.fi/datamodel/ns/iow#vertexXY");
+                        put("@id", "http://" + uriHost + "/datamodel/ns/iow#vertexXY");
                         put("@container", "@list");
                     }
                 });
@@ -860,5 +869,4 @@ public class Frames {
             }
         };
     }
-
 }

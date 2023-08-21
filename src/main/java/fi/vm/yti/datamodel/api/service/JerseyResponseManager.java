@@ -63,7 +63,7 @@ public class JerseyResponseManager {
         return Response.status(200).entity("{  \"groups\":\"" + properties.getPublicGroupManagementAPI() + "\"," +
             "\"groupsFrontend\":\"" + properties.getPublicGroupManagementFrontend() + "\"," +
             "\"conceptsFrontend\":\"" + properties.getPublicTerminologyFrontend() + "\", " +
-            "\"codesFrontend\":\"" + properties.getPublicSuomiCodeServerFrontend() + "\", " +
+            "\"codesFrontend\":\"" + properties.getPublicLocalCodeServerFrontend() + "\", " +
             "\"commentsFrontend\":\"" + properties.getPublicCommentsFrontend() + "\", " +
             "\"messagingEnabled\":" + properties.getMessagingEnabled() + ", " +
             "\"dev\":" + properties.getDevMode() + ", " +

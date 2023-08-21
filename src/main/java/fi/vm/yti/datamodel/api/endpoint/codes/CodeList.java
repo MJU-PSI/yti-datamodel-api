@@ -4,8 +4,8 @@
 package fi.vm.yti.datamodel.api.endpoint.codes;
 
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
-import fi.vm.yti.datamodel.api.model.OPHCodeServer;
-import fi.vm.yti.datamodel.api.model.SuomiCodeServer;
+import fi.vm.yti.datamodel.api.config.UriProperties;
+import fi.vm.yti.datamodel.api.model.LocalCodeServer;
 import fi.vm.yti.datamodel.api.service.*;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -33,16 +33,19 @@ public class CodeList {
     private final ApplicationProperties applicationProperties;
     private final JerseyResponseManager jerseyResponseManager;
     private final CodeSchemeManager codeSchemeManager;
+    private final UriProperties uriProperties;
 
     @Autowired
     CodeList(EndpointServices endpointServices,
              ApplicationProperties applicationProperties,
              CodeSchemeManager codeSchemeManager,
-             JerseyResponseManager jerseyResponseManager) {
+             JerseyResponseManager jerseyResponseManager,
+             UriProperties uriProperties) {
         this.endpointServices = endpointServices;
         this.applicationProperties = applicationProperties;
         this.jerseyResponseManager = jerseyResponseManager;
         this.codeSchemeManager = codeSchemeManager;
+        this.uriProperties = uriProperties;
     }
 
     @GET
@@ -60,12 +63,9 @@ public class CodeList {
             return jerseyResponseManager.invalidParameter();
         }
 
-        if (uri.startsWith("https://koodistot.suomi.fi")) {
-            SuomiCodeServer suomiCodeServer = new SuomiCodeServer("https://koodistot.suomi.fi", applicationProperties.getDefaultSuomiCodeServerAPI(), endpointServices, codeSchemeManager);
-            suomiCodeServer.updateCodeSchemeList();
-        } else if (uri.startsWith("https://virkailija.opintopolku.fi")) {
-            OPHCodeServer codeServer = new OPHCodeServer("https://virkailija.opintopolku.fi/koodisto-service/rest/json/", endpointServices);
-            codeServer.updateCodelistsFromServer();
+        if (uri.startsWith("http://local_code_server")) {
+            LocalCodeServer localCodeServer = new LocalCodeServer("http://local_code_server", applicationProperties.getDefaultLocalCodeServerAPI(), endpointServices, codeSchemeManager, uriProperties);
+            localCodeServer.updateCodeSchemeList();
         } else {
             return jerseyResponseManager.invalidParameter();
         }

@@ -4,9 +4,9 @@
 package fi.vm.yti.datamodel.api.endpoint.codes;
 
 import fi.vm.yti.datamodel.api.config.ApplicationProperties;
-import fi.vm.yti.datamodel.api.model.SuomiCodeServer;
+import fi.vm.yti.datamodel.api.config.UriProperties;
+import fi.vm.yti.datamodel.api.model.LocalCodeServer;
 import fi.vm.yti.datamodel.api.service.*;
-import fi.vm.yti.datamodel.api.model.OPHCodeServer;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -31,16 +31,19 @@ public class Codes {
     private final JerseyResponseManager jerseyResponseManager;
     private final ApplicationProperties applicationProperties;
     private final CodeSchemeManager codeSchemeManager;
+    private final UriProperties uriProperties;
 
     @Autowired
     Codes(EndpointServices endpointServices,
           JerseyResponseManager jerseyResponseManager,
           ApplicationProperties applicationProperties,
-          CodeSchemeManager codeSchemeManager) {
+          CodeSchemeManager codeSchemeManager,
+          UriProperties uriProperties) {
         this.endpointServices = endpointServices;
         this.jerseyResponseManager = jerseyResponseManager;
         this.applicationProperties = applicationProperties;
         this.codeSchemeManager = codeSchemeManager;
+        this.uriProperties = uriProperties;
     }
 
     @GET
@@ -56,14 +59,9 @@ public class Codes {
         @QueryParam("uri") String uri,
         @Parameter(description = "forced update")
         @QueryParam("force") boolean force) {
-        if (uri.startsWith("http://uri.suomi.fi")) {
-            SuomiCodeServer codeServer = new SuomiCodeServer("https://koodistot.suomi.fi", applicationProperties.getDefaultSuomiCodeServerAPI(), endpointServices, codeSchemeManager);
+        if (uri.startsWith(this.uriProperties.getScheme() + "://" + this.uriProperties.getHost())) {
+            LocalCodeServer codeServer = new LocalCodeServer("http://local_code_server", applicationProperties.getDefaultLocalCodeServerAPI(), endpointServices, codeSchemeManager, uriProperties);
             codeServer.updateCodes(uri, force);
-        } else if (uri.startsWith("https://virkailija.opintopolku.fi")) {
-            OPHCodeServer codeServer = new OPHCodeServer("https://virkailija.opintopolku.fi/koodisto-service/rest/json/", endpointServices);
-            if (!codeServer.containsCodeList(uri)) {
-                codeServer.updateCodes(uri);
-            }
         } else {
             return jerseyResponseManager.invalidParameter();
         }
@@ -92,12 +90,9 @@ public class Codes {
 
         ResponseBuilder rb;
 
-        if (uri.startsWith("http://uri.suomi.fi")) {
-            SuomiCodeServer codeServer = new SuomiCodeServer("https://koodistot.suomi.fi", applicationProperties.getDefaultSuomiCodeServerAPI(), endpointServices, codeSchemeManager);
-        } else if (uri.startsWith("https://virkailija.opintopolku.fi")) {
-            OPHCodeServer codeServer = new OPHCodeServer("https://virkailija.opintopolku.fi/koodisto-service/rest/json/", endpointServices);
-            codeServer.updateCodes(uri);
-        } else {
+        if (uri.startsWith(this.uriProperties.getScheme() + "://" + this.uriProperties.getHost())) {
+            LocalCodeServer codeServer = new LocalCodeServer("http://local_code_server", applicationProperties.getDefaultLocalCodeServerAPI(), endpointServices, codeSchemeManager, uriProperties);
+        }  else {
             return jerseyResponseManager.invalidParameter();
         }
 

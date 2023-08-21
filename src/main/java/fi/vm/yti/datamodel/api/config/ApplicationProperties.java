@@ -16,7 +16,7 @@ public final class ApplicationProperties {
     private String privateTerminologyAPI;
     private String publicGroupManagementAPI;
     private String publicTerminologyFrontend;
-    private String publicSuomiCodeServerFrontend;
+    private String publicLocalCodeServerFrontend;
     private String publicCommentsFrontend;
     private String publicGroupManagementFrontend;
     private String elasticHost;
@@ -24,7 +24,7 @@ public final class ApplicationProperties {
     private String elasticHttpPort;
     private String elasticHttpScheme;
     private boolean allowComplexElasticQueries;
-    private String defaultSuomiCodeServerAPI;
+    private String defaultLocalCodeServerAPI;
     private boolean devMode;
     private boolean messagingEnabled;
     private String env;
@@ -111,12 +111,12 @@ public final class ApplicationProperties {
         this.publicGroupManagementFrontend = publicGroupManagementFrontend;
     }
 
-    public String getPublicSuomiCodeServerFrontend() {
-        return publicSuomiCodeServerFrontend;
+    public String getPublicLocalCodeServerFrontend() {
+        return publicLocalCodeServerFrontend;
     }
 
-    public void setPublicSuomiCodeServerFrontend(String publicSuomiCodeServerFrontend) {
-        this.publicSuomiCodeServerFrontend = publicSuomiCodeServerFrontend;
+    public void setPublicLocalCodeServerFrontend(String publicLocalCodeServerFrontend) {
+        this.publicLocalCodeServerFrontend = publicLocalCodeServerFrontend;
     }
 
     public String getPublicCommentsFrontend() {
@@ -175,12 +175,12 @@ public final class ApplicationProperties {
         this.allowComplexElasticQueries = allowComplexElasticQueries;
     }
 
-    public String getDefaultSuomiCodeServerAPI() {
-        return this.defaultSuomiCodeServerAPI;
+    public String getDefaultLocalCodeServerAPI() {
+        return this.defaultLocalCodeServerAPI;
     }
 
-    public void setDefaultSuomiCodeServerAPI(String defaultSuomiCodeServerAPI) {
-        this.defaultSuomiCodeServerAPI = defaultSuomiCodeServerAPI;
+    public void setDefaultLocalCodeServerAPI(String defaultLocalCodeServerAPI) {
+        this.defaultLocalCodeServerAPI = defaultLocalCodeServerAPI;
     }
 
     public boolean getDevMode() {
