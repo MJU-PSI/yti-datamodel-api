@@ -76,7 +76,7 @@ public class Resolve {
         checkResourceValidity(uriPath);
 
         final String uriFragment = resolveUri.getFragment();
-        final String graphPrefix = uriPath.substring(applicationProperties.getPublicDatamodelFrontend().length());
+        final String graphPrefix = uriPath.substring(uriProperties.getContextPath().length());
 
         logger.debug("Resolving: " + uri);
 
