@@ -5,6 +5,7 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
@@ -289,10 +290,10 @@ public final class NamespaceManager {
             }
 
             if (isSchemaInStore(namespace) && !force) {
-                logger.info("Schema found in store: " + namespace);
+                logger.info("Schema found in store: " + StringUtils.normalizeSpace(namespace));
                 return true;
             } else {
-                logger.info("Trying to connect to: " + namespace);
+                logger.info("Trying to connect to: " + StringUtils.normalizeSpace(namespace));
                 Model model = ModelFactory.createDefaultModel();
 
                 URL url;
@@ -304,12 +305,12 @@ public final class NamespaceManager {
                         url = new URL(namespace);
                     }
                 } catch (MalformedURLException e) {
-                    logger.warn("Malformed Namespace URL: " + namespace);
+                    logger.warn("Malformed Namespace URL: " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
                 if (!("https".equals(url.getProtocol()) || "http".equals(url.getProtocol()))) {
-                    logger.warn("Namespace NOT http or https: " + namespace);
+                    logger.warn("Namespace NOT http or https: " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
@@ -317,7 +318,7 @@ public final class NamespaceManager {
             }
 
         } catch (Exception ex) {
-            logger.warn("Error in loading the " + namespace);
+            logger.warn("Error in loading the " + StringUtils.normalizeSpace(namespace));
             logger.warn(ex.getMessage(), ex);
             return false;
         }
@@ -325,7 +326,7 @@ public final class NamespaceManager {
 
 
     public boolean resolveNamespace(String namespace){
-        logger.info("Resolving namespace: {}", namespace);
+        logger.info("Resolving namespace: {}", StringUtils.normalizeSpace(namespace));
         var model = ModelFactory.createDefaultModel();
         try{
             RDFParser.create()
@@ -342,7 +343,7 @@ public final class NamespaceManager {
                 return true;
             }
         } catch (RiotException ex){
-            logger.warn("Namespace: {}, not resolvable: {}", namespace, ex.getMessage());
+            logger.warn("Namespace: {}, not resolvable: {}", StringUtils.normalizeSpace(namespace), ex.getMessage());
             return false;
         } catch (HttpException ex){
             logger.warn("Namespace not resolvable due to HTTP error, Status code: {}", ex.getStatusCode());

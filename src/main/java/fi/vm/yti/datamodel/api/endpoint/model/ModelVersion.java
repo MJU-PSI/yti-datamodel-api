@@ -15,6 +15,7 @@ import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
 import org.apache.jena.rdf.model.Model;
@@ -110,7 +111,7 @@ public class ModelVersion {
         }
 
         String newId = id.replaceAll(oldPrefix + "$", newPrefix);
-        logger.info("New id: " + newId);
+        logger.info("New id: " + StringUtils.normalizeSpace(newId));
 
         IRI newModelIRI;
 
@@ -121,7 +122,7 @@ public class ModelVersion {
         }
 
         if (newPrefix != null && newPrefix.length() > 1) {
-            logger.info("Creating new version from " + oldVocabulary.getIRI());
+            logger.info("Creating new version from " + StringUtils.normalizeSpace(oldVocabulary.getIRI().toString()));
             if (graphManager.isExistingGraph(newModelIRI)) {
                 logger.info("Model with the given prefix already exist!");
                 return jerseyResponseManager.usedIRI();

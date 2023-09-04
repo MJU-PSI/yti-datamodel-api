@@ -15,6 +15,7 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.query.DatasetAccessor;
 import org.apache.jena.query.DatasetAccessorFactory;
 import org.apache.jena.query.Query;
@@ -140,7 +141,7 @@ public final class TerminologyManager {
                                                          String modelUri,
                                                          Query query) {
 
-        logger.info("Constructing resource with concept: " + conceptUri);
+        logger.info("Constructing resource with concept: " + StringUtils.normalizeSpace(conceptUri));
         DatasetAccessor testAcc = DatasetAccessorFactory.createHTTP(endpointServices.getCoreReadAddress());
 
         Model conceptModel = searchConceptFromTerminologyIntegrationAPIAsModel(null, null, conceptUri);
@@ -190,7 +191,7 @@ public final class TerminologyManager {
         client.close();
 
         if (response.getStatusInfo().getFamily() != Response.Status.Family.SUCCESSFUL) {
-            logger.warn("Failed to connect " + response.getStatus() + ": " + url);
+            logger.warn("Failed to connect " + response.getStatus() + ": " + StringUtils.normalizeSpace(url));
             return null;
         }
 
