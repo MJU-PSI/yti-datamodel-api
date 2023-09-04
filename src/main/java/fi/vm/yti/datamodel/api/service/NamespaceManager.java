@@ -5,8 +5,6 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
-import org.apache.jena.atlas.RuntimeIOException;
-import org.apache.jena.atlas.web.ContentType;
 import org.apache.jena.atlas.web.HttpException;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.iri.IRIException;
@@ -14,8 +12,7 @@ import org.apache.jena.iri.IRIFactory;
 import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
-import org.apache.jena.riot.RDFLanguages;
+import org.apache.jena.riot.RDFParser;
 import org.apache.jena.riot.RiotException;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -24,11 +21,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
-import java.io.InputStream;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 @Service
@@ -38,6 +34,8 @@ public final class NamespaceManager {
 
     private final EndpointServices endpointServices;
     private final JenaClient jenaClient;
+
+    private static final List<String> ACCEPT_TYPES = List.of("application/rdf+xml;q=1.0", "text/turtle", "application/n-triples", "application/ld+json", "text/trig", "application/n-quads", "application/trix+xml", "application/rdf+thrift", "application/rdf+protobuf");
 
     @Autowired
     NamespaceManager(EndpointServices endpointServices,
@@ -315,180 +313,7 @@ public final class NamespaceManager {
                     return false;
                 }
 
-                HttpURLConnection connection = null;
-
-                try { // IOException
-
-                    // connection = (HttpURLConnection) url.openConnection();
-                    // // 2,5 seconds
-                    // connection.setConnectTimeout(8000);
-                    // // 2,5 minutes
-                    // connection.setReadTimeout(30000);
-                    // connection.setInstanceFollowRedirects(true);
-                    // //,text/rdf+n3,application/turtle,application/rdf+n3
-                    // //"application/rdf+xml,application/xml,text/html");
-                    // connection.setRequestProperty("Accept", "application/rdf+xml;q=1,application/turtle;q=0.8,application/x-turtle;q=0.8,text/turtle;q=0.8,text/rdf+n3;q=0.5,application/n3;q=0.5,text/n3;q=0.5");
-
-                    Map<String, Integer> visited = new HashMap<>();
-                    int times;
-                    URL resourceUrl, base, next;
-                    String location;
-                    while (true)
-                    {
-                       times = visited.compute(namespace, (key, count) -> count == null ? 1 : count + 1);
-                  
-                       if (times > 3)
-                          throw new IOException("Stuck in redirect loop");
-                  
-                       resourceUrl = new URL(namespace);
-                       connection  = (HttpURLConnection) resourceUrl.openConnection();
-                  
-                       connection.setConnectTimeout(8000);
-                       connection.setReadTimeout(30000);
-                       connection.setInstanceFollowRedirects(false);   // Make the logic below easier to detect redirections
-                       connection.setRequestProperty("Accept", "application/rdf+xml;q=1,application/turtle;q=0.8,application/x-turtle;q=0.8,text/turtle;q=0.8,text/rdf+n3;q=0.5,application/n3;q=0.5,text/n3;q=0.5");
-                  
-                       switch (connection.getResponseCode())
-                       {
-                          case HttpURLConnection.HTTP_MOVED_PERM:
-                          case HttpURLConnection.HTTP_MOVED_TEMP:
-                             location  = connection.getHeaderField("Location");
-                             location  = URLDecoder.decode(location, "UTF-8");
-                             base      = new URL(namespace);               
-                             next      = new URL(base, location);  // Deal with relative URLs
-                             namespace = next.toExternalForm();
-                             continue;
-                       }
-                  
-                       break;
-                    }
-
-                    try { // SocketTimeOut
-
-                        connection.connect();
-
-                        InputStream stream;
-
-                        try {
-                            stream = connection.getInputStream();
-                        } catch (IOException e) {
-                            try {
-                                // Try fallback to rdf/xml or turtle without q factor
-                                connection = (HttpURLConnection) url.openConnection();
-                                connection.setConnectTimeout(8000);
-                                connection.setReadTimeout(30000);
-                                connection.setInstanceFollowRedirects(true);
-                                connection.setRequestProperty("Accept", "application/rdf+xml,application/turtle,text/turtle");
-                                stream = connection.getInputStream();
-                            } catch (IOException ex) {
-                                logger.warn(ex.getMessage());
-                                logger.warn("Couldnt read from " + namespace);
-                                return false;
-                            }
-                        }
-
-                        String resolvedUrl = connection.getURL().toString();
-                        logger.info("Opened connection");
-                        logger.info("Resolved URL: " + resolvedUrl);
-                        logger.info("Content-Type: " + connection.getContentType());
-
-                        if (connection.getContentType() == null) {
-                            logger.info("Couldnt resolve Content-Type from: " + namespace);
-                            return false;
-                        }
-
-                        String contentType = connection.getContentType();
-
-                        if (contentType == null) {
-                            logger.info("ContentType is null");
-                            stream.close();
-                            connection.disconnect();
-                            return false;
-                        }
-
-                        ContentType guess = ContentType.create(contentType);
-                        Lang testLang = RDFLanguages.contentTypeToLang(guess);
-
-                        if (contentType.equals("application/xml") || resolvedUrl.endsWith(".xml") || resolvedUrl.endsWith(".rdf")) {
-                            // Try parsing as rdf/xml
-                            testLang = RDFLanguages.fileExtToLang("rdf");
-                        } else if (resolvedUrl.endsWith(".ttl")) {
-                            testLang = RDFLanguages.fileExtToLang("ttl");
-                        } else if (resolvedUrl.endsWith(".nt")) {
-                            testLang = RDFLanguages.fileExtToLang("nt");
-                        } else if (resolvedUrl.endsWith(".jsonld")) {
-                            testLang = RDFLanguages.fileExtToLang("jsonld");
-                        }
-
-                        if (testLang != null) {
-
-                            logger.info("Trying to parse " + testLang.getName() + " from " + namespace);
-
-                            RDFReader reader = model.getReader(testLang.getName());
-
-                            reader.setProperty("error-mode", "lax");
-
-                            try {
-                                logger.info("" + stream.available());
-                                reader.read(model, stream, namespace);
-                            } catch (RiotException e) {
-                                logger.info("Could not read file from " + namespace);
-                                return false;
-                            }
-
-                            stream.close();
-                            connection.disconnect();
-
-                        } else {
-                            logger.info("Could not parse RDF format from content-type!");
-                            try {
-                                // TODO: This seems to parse RDF even from wrong content-types text/html etc.
-                                model = RDFDataMgr.loadModel(resolvedUrl);
-                                logger.info("Parsed something out of " + contentType + " from " + resolvedUrl);
-                            } catch (RiotException e) {
-                                logger.info("Failed to parse RDF using " + contentType + " from " + resolvedUrl);
-                                return false;
-                            }
-
-                            stream.close();
-                            connection.disconnect();
-                        }
-
-                    } catch (UnknownHostException e) {
-                        logger.warn("Invalid hostname " + namespace);
-                        return false;
-                    } catch (SocketTimeoutException e) {
-                        logger.info("Timeout from " + namespace);
-                        logger.warn(e.getMessage(), e);
-                        return false;
-                    } catch (RuntimeIOException e) {
-                        logger.info("Could not parse " + namespace);
-                        logger.warn(e.getMessage(), e);
-                        return false;
-                    }
-
-                } catch (IOException e) {
-                    logger.info("Could not read file from " + namespace);
-                    return false;
-                }
-
-                logger.info("Model-size is: " + model.size());
-
-                try {
-                    if (model.size() > 1) {
-                        putSchemaToStore(namespace, model);
-                    } else {
-                        logger.warn("Namespace contains empty schema: " + namespace);
-                        return false;
-                    }
-
-                    return true;
-
-                } catch (HttpException ex) {
-                    logger.warn("Error in saving the model loaded from " + namespace);
-                    return false;
-                }
-
+                return resolveNamespace(namespace);
             }
 
         } catch (Exception ex) {
@@ -497,4 +322,33 @@ public final class NamespaceManager {
             return false;
         }
     }
+
+
+    public boolean resolveNamespace(String namespace){
+        logger.info("Resolving namespace: {}", namespace);
+        var model = ModelFactory.createDefaultModel();
+        try{
+            RDFParser.create()
+                    .source(namespace)
+                    .lang(Lang.RDFXML)
+                    .httpAccept(String.join(", ", ACCEPT_TYPES))
+                    .parse(model);
+
+            logger.info("Model-size is: " + model.size());
+
+            if(model.size() > 0){
+                putSchemaToStore(namespace, model);
+
+                return true;
+            }
+        } catch (RiotException ex){
+            logger.warn("Namespace: {}, not resolvable: {}", namespace, ex.getMessage());
+            return false;
+        } catch (HttpException ex){
+            logger.warn("Namespace not resolvable due to HTTP error, Status code: {}", ex.getStatusCode());
+            return false;
+        }
+        return false;
+    }
+
 }
