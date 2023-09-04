@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
@@ -59,7 +60,7 @@ public abstract class AbstractPredicate extends AbstractResource {
                 if (++i == Integer.MAX_VALUE) {
                     throw new RuntimeException("Too many items for iteration");
                 }
-                logger.info(props.next().getPredicate().getURI());
+                logger.info(StringUtils.normalizeSpace(props.next().getPredicate().getURI()));
             }
 
             try {

@@ -5,6 +5,7 @@ package fi.vm.yti.datamodel.api.service;
 
 import fi.vm.yti.datamodel.api.utils.LDHelper;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.atlas.RuntimeIOException;
 import org.apache.jena.atlas.web.ContentType;
 import org.apache.jena.atlas.web.HttpException;
@@ -291,10 +292,10 @@ public final class NamespaceManager {
             }
 
             if (isSchemaInStore(namespace) && !force) {
-                logger.info("Schema found in store: " + namespace);
+                logger.info("Schema found in store: " + StringUtils.normalizeSpace(namespace));
                 return true;
             } else {
-                logger.info("Trying to connect to: " + namespace);
+                logger.info("Trying to connect to: " + StringUtils.normalizeSpace(namespace));
                 Model model = ModelFactory.createDefaultModel();
 
                 URL url;
@@ -306,12 +307,12 @@ public final class NamespaceManager {
                         url = new URL(namespace);
                     }
                 } catch (MalformedURLException e) {
-                    logger.warn("Malformed Namespace URL: " + namespace);
+                    logger.warn("Malformed Namespace URL: " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
                 if (!("https".equals(url.getProtocol()) || "http".equals(url.getProtocol()))) {
-                    logger.warn("Namespace NOT http or https: " + namespace);
+                    logger.warn("Namespace NOT http or https: " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
@@ -382,7 +383,7 @@ public final class NamespaceManager {
                                 stream = connection.getInputStream();
                             } catch (IOException ex) {
                                 logger.warn(ex.getMessage());
-                                logger.warn("Couldnt read from " + namespace);
+                                logger.warn("Couldnt read from " + StringUtils.normalizeSpace(namespace));
                                 return false;
                             }
                         }
@@ -393,7 +394,7 @@ public final class NamespaceManager {
                         logger.info("Content-Type: " + connection.getContentType());
 
                         if (connection.getContentType() == null) {
-                            logger.info("Couldnt resolve Content-Type from: " + namespace);
+                            logger.info("Couldnt resolve Content-Type from: " + StringUtils.normalizeSpace(namespace));
                             return false;
                         }
 
@@ -422,7 +423,7 @@ public final class NamespaceManager {
 
                         if (testLang != null) {
 
-                            logger.info("Trying to parse " + testLang.getName() + " from " + namespace);
+                            logger.info("Trying to parse " + StringUtils.normalizeSpace(testLang.getName()) + " from " + StringUtils.normalizeSpace(namespace));
 
                             RDFReader reader = model.getReader(testLang.getName());
 
@@ -432,7 +433,7 @@ public final class NamespaceManager {
                                 logger.info("" + stream.available());
                                 reader.read(model, stream, namespace);
                             } catch (RiotException e) {
-                                logger.info("Could not read file from " + namespace);
+                                logger.info("Could not read file from " + StringUtils.normalizeSpace(namespace));
                                 return false;
                             }
 
@@ -455,20 +456,20 @@ public final class NamespaceManager {
                         }
 
                     } catch (UnknownHostException e) {
-                        logger.warn("Invalid hostname " + namespace);
+                        logger.warn("Invalid hostname " + StringUtils.normalizeSpace(namespace));
                         return false;
                     } catch (SocketTimeoutException e) {
-                        logger.info("Timeout from " + namespace);
+                        logger.info("Timeout from " + StringUtils.normalizeSpace(namespace));
                         logger.warn(e.getMessage(), e);
                         return false;
                     } catch (RuntimeIOException e) {
-                        logger.info("Could not parse " + namespace);
+                        logger.info("Could not parse " + StringUtils.normalizeSpace(namespace));
                         logger.warn(e.getMessage(), e);
                         return false;
                     }
 
                 } catch (IOException e) {
-                    logger.info("Could not read file from " + namespace);
+                    logger.info("Could not read file from " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
@@ -478,21 +479,21 @@ public final class NamespaceManager {
                     if (model.size() > 1) {
                         putSchemaToStore(namespace, model);
                     } else {
-                        logger.warn("Namespace contains empty schema: " + namespace);
+                        logger.warn("Namespace contains empty schema: " + StringUtils.normalizeSpace(namespace));
                         return false;
                     }
 
                     return true;
 
                 } catch (HttpException ex) {
-                    logger.warn("Error in saving the model loaded from " + namespace);
+                    logger.warn("Error in saving the model loaded from " + StringUtils.normalizeSpace(namespace));
                     return false;
                 }
 
             }
 
         } catch (Exception ex) {
-            logger.warn("Error in loading the " + namespace);
+            logger.warn("Error in loading the " + StringUtils.normalizeSpace(namespace));
             logger.warn(ex.getMessage(), ex);
             return false;
         }

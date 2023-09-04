@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.jena.iri.IRI;
 import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.Resource;
@@ -47,7 +48,7 @@ public class Shape extends AbstractShape {
                  GraphManager graphManager,
                  EndpointServices endpointServices) {
 
-        logger.info("Creating shape from " + classIRI.toString() + " to " + shapeIRI.toString());
+        logger.info("Creating shape from " + StringUtils.normalizeSpace(classIRI.toString()) + " to " + StringUtils.normalizeSpace(shapeIRI.toString()));
 
         if (!graphManager.isExistingServiceGraph(SplitIRI.namespace(classIRI.toString()))) {
 
