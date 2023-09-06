@@ -49,7 +49,7 @@ public class LocalCodeServer {
     static private Property isPartOf = ResourceFactory.createProperty("http://purl.org/dc/terms/", "isPartOf");
     static private Property id = ResourceFactory.createProperty("http://purl.org/dc/terms/", "identifier");
     static private Property creator = ResourceFactory.createProperty("http://purl.org/dc/terms/", "creator");
-    static private Property status;
+    static private Property status = ResourceFactory.createProperty("http://uri.suomi.fi/datamodel/ns/iow#", "status");
 
     private final EndpointServices endpointServices;
     private String uri;
@@ -69,8 +69,6 @@ public class LocalCodeServer {
         this.endpointServices = endpointServices;
         this.codeSchemeManager = codeSchemeManager;
         this.uriProperties = uriProperties;
-
-        status = ResourceFactory.createProperty("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#", "status");
     }
 
     public LocalCodeServer(String uri,
@@ -85,8 +83,6 @@ public class LocalCodeServer {
         this.url = url;
         this.codeSchemeManager = codeSchemeManager;
         this.uriProperties = uriProperties;
-
-        status = ResourceFactory.createProperty("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#", "status");
     }
 
     public static void addLangLiteral(Resource res,
@@ -109,7 +105,7 @@ public class LocalCodeServer {
 
         Model model = ModelFactory.createDefaultModel();
         model.setNsPrefix("dcterms", "http://purl.org/dc/terms/");
-        model.setNsPrefix("iow", "http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#");
+        model.setNsPrefix("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
 
         Client client = ClientBuilder.newClient();
 
@@ -153,7 +149,7 @@ public class LocalCodeServer {
                     addLangLiteral(group, registryDescription, description);
                 }
 
-                group.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeGroup"));
+                group.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeGroup"));
 
                 WebTarget schemeTarget = client.target(groupUrl + "/codeschemes/").queryParam("format", "application/json");
                 Response schemeResponse = schemeTarget.request("application/json").get();
@@ -180,7 +176,7 @@ public class LocalCodeServer {
                         }
 
                         Resource valueScheme = model.createResource(codeListUri);
-                        valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeScheme"));
+                        valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeScheme"));
 
                         valueScheme.addProperty(isPartOf, group);
 
@@ -219,7 +215,7 @@ public class LocalCodeServer {
                                          String codeSchemeModified) {
         Model model = ModelFactory.createDefaultModel();
         model.setNsPrefix("dcterms", "http://purl.org/dc/terms/");
-        model.setNsPrefix("iow", "http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#");
+        model.setNsPrefix("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
 
         Client client = ClientBuilder.newClient();
         WebTarget target = client.target(url + "v1/integration/resources").queryParam("includeIncomplete", "true").queryParam("container", containerUri).queryParam("format", "application/json");
@@ -228,7 +224,7 @@ public class LocalCodeServer {
         if (response.getStatusInfo().getFamily() == Response.Status.Family.SUCCESSFUL) {
 
             Resource valueScheme = model.createResource(containerUri);
-            valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCodeScheme"));
+            valueScheme.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCodeScheme"));
             valueScheme.addLiteral(modified, ResourceFactory.createTypedLiteral(codeSchemeModified, XSDDatatype.XSDdateTime));
 
             JsonReader jsonReader = Json.createReader(response.readEntity(InputStream.class));
@@ -252,7 +248,7 @@ public class LocalCodeServer {
 
                 Resource codeRes = model.createResource(codeURI);
 
-                codeRes.addProperty(RDF.type, ResourceFactory.createResource("http://" + this.uriProperties.getHost() + "/datamodel/ns/iow#FCode"));
+                codeRes.addProperty(RDF.type, ResourceFactory.createResource("http://uri.suomi.fi/datamodel/ns/iow#FCode"));
                 codeRes.addLiteral(id, ResourceFactory.createPlainLiteral(codeObj.getString("localName")));
 
                 JsonObject codeName = codeObj.getJsonObject("prefLabel");

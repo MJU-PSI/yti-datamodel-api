@@ -70,7 +70,6 @@ public class SearchIndexManager {
     private final ResourceQueryFactory resourceQueryFactory;
     private RestHighLevelClient esClient;
     private RHPOrganizationManager organizationManager;
-    private Frames frames;
 
     @Autowired
     public SearchIndexManager(final ElasticConnector esManager,
@@ -81,8 +80,7 @@ public class SearchIndexManager {
                               final ModelQueryFactory modelQueryFactory,
                               final DeepResourceQueryFactory deepClassQueryFactory,
                               final ResourceQueryFactory resourceQueryFactory,
-                              final RHPOrganizationManager organizationManager,
-                              final Frames frames) {
+                              final RHPOrganizationManager organizationManager) {
         this.esManager = esManager;
         this.esClient = esManager.getEsClient();
         this.jenaClient = jenaClient;
@@ -93,7 +91,6 @@ public class SearchIndexManager {
         this.deepResourceQueryFactory = deepClassQueryFactory;
         this.resourceQueryFactory = resourceQueryFactory;
         this.organizationManager = organizationManager;
-        this.frames = frames;
     }
 
     /**
@@ -374,8 +371,7 @@ public class SearchIndexManager {
             logger.warn("Could not find any models to index!");
             return;
         }
-
-        JsonNode nodes = modelManager.toFramedJsonNode(model, this.frames.esModelFrame);
+        JsonNode nodes = modelManager.toFramedJsonNode(model, Frames.esModelFrame);
         if (nodes == null) {
             logger.warn("Could not parse JSON");
             return;
@@ -419,7 +415,7 @@ public class SearchIndexManager {
             logger.warn("Could not find any classes to index!");
             return;
         }
-        JsonNode nodes = modelManager.toFramedJsonNode(model, this.frames.esClassFrame);
+        JsonNode nodes = modelManager.toFramedJsonNode(model, Frames.esClassFrame);
         if (nodes == null) {
             logger.warn("Could not parse JSON");
             return;
@@ -454,7 +450,7 @@ public class SearchIndexManager {
             logger.warn("Could not find any classes to index!");
             return;
         }
-        JsonNode nodes = modelManager.toFramedJsonNode(model, this.frames.esClassFrame);
+        JsonNode nodes = modelManager.toFramedJsonNode(model, Frames.esClassFrame);
         if (nodes == null) {
             logger.warn("Could not parse JSON");
             return;
@@ -497,7 +493,7 @@ public class SearchIndexManager {
         }
         JsonNode nodes = null;
         try {
-            nodes = modelManager.toFramedJsonNode(model, this.frames.esClassFrame);
+            nodes = modelManager.toFramedJsonNode(model, Frames.esClassFrame);
             if (nodes == null) {
                 logger.warn("Could not parse JSON");
                 return;
@@ -539,7 +535,7 @@ public class SearchIndexManager {
             logger.warn("Could not find any predicates to index!");
             return;
         }
-        JsonNode nodes = modelManager.toFramedJsonNode(model, this.frames.esPredicateFrame);
+        JsonNode nodes = modelManager.toFramedJsonNode(model, Frames.esPredicateFrame);
         if (nodes == null) {
             logger.warn("Could not parse JSON");
             return;
@@ -584,7 +580,7 @@ public class SearchIndexManager {
         }
         JsonNode nodes = null;
         try {
-            nodes = modelManager.toFramedJsonNode(model, this.frames.esPredicateFrame);
+            nodes = modelManager.toFramedJsonNode(model, Frames.esPredicateFrame);
             if (nodes == null) {
                 logger.warn("Could not parse JSON");
                 return;

@@ -158,8 +158,8 @@ public class LDHelper {
         return PREFIX_MAP.containsKey(prefix);
     }
 
-    public static Map<String, String> PREFIX_MAP =
-        new HashMap<String, String>() {{
+    public static final Map<String, String> PREFIX_MAP =
+        Collections.unmodifiableMap(new HashMap<String, String>() {{
             put("owl", "http://www.w3.org/2002/07/owl#");
             put("xsd", "http://www.w3.org/2001/XMLSchema#");
             put("rdf", "http://www.w3.org/1999/02/22-rdf-syntax-ns#");
@@ -171,8 +171,8 @@ public class LDHelper {
             put("void", "http://rdfs.org/ns/void#");
             put("sd", "http://www.w3.org/ns/sparql-service-description#");
             put("text", "http://jena.apache.org/text#");
-            put("sh", "http://www.w3.org/ns/shacl#");        
-            put("iow", "");
+            put("sh", "http://www.w3.org/ns/shacl#");
+            put("iow", "http://uri.suomi.fi/datamodel/ns/iow#");
             put("skos", "http://www.w3.org/2004/02/skos/core#");
             put("prov", "http://www.w3.org/ns/prov#");
             put("dcap", "http://purl.org/ws-mmi-dc/terms/");
@@ -183,7 +183,7 @@ public class LDHelper {
             put("at", "http://publications.europa.eu/ontology/authority/");
             put("skosxl", "http://www.w3.org/2008/05/skos-xl#");
             put("httpv", "http://www.w3.org/2011/http#");
-        }};
+        }});
 
     public static Literal getDateTimeLiteral() {
         Calendar cal = GregorianCalendar.getInstance();
@@ -352,7 +352,7 @@ public class LDHelper {
         return PREFIX_MAP.get(prefix);
     }
 
-    public static String prefix = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
+    public final static String prefix = "PREFIX owl: <http://www.w3.org/2002/07/owl#> " +
         "PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> " +
         "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> " +
         "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> " +
@@ -367,6 +367,7 @@ public class LDHelper {
         "PREFIX skos: <http://www.w3.org/2004/02/skos/core#> " +
         "PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#> " +
         "PREFIX prov: <http://www.w3.org/ns/prov#> " +
+        "PREFIX iow: <http://uri.suomi.fi/datamodel/ns/iow#>" +
         "PREFIX dcap: <http://purl.org/ws-mmi-dc/terms/> " +
         "PREFIX afn: <http://jena.hpl.hp.com/ARQ/function#>" +
         "PREFIX schema: <http://schema.org/>" +

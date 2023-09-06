@@ -6,9 +6,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
-import fi.vm.yti.datamodel.api.utils.LDHelper;
-import javax.annotation.PostConstruct;
-
 @ConfigurationProperties("uri")
 @Component
 @Validated
@@ -59,11 +56,5 @@ public class UriProperties {
 
     public String getUriHostPathAddress() {
         return this.scheme + "://" + this.host + getContextPath();
-    }
-
-    @PostConstruct
-    public void iowToPrefix(){
-        LDHelper.PREFIX_MAP.replace("iow", getUriHostPathAddress() + "iow#");
-        LDHelper.prefix = LDHelper.prefix + "PREFIX iow: <" + getUriHostPathAddress() +  "iow#>";
     }
 }
