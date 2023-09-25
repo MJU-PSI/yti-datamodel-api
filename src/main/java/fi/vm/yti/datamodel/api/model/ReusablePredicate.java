@@ -105,7 +105,7 @@ public class ReusablePredicate extends AbstractPredicate {
             throw new IllegalArgumentException("No existing predicate found");
         }
 
-        if (!(this.graph.contains(ResourceFactory.createResource(oldPredicateIRI.toString()), RDF.type, OWL.DatatypeProperty) || this.graph.contains(ResourceFactory.createResource(oldPredicateIRI.toString()), RDF.type, OWL.ObjectProperty))) {
+        if (!(this.graph.contains(ResourceFactory.createResource(oldPredicateIRI.toString()), RDF.type, OWL.DatatypeProperty) || this.graph.contains(ResourceFactory.createResource(oldPredicateIRI.toString()), RDF.type, OWL.ObjectProperty) || this.graph.contains(ResourceFactory.createResource(oldPredicateIRI.toString()), RDF.type, OWL.AnnotationProperty))) {
             throw new IllegalArgumentException("Expected predicate type");
         }
 
