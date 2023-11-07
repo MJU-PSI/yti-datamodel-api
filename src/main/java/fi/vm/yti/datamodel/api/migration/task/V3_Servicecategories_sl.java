@@ -9,13 +9,13 @@ import fi.vm.yti.datamodel.api.service.GraphManager;
 import fi.vm.yti.migration.MigrationTask;
 
 @Component
-public class V2_Servicecategories_sl implements MigrationTask {
+public class V3_Servicecategories_sl implements MigrationTask {
 
-    private static final Logger logger = LoggerFactory.getLogger(V2_Servicecategories_sl.class.getName());
+    private static final Logger logger = LoggerFactory.getLogger(V3_Servicecategories_sl.class.getName());
     private final GraphManager graphManager;
 
     @Autowired
-    V2_Servicecategories_sl(GraphManager graphManager) {
+    V3_Servicecategories_sl(GraphManager graphManager) {
         this.graphManager = graphManager;
     }
 

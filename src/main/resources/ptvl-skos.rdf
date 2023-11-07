@@ -52,7 +52,7 @@
     <skos:prefLabel xml:lang="fi">Työkyky ja ammatillinen kuntoutus</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Work ability and vocational rehabilitation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Work ability and vocational rehabilitation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Delovna sposobnost in poklicna rehabilitacija</skos:prefLabel>
     <skos:notation>P10.4</skos:notation>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1221">
@@ -68,7 +68,7 @@
     <skos:notation>P9.5</skos:notation>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Official notifications and declarations</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Official notifications and declarations</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Uradna obvestila in izjave</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1112">
     <sh:order>1107</sh:order>
@@ -78,7 +78,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tähän luokkaan kuuluvat esimerkiksi yrityksen tuonti- tai vientikaupan tukemiseen tarkoitetut avustukset ja muut rahoituspalvelut, tuontiin ja vientiin liittyvä neuvonta- ja tietopalvelut.</skos:note>
     <skos:prefLabel xml:lang="en">Import and export</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Import and export</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Uvoz</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="en">This class contains, for example, grants and other funding services intended to support a company’s import or export trade as well as advisory and information services related to imports and exports.</skos:note>
     <skos:note xml:lang="sl">This class contains, for example, grants and other funding services intended to support a company’s import or export trade as well as advisory and information services related to imports and exports.</skos:note>
@@ -92,7 +92,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään tieliikenteen ammattikuljettajien ja muiden tieliikenteeseen liittyvien ammattien koulutusta ja pätevyyksiä sekä erikoiskuljetuksiin liittyviä asioita.</skos:note>
     <skos:prefLabel xml:lang="en">Professional road transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Professional road transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poklicni cestni prevoz</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains the training and qualifications of professional drivers in road transport and other professions related to road transport as well as issues related to the transport of oversize loads.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the training and qualifications of professional drivers in road transport and other professions related to road transport as well as issues related to the transport of oversize loads.</skos:note>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas utbildning av och behörighet för yrkesförare i vägtrafik och andra trafikrelaterade yrken samt specialtransporter.</skos:note>
@@ -106,7 +106,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:notation>P5.1</skos:notation>
     <skos:prefLabel xml:lang="en">Primary health care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Primary health care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Primarno zdravstveno varstvo</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="fi">Perusterveydenhuolto</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
@@ -125,7 +125,7 @@
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör andra än boendeservice, bl.a. rehabiliterings-, tolknings- och färdtjänster för personer med funktionsnedsättning.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Services for the disabled other than housing and home services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Services for the disabled other than housing and home services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve za invalide, razen stanovanjskih storitev in storitev na domu</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Vammaisten muut kuin asumis- ja kotipalvelut</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1023"/>
@@ -138,7 +138,7 @@
     <skos:prefLabel xml:lang="sv">Att få barn</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Having a child</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Having a child</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Rojstvo otroka</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas tjänster för graviditetstiden och barnets babytid och ekonomiska bidrag för familjen. Till denna serviceundergrupp hör också fertilitetsbehandlingar och adoptioner samt ärenden i samband med namngivning.</skos:note>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään raskausajan ja lapsen vauva-ajan palveluja ja taloudellisia tukia perheelle. Tähän alaluokkaan kuuluvat myös lapsettomuushoidot ja adoptiot sekä nimen antamiseen liittyvät asiat.</skos:note>
@@ -150,7 +150,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1120"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään ulkomailla tehdyn työn eläkevaikutukset Suomen kansalaiselle sekä tilanteet, joissa henkilö on ansainnut eläkettä Suomessa tehdystä työstä, mutta on sittemmin muuttanut ulkomaille. Luokkaan kuuluvat myös maiden välisiä eläkesopimuksia ja ulkomailla karttuneen eläkkeen verotus.</skos:note>
     <skos:prefLabel xml:lang="en">Pension security for expatriate Finns</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pension security for expatriate Finns</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pokojninska varnost za izseljene Fince</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Finländares pensionsskydd utomlands</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains the pension effects of work performed abroad by Finnish citizens and also situations where a person has earned a pension for work performed in Finland but has since moved abroad. The class also includes pension agreements between countries and the taxation of pensions accrued abroad.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the pension effects of work performed abroad by Finnish citizens and also situations where a person has earned a pension for work performed in Finland but has since moved abroad. The class also includes pension agreements between countries and the taxation of pensions accrued abroad.</skos:note>
@@ -163,7 +163,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1136">
     <skos:prefLabel xml:lang="en">Bankruptcy</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Bankruptcy</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Stečaj</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Konkurssi</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services related to declaring bankruptcy, filing for bankruptcy, tasks of the Bankruptcy Ombudsman and different phases of the bankruptcy process. The class includes the bankruptcies of both natural persons and companies.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to declaring bankruptcy, filing for bankruptcy, tasks of the Bankruptcy Ombudsman and different phases of the bankruptcy process. The class includes the bankruptcies of both natural persons and companies.</skos:note>
@@ -186,7 +186,7 @@
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör ärenden i anslutning till finansiering och beskattning, tjänster som gäller uppgifter om försäljningspriser samt affärens villkor och eventuella tvistemål. Till gruppen hör också tjänster i anslutning till sökande och anskaffande av ägarbostad.</skos:note>
     <sh:order>102</sh:order>
     <skos:prefLabel xml:lang="en">Owner-occupied housing</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Owner-occupied housing</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Lastniška stanovanja</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains all funding and tax issues related to a residence, services associated with the sales price information of residences, terms and conditions of a deal and possible disputes. It also includes services related to seeking and purchasing an owner-occupied residence.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains all funding and tax issues related to a residence, services associated with the sales price information of residences, terms and conditions of a deal and possible disputes. It also includes services related to seeking and purchasing an owner-occupied residence.</skos:note>
     <skos:prefLabel xml:lang="fi">Omistusasuminen</skos:prefLabel>
@@ -199,7 +199,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
     <sh:order>2206</sh:order>
     <skos:prefLabel xml:lang="en">Moving from Finland to another EU Member State</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Moving from Finland to another EU Member State</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Selitev iz Finske v drugo državo članico EU</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Muuttaminen Suomesta toiseen EU-valtioon</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Flyttning från Finland till ett annat EU-land</skos:prefLabel>
@@ -213,7 +213,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Enterprise training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Enterprise training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Usposabljanje zaposlenih / Strokovno usposabljanje</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Företagsutbildning</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Yrityskoulutus</skos:prefLabel>
     <skos:note xml:lang="sv">Till denna grupp hör utbildnings- och skolningsevenemang som företagen arrangerar eller skaffar själva för att utveckla personalens kompetens samt rådgivningstjänster i samband med sådana ärenden.</skos:note>
@@ -226,7 +226,7 @@
     <skos:note xml:lang="en">This service subclass contains services related to wild plants and animals, including licences, reporting of sightings and different information services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to wild plants and animals, including licences, reporting of sightings and different information services.</skos:note>
     <skos:prefLabel xml:lang="en">Wild plants and animals</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Wild plants and animals</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Divje rastline in živali</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1191"/>
     <skos:prefLabel xml:lang="fi">Luonnonvaraiset kasvit ja eläimet</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till vilda växter och djur, såsom tillstånd, anmälningar om observationer och olika informationstjänster.</skos:note>
@@ -243,7 +243,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään kansalaisille, yhteisöille ja toisille viranomaisille tarjottavia tieto-, hallinto- ja tukipalveluja, jotka sisällöltään voivat liittyä mihin aiheeseen tahansa ja joita ei tämän vuoksi voida sijoittaa julkisen palvelun luokituksen muihin aiheluokkiin.</skos:note>
     <skos:prefLabel xml:lang="en">General information and administrative services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">General information and administrative services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Splošne informacijske in upravne storitve</skos:prefLabel>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="fi">Yleiset tieto- ja hallintopalvelut</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -264,7 +264,7 @@
     <skos:note xml:lang="sl">This service subclass contains services associated with courts of law and their processes. These include, for example, applications and trial procedures.</skos:note>
     <skos:prefLabel xml:lang="fi">Tuomioistuimet</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Courts of law</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Courts of law</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Sodišča</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till domstolar (t.ex. olika ansökningshandlingar samt rättegångar) i olika rättsinstanser och domstolslinjer.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -275,7 +275,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1210">
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Sports and outdoor activities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Sports and outdoor activities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Šport in dejavnosti na prostem</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1211"/>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1214"/>
@@ -294,7 +294,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1101">
     <skos:prefLabel xml:lang="en">Occupational safety</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Occupational safety</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varnost pri delu</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services related to statutory occupational safety activities, their implementation in workplaces and reporting shortcomings in them. This class also includes other occupational safety issues, as well as OHS related services for employers. Occupational health care, on the other hand, has its own subclass under the main class Health, medical care and nutrition.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to statutory occupational safety activities, their implementation in workplaces and reporting shortcomings in them. This class also includes other occupational safety issues, as well as OHS related services for employers. Occupational health care, on the other hand, has its own subclass under the main class Health, medical care and nutrition.</skos:note>
     <skos:prefLabel xml:lang="fi">Työsuojelu</skos:prefLabel>
@@ -315,7 +315,7 @@
     <skos:notation>P9.6</skos:notation>
     <skos:note xml:lang="sv">Denna underservicegrupp innehåller myndigheters generella rådgivningstjänster producerade åt medborgare och samfund, som exempel Medborgarrådgivningen</skos:note>
     <skos:prefLabel xml:lang="en">General advisory services in the public sector</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">General advisory services in the public sector</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Splošne svetovalne storitve v javnem sektorju</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Hallinnon yleiset neuvontapalvelut</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass features services such as Public Service Info where citizens and organisations can ask for general advice in matters related to public services and government organisations.</skos:note>
     <skos:note xml:lang="sl">This service subclass features services such as Public Service Info where citizens and organisations can ask for general advice in matters related to public services and government organisations.</skos:note>
@@ -332,7 +332,7 @@
     <skos:notation>P4.5</skos:notation>
     <skos:prefLabel xml:lang="sv">Personlig assistans</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Personal assistant services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Personal assistant services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve osebnega asistenta</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Henkilökohtaisen avustajan palvelut</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat henkilökohtaisen avustajan saamisen edellytyksiin, kustannuksiin ja tehtäviin liittyvät asiat. Sekä kotona asuvan että palvelutalossa asuvan avustajapalvelut kuuluvat tähän luokkaan.</skos:note>
@@ -347,7 +347,7 @@
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palveluja, jotka liittyvät virallisen kehotuksen jälkeenkin maksamattomien maksujen perintään ulosottoviranomaisen kautta.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Enforcement</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Enforcement</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Izvršba</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Utsökning</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services related to recovery by enforcement authorities of overdue payments that the debtors have not settled despite receiving a formal notice.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to recovery by enforcement authorities of overdue payments that the debtors have not settled despite receiving a formal notice.</skos:note>
@@ -362,7 +362,7 @@
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat teiden hoitoluokat ja niiden mukainen peruskunnossapito sekä teiden parannustyöt ja näihin saatavat avustukset.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Road maintenance</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Road maintenance</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vzdrževanje cest</skos:prefLabel>
     <sh:order>1607</sh:order>
     <skos:note xml:lang="en">This service subclass contains road maintenance classes, basic maintenance in accordance to the classes as well as road improvements and grants available for them.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains road maintenance classes, basic maintenance in accordance to the classes as well as road improvements and grants available for them.</skos:note>
@@ -377,7 +377,7 @@
     <skos:note xml:lang="en">This service subclass contains procedures and obligations related to the acknowledgement and confirmation of paternity.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains procedures and obligations related to the acknowledgement and confirmation of paternity.</skos:note>
     <skos:prefLabel xml:lang="en">Confirmation of paternity</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Confirmation of paternity</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Potrditev očetovstva</skos:prefLabel>
     <sh:order>303</sh:order>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas förfaranden och skyldigheter i anslutning till erkännande och fastställande av faderskap.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -395,7 +395,7 @@
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat kuuluvat näihin asumismuotoihin liittyvät haku- ja rahoitusmenettelyt sekä hakemisen edellytykset. Luokkaan kuuluvat myös osaomistus- tai asumisoikeusasunnon etsimiseen ja hankkimiseen liittyvät palvelut.</skos:note>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör ansöknings- och finansieringsförfaranden i anslutning till dessa boendeformer samt förutsättningar för sökandet. Till gruppen hör också tjänster i anslutning till sökande och anskaffande av delägar- eller bostadsrättsbostad.</skos:note>
     <skos:prefLabel xml:lang="en">Partial ownership and right-of-occupancy housing</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Partial ownership and right-of-occupancy housing</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Stanovanja v delnem lastništvu in stanovanja s pravico uporabe</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1113">
     <skos:prefLabel xml:lang="fi">Omistajanvaihdos</skos:prefLabel>
@@ -406,7 +406,7 @@
     <sh:order>1108</sh:order>
     <skos:note xml:lang="fi">Tähän luokkaan kuuluvat omistajanvaihdosprosessiin liittyviä asiat kuten yrityksen ostaminen, yrityksen myyminen, sukupolvenvaihdos ja niihin liittyvät palvelut.</skos:note>
     <skos:prefLabel xml:lang="en">Change of ownership</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Change of ownership</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Sprememba lastništva</skos:prefLabel>
     <skos:note xml:lang="en">This class contains issues related to a change of ownership process, including buying or selling a company, generation change and the associated services.</skos:note>
     <skos:note xml:lang="sl">This class contains issues related to a change of ownership process, including buying or selling a company, generation change and the associated services.</skos:note>
     <skos:note xml:lang="sv">Denna grupp omfattar ärenden relaterade till processer för byte av ägare, såsom köp och försäljning av företag, generationsväxling och relaterade tjänster.</skos:note>
@@ -414,7 +414,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1125">
     <skos:prefLabel xml:lang="en">Pension security in Finland for foreigners who are permanently resident in the country</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pension security in Finland for foreigners who are permanently resident in the country</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pokojninska varnost na Finskem za tujce s stalnim prebivališčem v državi</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Suomessa pysyvästi asuvan ulkomaalaisen eläketurva Suomessa</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -451,7 +451,7 @@
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1068"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1064"/>
     <skos:prefLabel xml:lang="en">Education and training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Education and training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Izobraževanje in usposabljanje</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1070"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1067"/>
     <sh:order>600</sh:order>
@@ -459,7 +459,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1181">
     <skos:prefLabel xml:lang="en">Moving from Finland to a non-EU country</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Moving from Finland to a non-EU country</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Selitev iz Finske v državo, ki ni članica EU</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar förfaranden och tjänster som är aktuella vid flyttning från Finland till ett annat nordiskt land. Dessa handlar i allmänhet om flyttningsanmälan, socialskydd och medborgarskap.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
@@ -493,7 +493,7 @@
     <skos:prefLabel xml:lang="sv">Arbete och arbetslöshet</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Work and unemployment</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Work and unemployment</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Delo in brezposelnost</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1193">
     <skos:prefLabel xml:lang="fi">Kasvintuotanto</skos:prefLabel>
@@ -507,7 +507,7 @@
     <skos:note xml:lang="sl">This service subclass contains services associated with professional plant production, including production subsidies, pest control and crop damage compensation.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Plant production</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Plant production</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Rastlinska pridelava</skos:prefLabel>
     <sh:order>2402</sh:order>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1084">
@@ -516,7 +516,7 @@
     <skos:note xml:lang="en">This service subclass contains punishments and sanctions for crimes.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains punishments and sanctions for crimes.</skos:note>
     <skos:prefLabel xml:lang="en">Sentences and sanctions</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Sentences and sanctions</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Kazni in sankcije</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar straff och brottspåföljsärenden.</skos:note>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat rangaistukset ja muut rikosseuraamusasiat.</skos:note>
@@ -534,7 +534,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
     <skos:notation>P6.12</skos:notation>
     <skos:prefLabel xml:lang="en">Entrepreneur training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Entrepreneur training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Usposabljanje podjetnikov</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Företagarutbildning</skos:prefLabel>
     <sh:order>612</sh:order>
     <skos:note xml:lang="fi">Tähän luokkaan kuuluvat yrittäjyyden oppimiseen ja yrittäjäksi kouluttautumiseen liittyvät asiat.</skos:note>
@@ -553,7 +553,7 @@
     <skos:prefLabel xml:lang="sv">Motion och idrott</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Sports and exercise</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Sports and exercise</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Šport in vadba</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1017">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -562,7 +562,7 @@
     <skos:prefLabel xml:lang="sv">Barndagvård</skos:prefLabel>
     <skos:notation>P3.4</skos:notation>
     <skos:prefLabel xml:lang="en">Day-care for children</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Day-care for children</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Dnevno varstvo za otroke</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1013"/>
     <skos:note xml:lang="en">This service subclass contains a child’s rights related to day-care for young children, eligibility criteria, e-services and application procedures associated with day-care, different forms and service channels of day-care provision, fees charged for day-care and financial support related to the fees.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains a child’s rights related to day-care for young children, eligibility criteria, e-services and application procedures associated with day-care, different forms and service channels of day-care provision, fees charged for day-care and financial support related to the fees.</skos:note>
@@ -576,7 +576,7 @@
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1129"/>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Taxation and public finance</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Taxation and public finance</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Obdavčitev in javne finance</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Beskattning och offentlig ekonomi</skos:prefLabel>
     <sh:order>1400</sh:order>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -594,7 +594,7 @@
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ne palvelut, jotka liittyvät pankkien talletus-, lainananto- ja sijoitustoimintaan, sijoitusneuvontaan sekä pankkien toiminnan valvontaan.</skos:note>
     <skos:prefLabel xml:lang="sv">Banker</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Banks</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Banks</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Banke</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:notation>P15.6</skos:notation>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till bankernas in- och utlåning samt placeringsverksamhet, placeringsrådgivning samt tillsynen av bankernas verksamhet.</skos:note>
@@ -613,7 +613,7 @@
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör olika typer av stöd, forutsättningar för beviljande av stöd inom olika befolkningsgrupper och situationer samt grunder för storleken på stödet och räknare för beräkning av stöd.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Housing benefits</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Housing benefits</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Stanovanjski dodatki</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Stöd för boende</skos:prefLabel>
     <sh:order>104</sh:order>
     <skos:note xml:lang="en">This service subclass includes different benefit types, eligibility criteria in different population groups and situations, the grounds for the benefit amounts and benefit calculators.</skos:note>
@@ -631,7 +631,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <sh:order>1006</sh:order>
     <skos:prefLabel xml:lang="en">Support and benefits for the unemployed</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Support and benefits for the unemployed</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Podpora in nadomestila za brezposelne</skos:prefLabel>
     <skos:notation>P10.6</skos:notation>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään työttömälle työnhakijalle suunnattuja erilaisia taloudellisia tukia, niiden saamisen edellytyksiä ja tukien hakupalveluja.</skos:note>
   </rdf:Description>
@@ -648,7 +648,7 @@
     <skos:note xml:lang="sl">This class contains services that help in winding up an enterprise.</skos:note>
     <skos:prefLabel xml:lang="fi">Yritystoiminnan lopettaminen</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Winding up an enterprise</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Winding up an enterprise</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prenehanje poslovanja podjetja</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1170">
     <skos:prefLabel xml:lang="fi">Löytötavarat</skos:prefLabel>
@@ -663,14 +663,14 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1167"/>
     <skos:prefLabel xml:lang="sv">Hittegods</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Lost and found property</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Lost and found property</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Izgubljena in najdena lastnina</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1097">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar flera tjänster för arbetslösa. Med hjälp av dem kan arbetssökande bland annat söka lediga arbetsplatser i Finland och utomlands, anmäla sig som arbetslös arbetssökande, skriva CV och lämna öppna ansökningar till rekryteringstjänster. Även tjänster av typen jobbsökningscoachning och arbetskraftsutbildning hör till denna grupp.</skos:note>
     <skos:notation>P10.1</skos:notation>
     <skos:prefLabel xml:lang="en">Jobseeking and jobs</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Jobseeking and jobs</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Iskanje zaposlitve in delovna mesta</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat useat työttömälle tarkoitetut palvelut. Näiden avulla työnhakija voi muun muassa etsiä avoimia työpaikkoja Suomesta ja ulkomailta ja hakea niihin, ilmoittautua työttömäksi työnhakijaksi, tuottaa ansioluettelon ja jättää avoimia hakemuksia työpaikkapalveluihin. Myös työnhakuvalmennuksen ja työvoimakoulutuksen kaltaiset palvelut kuuluvat tähän luokkaan.</skos:note>
     <sh:order>1001</sh:order>
     <skos:note xml:lang="en">This service subclass contains many services intended for the unemployed. Supported by them, jobseekers may, for example, look for vacancies in Finland and abroad and submit their applications, register as unemployed jobseekers, prepare a CV and submit open applications to web services for jobseekers. The class also includes such services as coaching for jobseekers and labour market training.</skos:note>
@@ -683,7 +683,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1085">
     <sh:order>709</sh:order>
     <skos:prefLabel xml:lang="en">Data protection and personal data</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Data protection and personal data</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varstvo podatkov in osebni podatki</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Datasekretess och personuppgifter</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään henkilötietojen ja yksityisyyden suojaan, henkilötunnuksiin ja -tunnisteisiin, matkustusasiakirjoihin ja henkilötietoja sisältäviin rekistereihin liittyviä palveluja sekä kansalaisen oikeuksia hallita ja käyttää omia tietojaan.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
@@ -705,7 +705,7 @@
     <skos:note xml:lang="sl">This service subclass contains services particularly targeted at Finnish citizens living abroad.</skos:note>
     <skos:notation>P22.8</skos:notation>
     <skos:prefLabel xml:lang="en">Expatriate Finns</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Expatriate Finns</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Izseljenski Finci</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Finländare i utlandet</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -722,7 +722,7 @@
     <sh:order>613</sh:order>
     <skos:notation>P6.13</skos:notation>
     <skos:prefLabel xml:lang="en">Studying abroad</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Studying abroad</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Študij v tujini</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään ensi sijassa toisen ja korkea-asteen opintojen suorittamista ulkomailla joko opiskelijavaihdossa tai muunlaisen menettelyn puitteissa. Tähän liittyvät hakumenettelyt ja ulkomailla suoritettujen tutkintojen hyväksyminen ja vastaavuudet Suomessa.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1061">
@@ -738,7 +738,7 @@
     <sh:order>601</sh:order>
     <skos:note xml:lang="sv">Till denna servicearbetsgrupp hör både den egentliga förskoleundervisningen med innehåll och det lokala ordnandet av förskoleundervisning och alternativ med tanke på barnen och deras familjer.</skos:note>
     <skos:prefLabel xml:lang="en">Pre-school education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pre-school education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Predšolska vzgoja</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1194">
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1191"/>
@@ -748,7 +748,7 @@
     <skos:note xml:lang="sl">This service subclass contains services related to production animals, including production subsidies, notification duties, compensation for damage to animals and general obligations related to animal welfare.</skos:note>
     <sh:order>2403</sh:order>
     <skos:prefLabel xml:lang="en">Production animals</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Production animals</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Proizvodne živali</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Produktionsdjur</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Tuotantoeläimet</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -767,7 +767,7 @@
     <skos:note xml:lang="sl">This service subclass includes family care services for the elderly, persons with disabilities, children, the chronically ill and other such groups. The class includes the organisation of services, care agreements and training for service providers.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Family care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Family care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Družinska oskrba</skos:prefLabel>
     <skos:notation>P4.6</skos:notation>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1200">
@@ -782,7 +782,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1198"/>
     <skos:prefLabel xml:lang="en">Arts</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Arts</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Umetnost</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Taiteet</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1098">
@@ -798,11 +798,11 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <sh:order>1002</sh:order>
     <skos:prefLabel xml:lang="en">Career guidance and career planning</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Career guidance and career planning</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poklicno svetovanje in načrtovanje poklicne poti</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1006">
     <skos:prefLabel xml:lang="en">Migration within Finland and population information</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Migration within Finland and population information</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Migracije na Finskem in podatki o prebivalstvu</skos:prefLabel>
     <sh:order>105</sh:order>
     <skos:note xml:lang="en">This service subclass contains the obligations, notification services and e-services related to moving house and issues associated with the Population Information System, including names and name changes, building data and non-disclosure orders for personal security reasons.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the obligations, notification services and e-services related to moving house and issues associated with the Population Information System, including names and name changes, building data and non-disclosure orders for personal security reasons.</skos:note>
@@ -824,7 +824,7 @@
     <skos:note xml:lang="fi">Työnantajan palvelut pääluokkaan kuuluvat kaikki työantajana toimimiseen liittyvät asiat kuten työntekijöiden palkkaaminen ja henkilöstön kehittäminen.</skos:note>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1117"/>
     <skos:prefLabel xml:lang="en">Employer services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Employer services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve za delodajalce</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1116"/>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1119"/>
@@ -836,7 +836,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1127">
     <skos:prefLabel xml:lang="en">Individual taxation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Individual taxation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Obdavčitev posameznikov</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services related to prepayment of tax on an earned income, tax cards and tax rate changes, tax proposals, tax deductions and tax calculators. The class also includes church tax.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to prepayment of tax on an earned income, tax cards and tax rate changes, tax proposals, tax deductions and tax calculators. The class also includes church tax.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -857,7 +857,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Retkeily</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Hiking</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Hiking</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pohodništvo</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains the recreational use of nature, which includes public access rights, hiking areas and maps, nature centres and national parks.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the recreational use of nature, which includes public access rights, hiking areas and maps, nature centres and national parks.</skos:note>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään luonnon virkistyskäyttöä, johon kuuluvat jokamiehenoikeudet, retkeilyalueet ja -kartat, luontokeskukset ja kansallispuistot.</skos:note>
@@ -877,12 +877,12 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1096"/>
     <skos:prefLabel xml:lang="en">Subsidised employment</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Subsidised employment</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Subvencionirano zaposlovanje</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1086">
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Minorities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Minorities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Manjšine</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till minoriteters rättigheter samt likabehandlings- och språklagar.</skos:note>
     <skos:prefLabel xml:lang="sv">Minoriteter</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään vähemmistöjen oikeuksiin ja yhdenvertaisuus- ja kielilakeihin liittyviä palveluja.</skos:note>
@@ -906,7 +906,7 @@
     <skos:note xml:lang="en">This service subclass includes services related to food safety, supervision of food production and organic production.</skos:note>
     <skos:note xml:lang="sl">This service subclass includes services related to food safety, supervision of food production and organic production.</skos:note>
     <skos:prefLabel xml:lang="en">Food production</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Food production</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Proizvodnja hrane</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1074">
@@ -920,7 +920,7 @@
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat opiskelijan taloudellisten tukien muodot, tuen hakuprosessit ja -palvelut sekä myöntämisen edellykset. Luokka käsittää kaikki koulutustasot, joilla opiskelija voi saada julkista taloudellista tukea.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Financial support for studies</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Financial support for studies</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Finančna podpora za študij</skos:prefLabel>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör ekonomiska stödformer för den studerande, ansökningsprocesser och -tjänster för stöd samt förutsättningar för beviljande av stöd. Gruppen omfattar alla utbildningsnivåer där den studerande kan få offentligt ekonomiskt stöd.</skos:note>
     <sh:order>614</sh:order>
   </rdf:Description>
@@ -928,7 +928,7 @@
     <sh:order>602</sh:order>
     <skos:prefLabel xml:lang="sv">Grundläggande utbildning</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Basic education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Basic education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Osnovno izobraževanje</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör både den egentliga grundläggande utbildningen med innehåll och mål samt direkta tjänster som erbjuds i anslutning till grundläggande utbildningen och för att stöda den, t.ex. skoltransporter, skolmat och assistanstjänster. Till denna grupp hör också ärenden i anslutning till avläggande av grundläggande utbildning utomlands i enlighet med den finska grundläggande utbildningen.</skos:note>
     <skos:notation>P6.2</skos:notation>
@@ -954,7 +954,7 @@
     <skos:note xml:lang="en">This service class includes consumer protection and consumer rights from the perspective of trade in goods and services as well as insurance.</skos:note>
     <skos:note xml:lang="sl">This service class includes consumer protection and consumer rights from the perspective of trade in goods and services as well as insurance.</skos:note>
     <skos:prefLabel xml:lang="en">Consumer matters</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Consumer matters</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zadeve v zvezi s potrošniki</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1183">
     <sh:order>2209</sh:order>
@@ -962,7 +962,7 @@
     <skos:note xml:lang="en">This service subclass contains procedures and services applied when a Finnish citizen remigrates to Finland after living permanently abroad.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains procedures and services applied when a Finnish citizen remigrates to Finland after living permanently abroad.</skos:note>
     <skos:prefLabel xml:lang="en">Return migration</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Return migration</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Povratna migracija</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Paluumuutto</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Återvändande</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
@@ -978,7 +978,7 @@
     <skos:note xml:lang="en">This service subclass contains the services that an employer organises for the employees in order to maintain their work ability, to improve their health and to prevent work-related diseases.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the services that an employer organises for the employees in order to maintain their work ability, to improve their health and to prevent work-related diseases.</skos:note>
     <skos:prefLabel xml:lang="en">Occupational health care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Occupational health care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poklicno zdravstveno varstvo</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään niitä palveluja, joita työnantaja järjestää työntekijöiden työkyvyn ylläpitämiseksi, terveyden edistämiseksi ja työperäisten sairauksien ehkäisemiseksi.</skos:note>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas de tjänster som arbetsgivaren ordnar för att upprätthålla arbetstagarnas arbetsförmåga, för att främja hälsan och för att förebygga arbetsrelaterade sjukdomar.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -988,7 +988,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1139">
     <skos:prefLabel xml:lang="en">Protection of deposits and investments</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Protection of deposits and investments</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zaščita vlog in naložb</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services related to deposit guarantee procedures intended for depositors and small investors.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to deposit guarantee procedures intended for depositors and small investors.</skos:note>
     <skos:notation>P15.7</skos:notation>
@@ -1008,7 +1008,7 @@
     <skos:note xml:lang="sl">This service subclass contains mediation in family disputes from the perspectives of the content and purpose of the service, legality, especially in terms of family law, and offer and availability in municipalities.</skos:note>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään perheasioiden sovittelua palvelun sisällön ja tarkoituksen, lainmukaisuuden, erityisesti perheoikeuden, sekä kunnallisen tarjonnan ja saatavuuden kannoillta.</skos:note>
     <skos:prefLabel xml:lang="en">Family mediation and family law</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Family mediation and family law</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Družinska mediacija in družinsko pravo</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1013"/>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas medling i familjeärenden med tanke på serviceinnehållet och -syftet, lagenligheten, särskilt familjerätten samt det kommunala utbudet och tillgängligheten.</skos:note>
@@ -1025,7 +1025,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Peer and voluntary activities in social services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Peer and voluntary activities in social services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vrstniške in prostovoljne dejavnosti na področju socialnih storitev</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Sosiaalipalvelujen vertais- ja vapaaehtoistoiminta</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat asiakkaalle sosiaalipalveluna annettava vertaistukitoiminta sekä muut vapaaehtoistoimintaan tukeutuvat sosiaalipalvelut. Vertaistukitoiminta on yksilölle tai ryhmälle annettava sosiaalipalvelu, jossa sosiaalihuollon asiakas saa tukea ja ohjausta sellaisilta ihmisiltä, joilla on samanlainen elämäntilanne tai samanlaisia, omakohtaisia kokemuksia. Vertaistukeen perustuvaa palvelua annetaan muun muassa erityistä tukea tarvitsevalle lapselle tai hänen perheelleen lapsen terveyden tai kehityksen turvaamiseksi. Muista sosiaalipalveluista esimerkiksi tukisuhdetoiminta ja liikkumista tukeva palvelu voidaan toteuttaa vapaaehtoistoiminnan avulla.</skos:note>
     <sh:order>412</sh:order>
@@ -1034,7 +1034,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1144">
     <skos:notation>P16.2</skos:notation>
     <skos:prefLabel xml:lang="en">Driving instruction and driving permits in road transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Driving instruction and driving permits in road transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Učenje vožnje in vozniška dovoljenja v cestnem prometu</skos:prefLabel>
     <sh:order>1602</sh:order>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar körtillstånd, undervisning och tillståndsexamina för fordon i vägtrafik.</skos:note>
     <skos:prefLabel xml:lang="sv">Körundervisning och körtillstånd i vägtrafik</skos:prefLabel>
@@ -1052,7 +1052,7 @@
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="sv">Geodata</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Geospatial data</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Geospatial data</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Geoprostorski podatki</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1158"/>
     <skos:prefLabel xml:lang="fi">Paikkatieto</skos:prefLabel>
     <skos:notation>P18</skos:notation>
@@ -1071,7 +1071,7 @@
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1029"/>
     <skos:prefLabel xml:lang="en">Social services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Social services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Socialne storitve</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1035"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="sv">I den här servicegruppen behandlas både allmänna socialtjänster och socialtjänster för specialgrupper, vilka avsetts som stöd för medborgarnas vardag, boende och försörjning.</skos:note>
@@ -1094,7 +1094,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1120">
     <skos:prefLabel xml:lang="en">Pensions</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pensions</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pokojnine</skos:prefLabel>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään palvelunäkökulmasta Suomen lakisääteisten eläkkeiden tyyppejä sekä ulkomailla pysyvästi asuvan eläketurvaa niin ulkosuomalaisen kuin Suomessa asuvan maahanmuuttajan kannalta.</skos:note>
     <skos:note xml:lang="sv">I denna servicegrupp behandlas ur ett serviceperspektiv typer av lagstadgade pensioner i Finland samt pensionsskyddet för personer som är permanent bosatta i utlandet med tanke på både finländare bosatta utomlands och invandrare bosatta i Finland.</skos:note>
@@ -1114,7 +1114,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1011">
     <skos:prefLabel xml:lang="en">Properties</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Properties</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Nepremičnine</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Fastigheter</skos:prefLabel>
     <skos:note xml:lang="sv">I denna underservicegrupp behandlas ur servicesynvinkeln fastighetsuppgifter samt fastighetsaffärer och -beskattning.</skos:note>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään palvelujen näkökulmasta kiinteistötietoja sekä kiinteistöjen kauppaa ja verotusta.</skos:note>
@@ -1130,7 +1130,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1132">
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1141"/>
     <skos:prefLabel xml:lang="en">Private finance and funding</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Private finance and funding</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zasebne finance in financiranje</skos:prefLabel>
     <sh:order>1500</sh:order>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1137"/>
     <skos:notation>P15</skos:notation>
@@ -1154,7 +1154,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1059">
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
     <skos:prefLabel xml:lang="en">Food safety</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Food safety</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varnost hrane</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Livsmedelssäkerhet</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Elintarviketurvallisuus</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1169,7 +1169,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1168">
     <sh:order>2001</sh:order>
     <skos:prefLabel xml:lang="en">Maintaining public order and licences and permits granted by the police</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Maintaining public order and licences and permits granted by the police</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vzdrževanje javnega reda in miru ter licence in dovoljenja, ki jih izda policija</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1167"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat palvelut, jotka liittyvät viranomaisten ja heidän valtuuttamiensa tahojen suorittamaan järjestyksen ylläpitoon ja valvontaan. Tässä luokassa ovat myös poliisin vastuulla olevat lupa-asiat.</skos:note>
@@ -1187,7 +1187,7 @@
     <skos:prefLabel xml:lang="sv">Skol- och studerandehälsovården</skos:prefLabel>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör hälsovårdstjänster för skolelever och studeranden på heltid. Till gruppen hör inte socialtjänster för dessa grupper.</skos:note>
     <skos:prefLabel xml:lang="en">Pupil and student health care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pupil and student health care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zdravstveno varstvo dijakov in študentov</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="en">This service subclass contains health services intended for pupils and full-time students. It does not include social services targeted at these groups.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains health services intended for pupils and full-time students. It does not include social services targeted at these groups.</skos:note>
@@ -1203,7 +1203,7 @@
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar ärenden relaterade till grundande och registrering av partier samt partistöd.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Political parties</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Political parties</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Politične stranke</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palvelujen näkökulmasta puolueen perustamista ja rekisteröintiä sekä puoluetukeen liittyviä asioita.</skos:note>
     <skos:prefLabel xml:lang="fi">Puolueet</skos:prefLabel>
@@ -1217,7 +1217,7 @@
     <skos:note xml:lang="sl">This service class contains the services of network operators, dissemination of information on network issues, Internet security, availability and use of domain names as well as the consumer’s position as a data communications user.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Data communications</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Data communications</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Podatkovne komunikacije</skos:prefLabel>
     <skos:notation>P26.3</skos:notation>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1206"/>
     <skos:note xml:lang="fi">Tähän palveluluokkaan kuuluvat verkko-operaattoreiden palvelut, verkon häiriöistä tiedottaminen, internetin turvallisuus, internet-tunnusten saatavuus ja käyttö sekä kuluttajan asema tietoliikennepalvelujen käyttäjänä.</skos:note>
@@ -1231,7 +1231,7 @@
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ne palvelut, jotka on suunnattu joko ennakoivasti yksityishenkilön tai kotitalouden rahankäytön ja talouden hallinnan tueksi tai maksuvaikeuksiin jo joutuneen avuksi.</skos:note>
     <skos:prefLabel xml:lang="sv">Ekonomi- och skuldrådgivning för privatpersoner</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Financial and debt advisory services for individuals</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Financial and debt advisory services for individuals</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Finančno in dolžniško svetovanje za posameznike</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1132"/>
     <skos:note xml:lang="en">This service subclass contains services intended to either proactively support individuals and households in handling money and financial management, or to assist those already facing financial difficulties.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services intended to either proactively support individuals and households in handling money and financial management, or to assist those already facing financial difficulties.</skos:note>
@@ -1254,7 +1254,7 @@
     <skos:prefLabel xml:lang="fi">Asumispalvelut</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Housing services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Housing services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Stanovanjske storitve</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1012">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1269,12 +1269,12 @@
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör tjänster i anslutning till anskaffning och hyrning av företagens kontorslokaler såsom affärslokaler eller lagerutrymmen.</skos:note>
     <skos:prefLabel xml:lang="sv">Kontorslokaler</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Premises</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Premises</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Površine / Prostori</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1145">
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1142"/>
     <skos:prefLabel xml:lang="en">Traffic safety and rules of the road</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Traffic safety and rules of the road</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prometna varnost in pravila v cestnem prometu</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään liikenneturvallisuutta sekä liikennesääntöjen että suositusten ja ohjeiden kannalta. Luokkaan kuuluvat myös liikenteen häiriö- ja vaaratiedotuspalvelut ja liikenteen säätietopalvelut.</skos:note>
@@ -1297,7 +1297,7 @@
     <skos:prefLabel xml:lang="fi">Kansaneläke</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat palvelunäkökulmasta kansaneläkkeeseen ja takuueläkkeeseen liittyvät asiat.</skos:note>
     <skos:prefLabel xml:lang="en">National pension</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">National pension</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Državna pokojnina</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="sv">Folkpension</skos:prefLabel>
   </rdf:Description>
@@ -1314,7 +1314,7 @@
     <sh:order>510</sh:order>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Oral and dental health care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Oral and dental health care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Ustno in zobozdravstveno varstvo</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1157">
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar allmänna elektroniska tjänster, såsom nationella och regionala terräng- och guidekartor, tematiska karttjänster såsom vandringskartor, ruttjänster samt särskilda karttjänster för vatten- och lufttrafik.</skos:note>
@@ -1323,7 +1323,7 @@
     <skos:notation>P18.1</skos:notation>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat yleiset, sähköisinä palveluina tarjottavat valtakunnalliset ja alueelliset maasto- ja opaskartat, teemakarttapalvelut kuten retkeilykartat, reitityspalvelut sekä vesi- ja ilmaliikenteen erityiskarttapalvelut.</skos:note>
     <skos:prefLabel xml:lang="en">Maps and map services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Maps and map services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zemljevidi in storitve zemljevidov</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Kartat ja karttapalvelut</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1156"/>
@@ -1333,7 +1333,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1169">
     <skos:prefLabel xml:lang="en">Organisation of public events</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Organisation of public events</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Organizacija javnih prireditev</skos:prefLabel>
     <skos:notation>P20.2</skos:notation>
     <sh:order>2002</sh:order>
     <skos:prefLabel xml:lang="sv">Ordnande av evenemang</skos:prefLabel>
@@ -1352,7 +1352,7 @@
     <skos:prefLabel xml:lang="fi">Sosiaalipalvelujen neuvonta- ja ohjauspalvelut</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Social service advisory and guidance services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Social service advisory and guidance services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve svetovanja in usmerjanja na področju socialnih storitev</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1023"/>
     <sh:order>413</sh:order>
@@ -1368,7 +1368,7 @@
     <skos:note xml:lang="sl">This service subclass contains the criteria for the right to vote, the procedures for becoming a candidate in national, municipal or European Parliament elections, informing voters about elections, services and monitoring related to election financing as well as information services concerning the results of elections.</skos:note>
     <skos:prefLabel xml:lang="fi">Vaalit</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Elections</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Elections</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Volitve</skos:prefLabel>
     <sh:order>802</sh:order>
     <skos:prefLabel xml:lang="sv">Val</skos:prefLabel>
     <skos:notation>P8.2</skos:notation>
@@ -1378,7 +1378,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1080">
     <skos:prefLabel xml:lang="en">Legal aid</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Legal aid</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pravna pomoč</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Rättshjälp</skos:prefLabel>
     <sh:order>704</sh:order>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -1398,7 +1398,7 @@
     <skos:note xml:lang="sl">This service subclass contains earnings-related pensions from the service point of view: earnings-related pensions for private sector employees and local and central government employees. The class also includes pension insurance.</skos:note>
     <skos:note xml:lang="sv">I denna underservicegrupp behandlas arbetsbaserade pensioner ur ett serviceperspektiv: arbetspension samt kommunernas och statens pensioner. Även pensionsförsäkring hör till denna grupp.</skos:note>
     <skos:prefLabel xml:lang="en">Earnings-related pensions</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Earnings-related pensions</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pokojnine, vezane na zaslužek</skos:prefLabel>
     <skos:notation>P13.2</skos:notation>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palvelunäkökulmasta työperusteisia eläkkeitä: työeläkettä sekä kuntien ja valtion eläkkeitä. Myös eläkevakuutus kuuluu tähän luokkaan.</skos:note>
     <skos:prefLabel xml:lang="sv">Arbetspensioner</skos:prefLabel>
@@ -1415,7 +1415,7 @@
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1021"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Services for families</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Services for families</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve za družine</skos:prefLabel>
     <skos:note xml:lang="en">This service class contains services for families with children, mainly covering the period from pregnancy until a young person turns 18. In the contents of this service class, family services are examined from the perspective of different actors, situations and viewpoints.</skos:note>
     <skos:note xml:lang="sl">This service class contains services for families with children, mainly covering the period from pregnancy until a young person turns 18. In the contents of this service class, family services are examined from the perspective of different actors, situations and viewpoints.</skos:note>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1018"/>
@@ -1443,7 +1443,7 @@
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1002"/>
     <skos:note xml:lang="sv">Denna servicegrupp omfattar hur man söker, hittar och skaffar en bostad, olika boendeformer, ekonomiskt stöd för boende, processer och tjänster i anslutning till flyttning inom Finland samt tjänster som berör befolkningsdatasystemet.</skos:note>
     <skos:prefLabel xml:lang="en">Housing</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Housing</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Stanovanja</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1004"/>
     <skos:prefLabel xml:lang="fi">Asuminen</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Boende</skos:prefLabel>
@@ -1453,7 +1453,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1134">
     <sh:order>1502</sh:order>
     <skos:prefLabel xml:lang="en">Financial and debt advisory services for companies</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Financial and debt advisory services for companies</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Finančno in dolžniško svetovanje za podjetja</skos:prefLabel>
     <skos:notation>P15.2</skos:notation>
     <skos:prefLabel xml:lang="sv">Ekonomi- och skuldrådgivning för företag</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän luokkaan kuuluu yrityksen taloudelliseen vaikeuksiin liittyvät asiat, kuten esimerkiksi terveyttämisneuvonta ja velkaneuvonta.</skos:note>
@@ -1478,7 +1478,7 @@
     <skos:prefLabel xml:lang="fi">Yritysyhteistyö ja verkostoituminen</skos:prefLabel>
     <skos:notation>P11.5</skos:notation>
     <skos:prefLabel xml:lang="en">Business cooperation and networking</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Business cooperation and networking</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poslovno sodelovanje in mreženje</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1049">
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat sekä omahoito (potilaan itsensä toteuttamaa, ammattihenkilön kanssa yhdessä suunnittelemaa ja kulloiseenkin tilanteeseen parhaiten sopivaa näyttöön perustuvaa hoitoa) että itsehoito (ilman ammattihenkilön apua henkilön tilanteeseensa suunnittelemaa hoitoa, joka saattaa sisältää itselääkintää ja elämäntapamuutoksia).</skos:note>
@@ -1490,7 +1490,7 @@
     <skos:note xml:lang="sv">Till denna servicearbetsgrupp hör tjänster vars syfte är att möjliggöra och stöda klienten att själv vårda sjukdomen som konstaterats till den del det är möjligt enligt vårdanvisningarna.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Self-care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Self-care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Samooskrba</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Egen- och självvård</skos:prefLabel>
     <sh:order>511</sh:order>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -1507,12 +1507,12 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1142"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Parking</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Parking</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Parkiranje</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Pysäköinti</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1037">
     <skos:prefLabel xml:lang="en">Social service auxiliary and support services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Social service auxiliary and support services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pomožne in podporne storitve na področju socialnih storitev</skos:prefLabel>
     <sh:order>414</sh:order>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat sosiaalipalveluja täydentävät palvelut, joiden avulla tuetaan palveluyksikön perustehtävää, asiakkaan arkea ja sosiaalipalvelujen saavutettavuutta. Tällaisia ovat esim. ateriapalvelut, vaatehuoltopalvelut, siivouspalvelut, sosiaalista kanssakäymistä edistävät palvelut ja palveluyksikön asiakkaille tarkoitetut sähköiset palvelukanavat.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -1529,7 +1529,7 @@
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör andra än boendetjänster, bl.a. rehabiliterings-, transport- och väntjänster för de äldre.</skos:note>
     <skos:prefLabel xml:lang="sv">Äldretjänster</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Services for older people</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Services for older people</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve za starejše osebe</skos:prefLabel>
     <skos:notation>P4.2</skos:notation>
     <sh:order>402</sh:order>
     <skos:note xml:lang="en">This service subclass contains services for older people, excluding housing services and including rehabilitation, transport and befriending services among other things.</skos:note>
@@ -1552,7 +1552,7 @@
     <skos:prefLabel xml:lang="sv">Geodatatjänster</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1156"/>
     <skos:prefLabel xml:lang="en">Geographic information services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Geographic information services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Geografske informacijske storitve</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Paikkatietopalvelut</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1093">
@@ -1563,7 +1563,7 @@
     <skos:note xml:lang="sl">This service subclass contains the political and social participation of citizens and non-governmental organisations outside the elections from the service point of view. The class includes the procedures for establishing and registering an association and submitting citizen’s and local resident’s initiatives.</skos:note>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palvelujen näkökumasta kansalaisten ja kansalaisyhteisöjen poliittista ja yhteiskunnallista vaikuttamista vaalien ulkopuolella. Luokkaan kuuluvat muun muassa yhdistyksen perustamisen ja rekisteröinnin menettelyt sekä kansalais- ja kuntalaisaloitteiden tekeminen.</skos:note>
     <skos:prefLabel xml:lang="en">Civic participation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Civic participation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Državljanska udeležba</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1090"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar medborgarnas och frivilligorganisationernas politiska och samhälleliga medverkan utanför val ur ett serviceperspektiv. Gruppen omfattar bland annat förfaranden för grundande och registrering av föreningar samt medborgar- och kommuninvånarinitiativ.</skos:note>
@@ -1576,7 +1576,7 @@
     <skos:note xml:lang="sl">This service subclass contains services and service channels associated with reporting different kinds of crimes to the police.</skos:note>
     <skos:prefLabel xml:lang="fi">Rikosten ilmoittaminen</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Reporting crimes</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Reporting crimes</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prijava kaznivih dejanj</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
@@ -1597,7 +1597,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1184"/>
     <skos:prefLabel xml:lang="en">Environmental oversight and hygiene</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Environmental oversight and hygiene</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Okoljski nadzor in higiena</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ne lakisääteiset viranomaismenettelyt, joiden avulla kuntatasolla huolehditaan luonnonympäristön tilasta ja elinympäristön terveellisyydestä.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1111">
@@ -1611,7 +1611,7 @@
     <skos:note xml:lang="sl">This class contains grants and other funding services that support internationalisation as well as advisory services and training events focusing on internationalisation.</skos:note>
     <skos:prefLabel xml:lang="sv">Internationaliseringstjänster</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Internationalisation services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Internationalisation services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve internacionalizacije</skos:prefLabel>
     <skos:notation>P11.6</skos:notation>
     <skos:note xml:lang="fi">Tähän luokkaan kuuluvat kansainvälistymisessä tukevat avustukset ja muut rahoituspalvelut, kansainvälistymiseen liittyvä neuvonta sekä kansainvälistymiskoulutustilaisuudet.</skos:note>
   </rdf:Description>
@@ -1626,7 +1626,7 @@
     <skos:note xml:lang="sl">This service subclass contains services related to the availability and price information of rental residences, lease agreement issues, a lodger’s rights and duties, as well as letting and subletting. It also includes services related to seeking and obtaining a rented residence.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Rental housing</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Rental housing</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Najemna stanovanja</skos:prefLabel>
     <skos:notation>P1.1</skos:notation>
     <skos:prefLabel xml:lang="fi">Vuokra-asuminen</skos:prefLabel>
   </rdf:Description>
@@ -1638,7 +1638,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1120"/>
     <skos:notation>P13.3</skos:notation>
     <skos:prefLabel xml:lang="en">Disability pension</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Disability pension</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Invalidska pokojnina</skos:prefLabel>
     <skos:note xml:lang="en">This service class contains services related to establishing disability and different types of disability pensions.</skos:note>
     <skos:note xml:lang="sl">This service class contains services related to establishing disability and different types of disability pensions.</skos:note>
     <skos:prefLabel xml:lang="fi">Työkyvyttömyyseläke</skos:prefLabel>
@@ -1647,7 +1647,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1220">
     <skos:prefLabel xml:lang="en">Support services for public services users</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Support services for public services users</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Podporne storitve za uporabnike javnih storitev</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Asioinnin tukipalvelut</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass features support services such as user support, digital certificates and signatures and  appointment reservation services connected to an end customer’s service instances and processes.</skos:note>
@@ -1679,7 +1679,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1165"/>
     <skos:prefLabel xml:lang="en">Safety and security</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Safety and security</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varnost in zaščita</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1038">
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas både allmänna och hälso- och sjukvårdstjänster för vissa grupper. Till gruppen hör också tjänster i anslutning till läkemedel och näring samt rehabilitering för hälso- och sjukvårdens och medicinska rehabiliteringens del.</skos:note>
@@ -1697,7 +1697,7 @@
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1049"/>
     <skos:prefLabel xml:lang="en">Health and medical care, nutrition</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Health and medical care, nutrition</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zdravje in zdravstvena oskrba, prehrana</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1054"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1055"/>
     <skos:prefLabel xml:lang="sv">Hälso- och sjukvård, näring</skos:prefLabel>
@@ -1719,7 +1719,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1135">
     <skos:prefLabel xml:lang="en">Loans and credit history</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Loans and credit history</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Posojila in kreditna zgodovina</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palveluja, jotka liittyvät lainan ottamiseen, takuisiin ja takaisinmaksuun, sosiaaliseen luotonantoon ja sekä luottotietorekisteriin ja maksuhäiriöihin. Luokka sisältää myös sisältää myös yritysten lainoihin liittyvät palvelut.</skos:note>
     <sh:order>1503</sh:order>
@@ -1740,7 +1740,7 @@
     <skos:note xml:lang="en">This service subclass contains especially services related to the home care of and home services for older people and persons with disabilities to provide assistance with cleaning, personal hygiene, cooking etc. The class excludes actual home nursing services, which have their own subclass.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains especially services related to the home care of and home services for older people and persons with disabilities to provide assistance with cleaning, personal hygiene, cooking etc. The class excludes actual home nursing services, which have their own subclass.</skos:note>
     <skos:prefLabel xml:lang="en">Home care and home services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Home care and home services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Oskrba na domu in storitve na domu</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Hemvård och hemservice</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -1749,7 +1749,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1014">
     <skos:prefLabel xml:lang="en">Intimate relationship</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Intimate relationship</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Intimni odnosi</skos:prefLabel>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas äktenskap, samboförhållande och registrerat partnerskap, lagstadgade skyldigheter och rättigheter för olika förhållandeformer, eventuella juridiska avtal i anslutning till förhållandet samt processer för att upplösa förhållandet.</skos:note>
     <skos:prefLabel xml:lang="sv">Parförhållande</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1013"/>
@@ -1766,7 +1766,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1142"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Public transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Public transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Javni prevoz</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains public transport timetables, routes, stations, prices and rights to discounts.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains public transport timetables, routes, stations, prices and rights to discounts.</skos:note>
     <skos:prefLabel xml:lang="sv">Kollektivtrafik</skos:prefLabel>
@@ -1779,7 +1779,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1082">
     <skos:prefLabel xml:lang="en">Prosecutors</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Prosecutors</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Tožilci</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains issues and services related to prosecution services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains issues and services related to prosecution services.</skos:note>
     <skos:note xml:lang="fi">Tähän palvelualaluokassa käsitellään syyttäjälaitokseen liittyviä asioita palvelujen näkökulmasta.</skos:note>
@@ -1806,7 +1806,7 @@
     <skos:notation>P24</skos:notation>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1195"/>
     <skos:prefLabel xml:lang="en">Natural resources, flora and fauna</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Natural resources, flora and fauna</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Naravni viri, flora in favna</skos:prefLabel>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <sh:order>2400</sh:order>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1192"/>
@@ -1815,7 +1815,7 @@
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1070">
     <skos:prefLabel xml:lang="en">Adult and continuing education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Adult and continuing education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Izobraževanje odraslih in vseživljensko izobraževanje</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
     <skos:notation>P6.10</skos:notation>
     <skos:prefLabel xml:lang="sv">Vuxen- och kompletteringsutbildning</skos:prefLabel>
@@ -1840,7 +1840,7 @@
     <skos:note xml:lang="sl">This service subclass contains issues related to the activities of organisations and associations and the legality of these activities, including permit procedures for collecting signatures and funds as part of campaigning.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Activities of non-governmental organisations</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Activities of non-governmental organisations</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Dejavnosti nevladnih organizacij</skos:prefLabel>
     <sh:order>804</sh:order>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1188">
@@ -1854,7 +1854,7 @@
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar anmälnings- och tillståndsförfaranden relaterade till åtgärder som förändrar miljön permanent eller som eventuellt är skadliga för miljön, såsom gruvdrift eller miljöfarliga kemikalier.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Environmental notifications and permits</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Environmental notifications and permits</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Okoljska obvestila in dovoljenja</skos:prefLabel>
     <sh:order>2305</sh:order>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
   </rdf:Description>
@@ -1871,7 +1871,7 @@
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster med vars hjälp medborgare kan följa upp myndighetsverksamhetens lagenlighet och anmäla fel i myndigheternas verksamhet. Nyckelinstanserna i dessa ärenden är Justiekanslern och Riksdagens justieombudsman.</skos:note>
     <sh:order>703</sh:order>
     <skos:prefLabel xml:lang="en">Legal protection and legality</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Legal protection and legality</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pravno varstvo in zakonitost</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1067">
     <skos:note xml:lang="en">This service subclass contains apprenticeship training as a method of obtaining a vocational qualification: the structure of the education and training, completion of a qualification and the contractual nature of the training. Financial support for studies is included in its own subclass.</skos:note>
@@ -1886,7 +1886,7 @@
     <skos:prefLabel xml:lang="fi">Oppisopimus</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
     <skos:prefLabel xml:lang="en">Apprenticeship training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Apprenticeship training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vajeništvo</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1164">
     <skos:note xml:lang="en">This service subclass contains the military service, services and support forms for conscripts, ways of completing military service, compensation for accidents sustained while in service as well as reservist activities, voluntary national defence and reserve training.</skos:note>
@@ -1897,7 +1897,7 @@
     <sh:order>1904</sh:order>
     <skos:prefLabel xml:lang="sv">Försvar</skos:prefLabel>
     <skos:prefLabel xml:lang="en">National defence</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">National defence</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Nacionalna obramba</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään asevelvollisuutta, asevelvollisen palveluja ja tukia, asevelvollisuuden suorittamisen tapoja, palveluksessa tapahtuneiden tapaturmien korvaamista sekä reserviläistoimintaa, vapaaehtoista maanpuolustusta ja kertausharjoituksia.</skos:note>
@@ -1908,7 +1908,7 @@
     <skos:prefLabel xml:lang="fi">Terveyden ja hyvinvoinnin neuvonta- ja ohjauspalvelut</skos:prefLabel>
     <skos:note xml:lang="sv">Tjänster i anslutning till en separat servicehändelse, besök till en serviceenhet eller tjänster i samband med en servicehelhet eller dess hantering, med hjälp av vilken klienten får rådgivning och handledning när han eller hon söker hälsovårdstjänster i problemsituationer. Sådana är t.ex. patientombudsmannens tjänster, tidsbeställningar, påminnelsetjänster, egenvårdstjänster och servicestyrning.</skos:note>
     <skos:prefLabel xml:lang="en">Advisory and guidance services for health and well-being</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Advisory and guidance services for health and well-being</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Svetovalne in usmerjevalne storitve za zdravje in dobro počutje</skos:prefLabel>
     <skos:note xml:lang="en">The class contains services related to an individual service transaction, visit to a service unit, or a service package or its management, through which a client receives advice and guidance when seeking health and/or well-being services in either problem situations or health promotion. These include the patient ombudsman’s services, appointments, reminder services, self-care services and case management services.</skos:note>
     <skos:note xml:lang="sl">The class contains services related to an individual service transaction, visit to a service unit, or a service package or its management, through which a client receives advice and guidance when seeking health and/or well-being services in either problem situations or health promotion. These include the patient ombudsman’s services, appointments, reminder services, self-care services and case management services.</skos:note>
     <skos:note xml:lang="fi">Yksittäiseen palvelutapahtumaan, käyntiin palveluyksikössä tai palvelukokonaisuuteen tai sen hallintaan liittyvät palvelut, joiden avulla asiakas saa neuvontaa ja opastusta etsiessään palveluja terveyden ja hyvinvoinnin ongelmatilanteisiin ja terveyden edistämiseen. Näitä ovat esimerkiksi potilasasiamiespalvelu, ajanvaraukset, muistutuspalvelut, oma- ja itsehoitopalvelut ja palveluohjaus.</skos:note>
@@ -1930,7 +1930,7 @@
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään potilaan kiireelliseen hoitoon ja hoitoon hakeutumiseen liittyviä palveluja.</skos:note>
     <skos:notation>P5.5</skos:notation>
     <skos:prefLabel xml:lang="en">First aid and emergency care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">First aid and emergency care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prva pomoč in nujna oskrba</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1176">
@@ -1946,7 +1946,7 @@
     <skos:note xml:lang="en">This service subclass contains permits that a foreign citizen needs to work or study in Finland, and the support services offered in the education and labour markets.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains permits that a foreign citizen needs to work or study in Finland, and the support services offered in the education and labour markets.</skos:note>
     <skos:prefLabel xml:lang="en">Immigrants’ employment and studies</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Immigrants’ employment and studies</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zaposlovanje in študij priseljencev</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1140">
     <sh:order>1508</sh:order>
@@ -1960,12 +1960,12 @@
     <skos:note xml:lang="fi">Tähän luokkaan kuuluu kaikki yrityksen rahoitukseen liittyvät asiat kuten esimerkiksi yritystuet, kehittämisavustukset, lainat, takuut sekä hanke- ja kansainvälistymisrahoitus.</skos:note>
     <skos:prefLabel xml:lang="sv">Företagsfinansiering</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Business funding</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Business funding</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Financiranje podjetij</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1031">
     <skos:prefLabel xml:lang="en">Financial support for jobseekers</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Financial support for jobseekers</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Finančna podpora iskalcem zaposlitve</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1023"/>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör bl.a. tjänster i anslutning till arbetskraftsutbildning, jobbsökarträning, den arbetslösas frivilliga studier och arbetsverksamhet i rehabiliteringssyfte.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -1986,7 +1986,7 @@
     <skos:note xml:lang="sl">This service class contains tourism services, travel documents, border services, traveller’s safety and the services of Finland's foreign missions.</skos:note>
     <skos:prefLabel xml:lang="sv">Turism</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Tourism</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Tourism</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Turizem</skos:prefLabel>
     <skos:notation>P17</skos:notation>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1155"/>
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään matkailupalveluja, matkustusasiakirjoja, rajapalveluja, matkailijan turvallisuutta ja Suomen ulkomaan-edustustojen palveluja.</skos:note>
@@ -2008,7 +2008,7 @@
     <skos:note xml:lang="en">This service subclass contains grants and other funding services to support business development, business development programmes and business advice services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains grants and other funding services to support business development, business development programmes and business advice services.</skos:note>
     <skos:prefLabel xml:lang="en">Business development</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Business development</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Razvoj podjetij</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Liiketoiminnan kehittäminen</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1205">
@@ -2021,7 +2021,7 @@
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar instituts- och högskoleundervisning som är öppen för alla, öppen undervisning i olika konstarter samt läroanstalter som ordnar konstfostran för barn och ungdomar.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1198"/>
     <skos:prefLabel xml:lang="en">Free adult education and art education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Free adult education and art education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Brezplačno izobraževanje odraslih in umetniško izobraževanje</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Fritt bildningsarbete och konstfostran</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains instruction at secondary and higher level educational institutions that is open for all, open instruction in different arts as well as institutions that provide art education for children and young people and their teaching contents.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains instruction at secondary and higher level educational institutions that is open for all, open instruction in different arts as well as institutions that provide art education for children and young people and their teaching contents.</skos:note>
@@ -2031,7 +2031,7 @@
     <skos:notation>P9.1</skos:notation>
     <skos:prefLabel xml:lang="fi">Tilasto- ja tietopalvelut</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Statistics and information services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Statistics and information services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Statistične in informacijske storitve</skos:prefLabel>
     <skos:note xml:lang="fi">Tämä alapalveluluokka sisältää palvelut, joiden tehtävänä on tuottaa tai kerätä, ylläpitää ja tarjota systemaattisesti (tilastollisesti tai muulla tavoin) tuotettua tietoa yhteiskunnasta, luonnonympäristöstä tai organisaatioiden toiminnasta.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="sv">Statistik- och informationstjänster</skos:prefLabel>
@@ -2044,7 +2044,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1177">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Language courses</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Language courses</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Jezikovni tečaji</skos:prefLabel>
     <sh:order>2203</sh:order>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
@@ -2064,7 +2064,7 @@
     <skos:note xml:lang="en">This service subclass contains the contents and objectives of general upper secondary education, applying for a place in general upper secondary education, methods of completing the education and the matriculation examination. Financial support for studies is included in its own subclass.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the contents and objectives of general upper secondary education, applying for a place in general upper secondary education, methods of completing the education and the matriculation examination. Financial support for studies is included in its own subclass.</skos:note>
     <skos:prefLabel xml:lang="en">General upper secondary education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">General upper secondary education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Splošno srednješolsko izobraževanje</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Lukiokoulutus</skos:prefLabel>
@@ -2079,7 +2079,7 @@
     <skos:note xml:lang="sv">Klient- och patienttjänster som stöder serviceenhetens grunduppgift eller en individuell klient och som utgörs av tjänster i anslutning till exempelvis inkvartering, näring, rekreation och tillgång till information för serviceenhetens klienter och patienter.</skos:note>
     <sh:order>518</sh:order>
     <skos:prefLabel xml:lang="en">Support services for well-being services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Support services for well-being services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Podporne storitve za dobro počutje</skos:prefLabel>
     <skos:notation>P5.18</skos:notation>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2097,7 +2097,7 @@
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palveluja ja menettelyjä, joilla suojellaan arvokkaaksi katsottua rakennuskantaa joko yksittäisinä rakennuksina tai rakennuskokonaisuuksina.</skos:note>
     <skos:notation>P23.6</skos:notation>
     <skos:prefLabel xml:lang="en">Building heritage and cultural environments</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Building heritage and cultural environments</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Gradbena dediščina in kulturno okolje</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1184"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -2105,7 +2105,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <sh:order>1701</sh:order>
     <skos:prefLabel xml:lang="en">Tourism in Finland</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Tourism in Finland</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Turizem na Finskem</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat kotimaan matkailun tieto-, reitti- ja majoituspalvelut.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1152"/>
     <skos:prefLabel xml:lang="fi">Matkailu Suomessa</skos:prefLabel>
@@ -2129,7 +2129,7 @@
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsiteltävät palvelut sijoittuvat erikoissairaanhoidon määritelmään: "Erikoissairaanhoito tarkoittaa sairaalassa annettavaa erikoislääkärien tekemää tutkimusta ja hoitoa". Määritelmän mukaan myös ruumiinavaus ja patologin palvelut kuuluvat tähän.</skos:note>
     <skos:prefLabel xml:lang="en">Specialised medical care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Specialised medical care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Specializirana zdravstvena oskrba</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1165">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2142,7 +2142,7 @@
     <skos:notation>P19.5</skos:notation>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1159"/>
     <skos:prefLabel xml:lang="en">Border guarding</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Border guarding</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varovanje meja</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Rajavalvonta</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
   </rdf:Description>
@@ -2157,13 +2157,13 @@
     <skos:prefLabel xml:lang="sv">Socialtjänster för skol- och studerandevård</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Pupil and student welfare social services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Pupil and student welfare social services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Socialne storitve v zvezi z varstvom učencev in dijakov</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains social services intended for pupils and full-time students, including a school social worker’s services and services targeted at secondary and tertiary level students that support coping with everyday life, such as peer support groups and advisory services that are not health or medical care services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains social services intended for pupils and full-time students, including a school social worker’s services and services targeted at secondary and tertiary level students that support coping with everyday life, such as peer support groups and advisory services that are not health or medical care services.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1020">
     <skos:prefLabel xml:lang="en">Developmental and family counselling</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Developmental and family counselling</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Razvojno in družinsko svetovanje</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Rådgivning i uppfostrings- och familjefrågor</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains counselling services intended for families with young children, parents of families and young people.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains counselling services intended for families with young children, parents of families and young people.</skos:note>
@@ -2179,7 +2179,7 @@
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1141">
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Financial market</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Financial market</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Finančni trg</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till utlåning och placeringsrådgivning utanför bankerna, tillsyn av denna verksamhet samt konsumenternas rättigheter som användare av dessa tjänster. Gruppen omfattar också informationstjänster relaterade till räntenivån.</skos:note>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ne palvelut, jotka liittyvät pankkien ulkopuolella tapahtuvaan lainanantoon ja sijoitusneuvontaan, tämän toiminnan valvontaan sekä kuluttajan oikeuksiin näiden palvelujen käyttäjänä. Luokkaan kuuluvat myös korkotasoon liityvät tietopalvelut.</skos:note>
     <skos:notation>P15.9</skos:notation>
@@ -2200,7 +2200,7 @@
     <skos:prefLabel xml:lang="fi">Asiakirja- ja tietopyynnöt</skos:prefLabel>
     <skos:note xml:lang="fi">Tämä alapalveluluokka sisältää julkishallinnon palvelut, joissa kansalaiset, yhteisöt ja toiset viranomaiset voivat pyytää itselleen viranomaisen virallisia asiakirjoja tai muita viranomaisen hallinnoimia tietoja (tyypillisesti organisaation kirjaamosta) niissä puitteissa, kuin heillä on näiden tietojen saamiseen oikeus.</skos:note>
     <skos:prefLabel xml:lang="en">Requests for public documents and information</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Requests for public documents and information</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zahtevki za javne dokumente in informacije</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <sh:order>902</sh:order>
     <skos:note xml:lang="sv">Denna underservicegrupp innehåller den offentliga förvaltningens tjänster där medborgare, samfund och andra myndigheter kan be om myndighetens offentliga dokument eller annan information administrerad av myndigheten (typiskt från organisationens registratorskontor) inom ramen som de har rätt till att få informationen.</skos:note>
@@ -2218,7 +2218,7 @@
     <skos:prefLabel xml:lang="sv">Utveckling av produkter och tjänster</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Product and service development</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Product and service development</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Razvoj izdelkov in storitev</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat yritysten tuote- ja palvelukehitystä tukevat avustukset ja muut rahoituspalvelut, tuotekehitysohjelmat ja neuvonta liittyen esimerkiksi keksintöihin ja patentteihin.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:">
@@ -2271,7 +2271,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1206">
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään viestintää joukkoviestinnän ja sähköisen viestinnän (YLE, operaattorit, JSN, sananvapaus, yksityisyys, verkkotunnukset, postipalvelut) säädösten ja peruspalvelujen kannalta. Luokkaan kuuluvat mm. Yleisradio, julkisen sanan neuvosto, tele- ja internetoperaattorit sekä viestinnän säädökset.</skos:note>
     <skos:prefLabel xml:lang="en">Communications</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Communications</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Komunikacije</skos:prefLabel>
     <skos:note xml:lang="sv">I denna servicegrupp behandlas kommunikation utifrån masskommunikation och elektronisk kommunikation, och den omfattar YLE, operatörer, opinionsnämnden för massmedier, yttrandefrihet, integritet, domännamn och posttjänster med tanke på författningar och primärservice. Gruppen omfattar bland annat Rundradion, opinionsnämnden för massmedier, tele- och internetoperatörer samt författningar om kommunikation.</skos:note>
     <skos:note xml:lang="en">This service class contains communications from the perspective of mass communication and electronic communication, freedom of speech, privacy, domain names, and postal services from the viewpoint of regulations and basic services. The class includes the Finnish Broadcasting Company, the Council for Mass Media, telecommunications and internet operators and statutes on communication.</skos:note>
     <skos:note xml:lang="sl">This service class contains communications from the perspective of mass communication and electronic communication, freedom of speech, privacy, domain names, and postal services from the viewpoint of regulations and basic services. The class includes the Finnish Broadcasting Company, the Council for Mass Media, telecommunications and internet operators and statutes on communication.</skos:note>
@@ -2291,7 +2291,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Potilaan oikeudet</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat potilasasiamiehen palvelut sekä ne tieto- ja muut palvelut, joiden kautta ja puitteissa potilas voi toteuttaa oikeuksiaan.</skos:note>
     <skos:prefLabel xml:lang="en">Patient’s rights</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Patient’s rights</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pravice bolnikov</skos:prefLabel>
     <sh:order>519</sh:order>
     <skos:prefLabel xml:lang="sv">Patientombudsmannen och patientens rättigheter</skos:prefLabel>
     <skos:notation>P5.19</skos:notation>
@@ -2306,7 +2306,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1159"/>
     <skos:notation>P19.6</skos:notation>
     <skos:prefLabel xml:lang="en">Radiation safety</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Radiation safety</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Radiacijska varnost</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Säteilyturvallisuus</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -2323,7 +2323,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
     <sh:order>2204</sh:order>
     <skos:prefLabel xml:lang="en">Citizenship applications</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Citizenship applications</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prošnje za državljanstvo</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään Suomen kansalaisuuden hakemisen prosessiin liittyviä menettelyjä, velvoitteita ja palveluja.</skos:note>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas förfaranden, skyldigheter och tjänster relaterade till ansökan om finskt medborgarskap.</skos:note>
     <skos:prefLabel xml:lang="sv">Ansökan om medborgarskap</skos:prefLabel>
@@ -2341,7 +2341,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Tjänster för missbrukare och mentalvårdstjänster</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
     <skos:prefLabel xml:lang="en">Intoxicant abuse and mental health services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Intoxicant abuse and mental health services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve v zvezi z zlorabo opojnih snovi in duševnim zdravjem</skos:prefLabel>
     <skos:note xml:lang="sv">Tjänster som hör till denna serviceundergrupp har anvisats för personer som insjuknat i missbrukar- och övriga beroendsjukdomar och för de som lider av mentala problem. Gruppens tjänster kan vara såväl vårdande, stödjande som förebyggande.</skos:note>
     <skos:prefLabel xml:lang="fi">Päihde- ja mielenterveyspalvelut</skos:prefLabel>
     <sh:order>507</sh:order>
@@ -2358,7 +2358,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains issues related to social assistance, including the different forms of assistance, eligibility criteria, the grounds for calculating assistance amounts and application procedures.</skos:note>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas ärenden i samband med utkomststöd, t.ex. olika stödformer, förutsättningar för beviljande, grunder för uträkning av stöd och ansökningsförfaranden.</skos:note>
     <skos:prefLabel xml:lang="en">Social assistance</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Social assistance</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Socialna pomoč</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Toimeentulotuki</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1142">
@@ -2380,7 +2380,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1145"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1143"/>
     <skos:prefLabel xml:lang="en">Transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Promet</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Liikenne</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1144"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1151"/>
@@ -2397,7 +2397,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar EU-medborgares rättigheter som turist i EU-området samt regler för och begränsningar i privat import och export.</skos:note>
     <sh:order>1702</sh:order>
     <skos:prefLabel xml:lang="en">Tourism in the EU area</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Tourism in the EU area</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Turizem na območju EU</skos:prefLabel>
     <skos:notation>P17.2</skos:notation>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1021">
@@ -2407,7 +2407,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Barnskydd</skos:prefLabel>
     <skos:notation>P3.8</skos:notation>
     <skos:prefLabel xml:lang="en">Child welfare</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Child welfare</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varstvo otrok</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään palveluja, jotka liittyvät perheen kriisien ehkäisemiseen, lapsen tai nuoren kasvuympäristön turvallisuuteen ja erilaisiin sijaiskotiratkaisuihin.</skos:note>
     <skos:note xml:lang="en">This service subclass contains services associated with preventing family crises, safety of the environment in which a child or a young person grows up, and different substitute care arrangements.</skos:note>
@@ -2427,7 +2427,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör innehåll och syfte för en utbildning av högre nivå, hur man söker till utbildning av högre nivå samt examenskrav och -strukturer. Det ekonomiska stödet för studierna behandlas i sin egen serviceundergrupp.</skos:note>
     <skos:prefLabel xml:lang="en">Higher education</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Higher education</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Visokošolsko izobraževanje</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat korkea-asteen koulutuksen sisältö ja tarkoitus, korkeakoulutukseen hakeminen ja tutkintovaatimukset ja -rakenteet. Opintojen taloudellinen tuki käsitellään omassa alapalveluluokassaan.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1130">
@@ -2440,7 +2440,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains issues related to corporate taxation, including services that support the submission of tax returns.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1126"/>
     <skos:prefLabel xml:lang="en">Corporate taxation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Corporate taxation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Obdavčitev podjetij</skos:prefLabel>
     <skos:notation>P14.4</skos:notation>
     <skos:prefLabel xml:lang="fi">Yritysverotus</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat yritysverotukseen liittyvät asiat, kuten esimerkiksi veroilmoituksen tekemistä tukevat palvelut.</skos:note>
@@ -2451,7 +2451,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service class contains the conventional mass media (radio, television, press) with their various services, operating licences related to mass media as well as questions of freedom of speech.</skos:note>
     <skos:note xml:lang="sl">This service class contains the conventional mass media (radio, television, press) with their various services, operating licences related to mass media as well as questions of freedom of speech.</skos:note>
     <skos:prefLabel xml:lang="en">Mass media</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Mass media</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Množični mediji</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar traditionella massmedier (radio, tv, pressen) med olika tjänster, koncessioner relaterade till massmedier samt frågor om yttrandefrihet.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1206"/>
@@ -2463,7 +2463,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1219">
     <skos:note xml:lang="sv">Denna underservicegrupp innehåller lagenligt utnyttjande av innehållet i den offentliga förvaltningens register och databaser som enstaka informationsinlämningar eller som automatiskt sambruk av information mellan systemen.</skos:note>
     <skos:prefLabel xml:lang="en">Government (state and local) registers and databases</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Government (state and local) registers and databases</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vladni (državni in lokalni) registri in zbirke podatkov</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass features services that facilitate legal disclosures of information from public sector registers and databases either as individual instances or mass information exchange between information systems.</skos:note>
     <skos:note xml:lang="sl">This service subclass features services that facilitate legal disclosures of information from public sector registers and databases either as individual instances or mass information exchange between information systems.</skos:note>
     <skos:notation>P9.3</skos:notation>
@@ -2480,7 +2480,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains both regular health examinations (for example at schools) and discretionary health examinations (for example in occupational health care services) as well as screenings of large population groups, focusing on specific illnesses.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Health examinations</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Health examinations</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zdravstveni pregledi</skos:prefLabel>
     <sh:order>508</sh:order>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat sekä säännöllisesti järjestettävät terveystarkastukset (esimerkiksi kouluissa) ja harkinnanvaraiset terveystarkastukset (esimerkiksi työterveydenhuollossa) että tiettyihin sairauksiin liittyvät seulonnat, joita tarjotaan laajoille väestöryhmille.</skos:note>
@@ -2500,7 +2500,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <sh:order>1703</sh:order>
     <skos:prefLabel xml:lang="fi">Matkailu EU-alueen ulkopuolella</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Tourism outside the EU area</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Tourism outside the EU area</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Turizem zunaj območja EU</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass includes travel advisories for different countries and recommended vaccinations, safety instructions, international driving licences, visa practices and electronic travel authorisations, such as ESTA and eTA.</skos:note>
     <skos:note xml:lang="sl">This service subclass includes travel advisories for different countries and recommended vaccinations, safety instructions, international driving licences, visa practices and electronic travel authorisations, such as ESTA and eTA.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2509,7 +2509,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1169"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1168"/>
     <skos:prefLabel xml:lang="en">Public order</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Public order</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Javni red</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1170"/>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä luokassa käsitellään yhteiskuntajärjestyksen ja turvallisuuden ylläpitoa normaalioloissa. Luokkaan kuuluvat ensi sijassa poliisin ja muiden järjestyksen valvonnasta vastuussa olevien palvelut.</skos:note>
@@ -2525,7 +2525,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1034">
     <skos:prefLabel xml:lang="en">Integration</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Integration</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Integracija</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Integration</skos:prefLabel>
     <sh:order>411</sh:order>
     <skos:notation>P4.11</skos:notation>
@@ -2540,7 +2540,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1022">
     <skos:prefLabel xml:lang="en">Child maintenance</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Child maintenance</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Preživnina za otroke</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1013"/>
     <sh:order>309</sh:order>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2566,12 +2566,12 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <sh:order>1405</sh:order>
     <skos:prefLabel xml:lang="en">Public finance and public procurements</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Public finance and public procurements</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Javne finance in javna naročila</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1143">
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat tieliikenneajoneuvojen omistamista, maahantuontia, rekisteröintiä ja liikennekelpoisuutta koskevat palvelut.</skos:note>
     <skos:prefLabel xml:lang="en">Vehicles and registration in road transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Vehicles and registration in road transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vozila in registracija v cestnem prometu</skos:prefLabel>
     <skos:notation>P16.1</skos:notation>
     <sh:order>1601</sh:order>
     <skos:note xml:lang="en">This service subclass contains services related to the ownership, importation, registration and road-worthiness of road transport vehicles.</skos:note>
@@ -2586,7 +2586,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1010">
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Land use, land use planning and sites</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Land use, land use planning and sites</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Raba zemljišč, prostorsko načrtovanje in območja</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <sh:order>203</sh:order>
     <skos:note xml:lang="en">This service subclass contains regional land use plans, local master plans and local detailed plans, possibilities of influencing these plans, and the sales and leasing of zoned land and sites, including commercial sites.</skos:note>
@@ -2603,7 +2603,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains procedures and services used when individuals move from Finland to another Nordic country. Typically, they include issues related to notifications of move, social security and citizenship.</skos:note>
     <skos:notation>P22.5</skos:notation>
     <skos:prefLabel xml:lang="en">Moving from Finland to another Nordic country</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Moving from Finland to another Nordic country</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Selitev iz Finske v drugo nordijsko državo</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar förfaranden och tjänster som är aktuella vid flyttning från Finland till ett annat nordiskt land. Dessa handlar i allmänhet om flyttningsanmälan, socialskydd och medborgarskap.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat menettelyt ja palvelut, joita käytetään luokkaotsikon mukaisessa muuttotilanteessa. Näitä ovat tyypillisesti muuttoilmoituksiin, sosiaaliturvaan ja kansalaisuuteen liittyvät asiat.</skos:note>
@@ -2618,7 +2618,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Näring</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään terveyttä ylläpitävään ravitsemukseen kuten ravitsemussuosituksiin ja ravitsemusneuvontaan liittyviä asioita.</skos:note>
     <skos:prefLabel xml:lang="en">Nutrition</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Nutrition</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Prehrana</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Ravinto</skos:prefLabel>
     <sh:order>520</sh:order>
     <skos:note xml:lang="en">This service subclass contains issues related to nutrition that maintains good health, including nutrition recommendations and nutritional advice.</skos:note>
@@ -2639,7 +2639,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service class includes services and information related to representative democracy. Particularly prominent in it are political parties, the election system and voting as well as services provided by the civic society and the third sector.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Democracy</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Democracy</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Demokracija</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="sv">Demokrati</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1091"/>
@@ -2660,11 +2660,11 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:notation>P26.2</skos:notation>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Postal services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Postal services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poštne storitve</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1099">
     <skos:prefLabel xml:lang="en">Working life rules and collective agreements</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Working life rules and collective agreements</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Preživljanje časa v delovnem okolju in kolektivne pogodbe</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Arbetslivets regler och kollektivavtal</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat palvelujen näkökulmasta työsopimuksiin ja -ehtoihin, palkkaukseen, työelämän yhdenvertaisuuteen ja joustoihin kuten etä- ja osa-aikatyöhön liittyvät asiat.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2687,7 +2687,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass deals with services associated with public guardianship as specified in the relevant legislation.</skos:note>
     <skos:note xml:lang="sl">This service subclass deals with services associated with public guardianship as specified in the relevant legislation.</skos:note>
     <skos:prefLabel xml:lang="en">Public guardianship</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Public guardianship</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Javno skrbništvo</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Intressebevakning</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
     <skos:notation>P7.11</skos:notation>
@@ -2702,7 +2702,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ne kolmannen sektorin tuottamat palvelut ja toimintamuodot, joilla tuetaan työttömän työnhakua ja toimintakyvyn säilyttämistä.</skos:note>
     <skos:prefLabel xml:lang="sv">Föreningar och kamratstöd för arbetslösa</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Organisations of the unemployed and peer support</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Organisations of the unemployed and peer support</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Organizacije brezposelnih in medsebojna pomoč</skos:prefLabel>
     <skos:notation>P10.8</skos:notation>
     <skos:note xml:lang="en">This service subclass contains services and activities provided by the third sector to support the jobseeking of unemployed persons and to maintain their functional ability.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services and activities provided by the third sector to support the jobseeking of unemployed persons and to maintain their functional ability.</skos:note>
@@ -2712,7 +2712,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains aspects related to the role of an employer, including the employer's obligations.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1115"/>
     <skos:prefLabel xml:lang="en">Services for employers</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Services for employers</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve za delodajalce</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:notation>P12.1</skos:notation>
     <skos:prefLabel xml:lang="fi">Palveluja työnantajalle</skos:prefLabel>
@@ -2734,14 +2734,14 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1198"/>
     <skos:prefLabel xml:lang="fi">Museot</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Museums</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Museums</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Muzeji</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan liittyvät museoiden fyysiset palvelupisteet ja näyttelytoiminta, rakennusperinnön suojeluun liittyvät asiat sekä museoalan sähköiset palvelut kuten tietopalvelut ja kulttuuriperinnön digitointi.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1213">
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <sh:order>2703</sh:order>
     <skos:prefLabel xml:lang="en">Boating</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Boating</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Čolnarjenje</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="fi">Veneily</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1210"/>
@@ -2754,7 +2754,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1075">
     <skos:prefLabel xml:lang="en">Science and research</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Science and research</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Znanost in raziskave</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Vetenskap och undersökning</skos:prefLabel>
     <skos:notation>P6.15</skos:notation>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2782,7 +2782,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Ympäristö</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1188"/>
     <skos:prefLabel xml:lang="en">The environment</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">The environment</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Okolje</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1189"/>
     <skos:topConceptOf rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -2802,14 +2802,14 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <sh:order>2405</sh:order>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1191"/>
     <skos:prefLabel xml:lang="en">Veterinary services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Veterinary services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Veterinarske storitve</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1063">
     <sh:order>603</sh:order>
     <skos:notation>P6.3</skos:notation>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas den morgon- och eftermiddagsverksamhet som ordnas av kommunen och vars syfte är att stöda hemmets och skolans uppfostringsarbete och barnets balanserade tillväxt samt erbjuda möjligheter till handledd verksamhet och övervakad vila utanför hemmet.</skos:note>
     <skos:prefLabel xml:lang="en">Morning and afternoon club activities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Morning and afternoon club activities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Dopoldanske in popoldanske klubske dejavnosti</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="sv">Morgon- och eftermiddagsverksamhet</skos:prefLabel>
@@ -2827,7 +2827,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas lagstadgade och övriga tjänster vars primära syfte är att återställa personens arbets- eller funktionsförmåga, som av olika anledningar blivit nedsatt, med hjälp av olika terapeutiska och/eller medicinska metoder.</skos:note>
     <skos:prefLabel xml:lang="en">Rehabilitation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Rehabilitation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Rehabilitacija</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Kuntoutus</skos:prefLabel>
     <sh:order>513</sh:order>
     <skos:notation>P5.13</skos:notation>
@@ -2843,7 +2843,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains local and national fire and rescue services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains local and national fire and rescue services.</skos:note>
     <skos:prefLabel xml:lang="en">Fire and rescue activities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Fire and rescue activities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Gasilske in reševalne dejavnosti</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1159"/>
     <sh:order>1901</sh:order>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar lokala och nationella brand- och räddningstjänster.</skos:note>
@@ -2854,7 +2854,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains consumer rights and information services associated with them, complaints, returns and processing of disputes. The class includes trade in goods (in-store and online purchases), tourism services and other immaterial services.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains consumer rights and information services associated with them, complaints, returns and processing of disputes. The class includes trade in goods (in-store and online purchases), tourism services and other immaterial services.</skos:note>
     <skos:prefLabel xml:lang="en">Consumer protection</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Consumer protection</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varstvo potrošnikov</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Kuluttajansuoja</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar konsumenters rättigheter och relaterade informationstjänster, reklamationer, återlämning och behandling av tvister. I gruppen beaktas såväl varuhandel (butiks- och nätinköp) och resetjänster som andra immateriella tjänster.</skos:note>
@@ -2866,7 +2866,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1019">
     <skos:prefLabel xml:lang="en">Social services for families with children</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Social services for families with children</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Socialne storitve za družine z otroki</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään erityisesti lapsiperheille suunnattuja taloudellisia tukia ja etuuksia sekä niitä koti- ja tukipalveluja, jotka eivät kuulu perheneuvonnan tai lastensuojelun piiriin.</skos:note>
     <skos:prefLabel xml:lang="sv">Socialtjänster för barnfamiljer</skos:prefLabel>
     <sh:order>306</sh:order>
@@ -2891,7 +2891,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Omaisuuden verotus</skos:prefLabel>
     <skos:notation>P14.2</skos:notation>
     <skos:prefLabel xml:lang="en">Net wealth taxation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Net wealth taxation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Obdavčitev neto premoženja</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat palvelut, jotka liittyvät omaisuuden verottamiseen. Tähän kuuluvat muun muassa perintöjen, lahjoitusten, vuokratuottojen, myyntivoittojen ja kiinteistöjen verotus. Omaisuusverolaskurit ja vastaavat työkalut kuuluvat tähän luokkaan.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1007">
@@ -2903,7 +2903,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:notation>P2</skos:notation>
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään julkiseen ja asumiskäyttöön tarkoitettuja rakennuksia sekä yleensä kiinteistöihin ja niiden käyttöön liittyvää kunnallista infrastruktuuria ja sen palveluja.</skos:note>
     <skos:prefLabel xml:lang="en">Built environment</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Built environment</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Grajeno okolje</skos:prefLabel>
     <skos:note xml:lang="en">This service class contains public and residential buildings as well as municipal infrastructure and related services associated with buildings and their use in general.</skos:note>
     <skos:note xml:lang="sl">This service class contains public and residential buildings as well as municipal infrastructure and related services associated with buildings and their use in general.</skos:note>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1009"/>
@@ -2917,7 +2917,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1088">
     <sh:order>712</sh:order>
     <skos:prefLabel xml:lang="en">Enforcement</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Enforcement</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Organi pregona</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1076"/>
     <skos:note xml:lang="sv">Denna grupp omfattar tjänster relaterade till utsökning.</skos:note>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään ulosottoon liittyviä palveluita.</skos:note>
@@ -2940,7 +2940,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Skogs-, vatten och mineralresurser</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1191"/>
     <skos:prefLabel xml:lang="en">Forest, water and mineral resources</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Forest, water and mineral resources</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Gozdni, vodni in mineralni viri</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains services associated with the use of natural resources other than plant or animal based resources for administrative or commercial purposes.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services associated with the use of natural resources other than plant or animal based resources for administrative or commercial purposes.</skos:note>
   </rdf:Description>
@@ -2952,7 +2952,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1081"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1079"/>
     <skos:prefLabel xml:lang="en">Legal protection</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Legal protection</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pravno varstvo</skos:prefLabel>
     <skos:notation>P7</skos:notation>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1084"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1077"/>
@@ -2982,7 +2982,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:notation>P27.4</skos:notation>
     <skos:prefLabel xml:lang="fi">Metsästys</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Hunting</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Hunting</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Lov</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar jaktsäsonger och -kvoter, jägarexamina och jaktlicenser, viltvårdsföreningar och anmälan om observationer av stora rovdjur.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -2999,7 +2999,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Elinkeinot</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1110"/>
     <skos:prefLabel xml:lang="en">Industries</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Industries</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Industrije</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1108"/>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1111"/>
@@ -3018,7 +3018,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1198"/>
     <skos:notation>P25.4</skos:notation>
     <skos:prefLabel xml:lang="en">Archives</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Archives</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Arhivi</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ensi sijassa Kansallisarkiston, sen alaisten maakunta-arkistojen sekä muiden säädösperustaisesti toimivien arkistojen palvelut.</skos:note>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar i första hand tjänster som tillhandahålls av Nationalarkivet, landskapsarkiven under Nationalarkivet och övriga arkiv som regleras av författningar.</skos:note>
     <skos:prefLabel xml:lang="sv">Arkiv</skos:prefLabel>
@@ -3033,7 +3033,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
     <skos:prefLabel xml:lang="en">Career guidance and guidance counselling</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Career guidance and guidance counselling</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poklicno usmerjanje in svetovanje</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat ne Suomen koulutusjärjestelmän puitteissa tarjottavat palvelut, jotka opastavat, neuvovat ja ohjaavat oppilasta tai opiskelijaa tekemään perusteltuja valintoja ammatin ja/tai koulutussuuntautumisen valitsemiseksi. Työelämässä jo olevan henkilön uraohjauspalvelut ovat omassa alaluokassaan Työ ja työttömyys -pääluokan alla.</skos:note>
     <sh:order>604</sh:order>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör de tjänster som erbjuds inom ramarna för Finlands utbildningssystem och som guidar, ger råd och handleder elever eller studerande att fatta motiverade beslut för att välja yrke och/eller utbildningsinriktning. Karriärvägledningstjänster för en person som redan är i arbetslivet finns i den egna undergruppen under huvudgruppen Arbete och arbetslöshet.</skos:note>
@@ -3049,7 +3049,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään lakisääteisiä ja vapaaehtoisia vakuutuksia, niiden ottamista ja ehtoja, korvausmenettelyjä ja vakuutuspäätöksistä valittamista.</skos:note>
     <skos:prefLabel xml:lang="fi">Vakuutukset</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Insurance</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Insurance</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zavarovanje</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Försäkringar</skos:prefLabel>
     <skos:notation>P21.2</skos:notation>
     <skos:note xml:lang="en">This service subclass contains statutory and voluntary insurance policies, taking out of policies and policy terms, compensation procedures and complaints on insurance decisions.</skos:note>
@@ -3069,12 +3069,12 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Miljö- och naturskydd</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Environmental protection and conservation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Environmental protection and conservation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Varstvo in ohranjanje okolja</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1052">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Home nursing and informal care</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Home nursing and informal care</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zdravstvena nega na domu in neformalna oskrba</skos:prefLabel>
     <sh:order>514</sh:order>
     <skos:note xml:lang="en">This service subclass contains home nursing as a service that supports a patient in living at home. It includes home nursing activities, support for home nursing and procedures for applying for this support. This class also contains informal care, which includes subsidies and benefits for informal carers, rights to family leave and contracts related to informal caring.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains home nursing as a service that supports a patient in living at home. It includes home nursing activities, support for home nursing and procedures for applying for this support. This class also contains informal care, which includes subsidies and benefits for informal carers, rights to family leave and contracts related to informal caring.</skos:note>
@@ -3091,7 +3091,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains the statutory maternity and child health clinic services organised by the municipalities and the clinics’ various forms of activities.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains the statutory maternity and child health clinic services organised by the municipalities and the clinics’ various forms of activities.</skos:note>
     <skos:prefLabel xml:lang="en">Health clinic services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Health clinic services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve zdravstvenih ustanov</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
     <sh:order>502</sh:order>
     <skos:notation>P5.2</skos:notation>
@@ -3112,13 +3112,13 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass is associated with civil defence shelters, civil defence training and other services and activities related to the protection of civilians in a crisis as well as security of supply.</skos:note>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar skyddsrum, utbildning i befolkningsskydd och övriga tjänster och funktioner relaterade till skyddet av befolkningen i krissituationer samt försörjningsberedskap.</skos:note>
     <skos:prefLabel xml:lang="en">Civil defence</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Civil defence</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Civilna obramba</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Väestönsuojelu</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan liittyvät väestönsuojat, väestönsuojelukoulutus ja muu siviiliväestön kriisitilanteessa suojeluun liittyvät palvelut ja toiminta sekä huoltovarmuus.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1117">
     <skos:prefLabel xml:lang="en">Recruitments</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Recruitments</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zaposlovanje</skos:prefLabel>
     <skos:notation>P12.2</skos:notation>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="sv">Rekrytering</skos:prefLabel>
@@ -3142,7 +3142,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään rakentamiseen liittyviä asioita yksityisen rakentajan palvelujen näkökulmasta. Keskeisiä asioita ovat esimerkiksi rakentamisen luvat ja lupaprosessit, rakennusvalvonnasta huolehtiminen, remontointi ja korjausrakentaminen sekä rakentamiseen liittyvät veroasiat.</skos:note>
     <sh:order>201</sh:order>
     <skos:prefLabel xml:lang="en">Construction</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Construction</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Gradbeništvo</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Rakentaminen</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
   </rdf:Description>
@@ -3150,7 +3150,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sv">Denna underservicegrupp omfattar tjänster som anknyter till engångsskatter på köp och import av bilar och fordon samt skatter relaterade till ägande av fordon (fordonsskatt).</skos:note>
     <skos:prefLabel xml:lang="sv">Fordonsbeskattning</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Vehicle taxation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Vehicle taxation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Obdavčitev vozil</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="en">This service subclass contains services related to purchasing cars and other vehicles, one-off taxes paid on importation (car tax) and owning a vehicle (vehicle tax).</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to purchasing cars and other vehicles, one-off taxes paid on importation (car tax) and owning a vehicle (vehicle tax).</skos:note>
@@ -3163,7 +3163,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1089">
     <skos:prefLabel xml:lang="en">Intellectual property rights</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Intellectual property rights</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Pravice intelektualne lastnine</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="en">This service subclass contains services related to intellectual property rights such as trademarks, patents, utility models and design rights.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services related to intellectual property rights such as trademarks, patents, utility models and design rights.</skos:note>
@@ -3188,13 +3188,13 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <sh:order>701</sh:order>
     <skos:prefLabel xml:lang="sv">Medborgarnas grundläggande rättigheter</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Citizens’ fundamental rights</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Citizens’ fundamental rights</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Temeljne pravice državljanov</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster som föranleds av Finlands nationella lagstiftning och som anknyter till rösträtt, yttrande-, religions- och mötesfrihet samt national- och minoritetsspråk. Gruppen omfattar också tjänster relaterade till EU-medborgares rättigheter.</skos:note>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1186">
     <skos:prefLabel xml:lang="fi">Jätehuolto</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Waste management</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Waste management</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Ravnanje z odpadki</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Avfallshantering</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1184"/>
     <skos:note xml:lang="fi">Tässä palveluluokassa käsitellään, kunnallista lakisääteistä jätehuoltoa, jätteisiin liittyvää paikallista tutkimusta ja selvityksiä sekä aiheeseen liittyviä tietopalveluja.</skos:note>
@@ -3211,7 +3211,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Kultur</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1205"/>
     <skos:prefLabel xml:lang="en">Culture</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Culture</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Kultura</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1204"/>
     <skos:note xml:lang="en">This service class contains a wide range of cultural services associated with different branches of arts, the library system, religious organisations and liberal adult education. The class also includes different free time services.</skos:note>
@@ -3240,7 +3240,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:notation>P6.5</skos:notation>
     <skos:prefLabel xml:lang="sv">Hur man söker till utbildning</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Applying for a place in education and training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Applying for a place in education and training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vloga za vpis v izobraževanje in usposabljanje</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1060"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1203">
@@ -3251,7 +3251,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1198"/>
     <skos:prefLabel xml:lang="en">Free-time services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Free-time services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve v prostem času</skos:prefLabel>
     <skos:prefLabel xml:lang="sv">Fritidstjänster</skos:prefLabel>
     <sh:order>2505</sh:order>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar tjänster relaterade till fritiden på ett omfattande plan. Denna grupp omfattar inte motions- och idrottstjänster, som har en egen huvudgrupp.</skos:note>
@@ -3268,7 +3268,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar fisketillstånd och fiskevårdsavgift samt lokala och säsongsrelaterade begränsningar i fritidsfisket på grund av skydd av fiskarter.</skos:note>
     <skos:notation>P27.5</skos:notation>
     <skos:prefLabel xml:lang="en">Fishing</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Fishing</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Ribolov</skos:prefLabel>
     <sh:order>2705</sh:order>
     <skos:prefLabel xml:lang="fi">Kalastus</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat kalastusluvat ja kalastonhoitomaksut sekä vapaa-ajan kalastuksen lajien suojeluun perustuvat paikalliset ja kausiluonteiset rajoitukset.</skos:note>
@@ -3278,7 +3278,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains the 112 emergency number, specific emergency service numbers of different authorities as well as rescue and crisis services related to accidents both on scene and as part of post-incident management. The class also includes services aiming to prevent accidents and accident investigation.</skos:note>
     <skos:prefLabel xml:lang="sv">Nödnummer och olyckor</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Emergency numbers and accidents</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Emergency numbers and accidents</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Številke za klic v sili in nesreče</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Hätänumerot ja onnettomuustilanteet</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas det allmänna nödnumret 112, olika myndigheters särskilda nödnummer samt räddnings- och kristjänster i samband med olyckor både omedelbart och efter olyckan. Även tjänster som siktar på att förebygga olyckor och olycksutredning hör till denna grupp.</skos:note>
@@ -3301,7 +3301,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Lääkkeet ja apteekit</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:prefLabel xml:lang="en">Medicines and pharmacies</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Medicines and pharmacies</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zdravila in lekarne</skos:prefLabel>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1174">
     <skos:prefLabel xml:lang="sv">Immigration och emigration</skos:prefLabel>
@@ -3324,7 +3324,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sv">I denna servicegrupp behandlas utländska medborgares immigration till Finland och finska medborgares emigration till utlandet och återvändande till Finland. Gruppen omfattar lagstadgade förfaranden såsom tillstånd och anmälningar samt dessutom olika slags stöd- och rådgivningstjänster.</skos:note>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1180"/>
     <skos:prefLabel xml:lang="en">Immigration and emigration</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Immigration and emigration</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Priseljevanje in izseljevanje</skos:prefLabel>
     <skos:narrower rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1181"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1041">
@@ -3334,7 +3334,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Vaccinationer</skos:prefLabel>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="en">Vaccinations</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Vaccinations</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Cepljenje</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään rokotuksia perusterveydenhuollon palveluna, kansanterveyteen kuuluvina ohjelmina että kansalaisen terveyshistoriaan kuuluvana asiana.</skos:note>
     <skos:notation>P5.3</skos:notation>
@@ -3349,7 +3349,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat vesiajoneuvojen kelpoisuus- ja turvallisuusvaatimukset, rekisteri- ja omistusasiat, satamapalvelut aluksille, vesiliikenteen turvallisuus ja eräisiin alustyyppeihin liittyvät kuljettajakelpoisuudet ja -luvat.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1142"/>
     <skos:prefLabel xml:lang="en">Waterborne transport</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Waterborne transport</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vodni promet</skos:prefLabel>
     <sh:order>1608</sh:order>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:notation>P16.8</skos:notation>
@@ -3364,7 +3364,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains grants for renovations and improving a building’s energy efficiency as well as the application processes and e-services related to these grants from the service point of view.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains grants for renovations and improving a building’s energy efficiency as well as the application processes and e-services related to these grants from the service point of view.</skos:note>
     <skos:prefLabel xml:lang="en">Renovation and energy grants</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Renovation and energy grants</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Nepovratna sredstva za obnovo in energijo</skos:prefLabel>
     <sh:order>202</sh:order>
     <skos:note xml:lang="fi">Tässä alapalveluluokassa käsitellään palvelunäkökulmasta korjausrakentamiseen ja rakennuksen energiatehokkuuden lisäämiseen tarkoitettuja avustuksia, niiden hakuprosesseja ja niihin liittyviä asiointipalveluja.</skos:note>
     <skos:notation>P2.2</skos:notation>
@@ -3376,7 +3376,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains grants and funding services intended for the startup phase, advice related to establishing an enterprise and information events.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains grants and funding services intended for the startup phase, advice related to establishing an enterprise and information events.</skos:note>
     <skos:prefLabel xml:lang="en">Establishing an enterprise</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Establishing an enterprise</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Ustanovitev podjetja</skos:prefLabel>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1105"/>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat yrityksen perustamisvaiheeseen tarkoitetut avustukset, rahoituspalvelut ja yrityksen perustamisneuvonta ja infotilaisuudet.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
@@ -3390,7 +3390,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1118">
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1115"/>
     <skos:prefLabel xml:lang="en">A household as an employer</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">A household as an employer</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Gospodinjstvo kot delodajalec</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat palvelut, joiden avulla kotitalous voi teettää työtä kodissa tai vapaa-ajan asunnolla työtä ja huolehtia työntekijän palkkaan ja verotukseen liittyvistä asioista sekä kotitalousvähennyksestä.</skos:note>
     <skos:prefLabel xml:lang="sv">Hushåll som arbetsgivare</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Kotitalous työnantajana</skos:prefLabel>
@@ -3408,7 +3408,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="sv">Bibliotek</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Kirjastot</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Libraries</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Libraries</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Knjižnice</skos:prefLabel>
     <sh:order>2501</sh:order>
     <skos:note xml:lang="en">This service subclass is associated with municipal and national general and specialist libraries and their services.</skos:note>
     <skos:note xml:lang="sl">This service subclass is associated with municipal and national general and specialist libraries and their services.</skos:note>
@@ -3422,7 +3422,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Lait ja asetukset</skos:prefLabel>
     <skos:note xml:lang="fi">Tässä palvelualaluokassa käsitellään palveluja, joiden tarkoitus on saattaa voimassa oleva lainsäädäntö kansalaisten ulottuville, tiedottaa lainsäädäntötyöstä ja helpottaa eri tavoin kansalaisten osallistumista lainsäädännön laatimis- ja kuulemisprosesseihin.</skos:note>
     <skos:prefLabel xml:lang="en">Acts and decrees</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Acts and decrees</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Zakonodaja</skos:prefLabel>
     <skos:notation>P7.2</skos:notation>
     <skos:note xml:lang="en">This service subclass contains services intended to give the citizens access to valid legislation, inform the citizens of legislative projects and facilitate citizens’ participation in legislative drafting and consultation processes in different ways.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains services intended to give the citizens access to valid legislation, inform the citizens of legislative projects and facilitate citizens’ participation in legislative drafting and consultation processes in different ways.</skos:note>
@@ -3435,7 +3435,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1175">
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar handlingar som inresa till Finland förutsätter samt ansökan och användning av dem.</skos:note>
     <skos:prefLabel xml:lang="en">Authorisations to enter and documents</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Authorisations to enter and documents</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Dovoljenja za vstop in dokumenti</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1174"/>
     <sh:order>2201</sh:order>
@@ -3452,7 +3452,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas strukturen på andra gradens yrkesutbildning, examenskrav och utföringssätt för utbildningen. Det ekonomiska stödet för studierna behandlas i sin egen serviceundergrupp.</skos:note>
     <skos:prefLabel xml:lang="fi">Toisen asteen ammatillinen koulutus</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Vocational upper secondary education and training</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Vocational upper secondary education and training</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Poklicno srednješolsko izobraževanje in usposabljanje</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:note xml:lang="en">This service subclass contains the structure, qualification requirements and completion methods of vocational upper secondary education and training. Financial support for studies is included in its own subclass.</skos:note>
@@ -3468,7 +3468,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="sl">This service subclass contains both peer activities (volunteer support and guidance provided by individuals or groups who live with or have experienced a certain illness for those in a similar situation) and volunteer activities (volunteer support and guidance provided by individuals or communities for patients without a peer group setting). Peer activities include those related to gambling problems, childlessness, informal care, intoxicant addition, illnesses, sexuality, bereavement, eating disorders, giving up smoking or a disability.</skos:note>
     <sh:order>516</sh:order>
     <skos:prefLabel xml:lang="en">Health-related peer and voluntary activities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Health-related peer and voluntary activities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Z zdravjem povezane vrstniške in prostovoljne dejavnosti</skos:prefLabel>
     <skos:notation>P5.16</skos:notation>
     <skos:prefLabel xml:lang="fi">Terveyden vertais- ja vapaaehtoistoiminta</skos:prefLabel>
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat sekä vertaistoiminta (vapaaehtoisuuteen perustuva tuki ja ohjaus, jota tietyn sairauden kanssa elävät tai kyseisen sairauden kokeneet henkilöt tai ryhmät antavat samassa tilanteessa oleville) että vapaaehtoistoiminta (vapaaehtoisuuteen perustuva tuki ja ohjaus, jota henkilöt tai yhteisöt antavat sairastuneille ilman vertaisryhmäasetelmaa). Vertaistoimintaa on mm. rahapeliongelmiin, lapsettomuuteen, omaishoitoon, päihderiippuvuuteen, sairauksiin, sukupuolisuuteen, surutyöhön, syömishäiriöihin, tupakoinnin lopettamiseen tai vammaan liittyvä vertaistoiminta.</skos:note>
@@ -3479,7 +3479,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1187">
     <skos:prefLabel xml:lang="en">Water supply</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Water supply</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Oskrba z vodo</skos:prefLabel>
     <skos:note xml:lang="sv">Denna serviceundergrupp omfattar i första hand ärenden relaterade till hantering av bebyggda miljöers avfallsvatten från såväl affärslokaler och permanenta bostäder som från semester- och fritidsbostäder.</skos:note>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat ensi sijassa rakennetun ympäristön jätevesien käsittelyyn liittyvät asiat niin liiketiloissa, ympärivuotisissa asunnoissa kuin loma- ja vapaa-ajan kiinteistöissä.</skos:note>
@@ -3496,7 +3496,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:prefLabel xml:lang="fi">Uskonnot ja elämänkatsomukset</skos:prefLabel>
     <skos:notation>P25.6</skos:notation>
     <skos:prefLabel xml:lang="en">Religions and world views</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Religions and world views</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Vere in svetovni nazori</skos:prefLabel>
     <sh:order>2506</sh:order>
     <skos:note xml:lang="sv">I denna serviceundergrupp behandlas tjänster som tillhandahålls av folkkyrkor, andra registrerade religiösa samfund och icke-religiösa registrerade livsåskådningsmässiga samfund. Exempel på dessa utgörs av tjänster för anslutning till och utträde ur samfund samt pedagogiska och sociala tjänster.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -3516,7 +3516,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains pilot training and pilot’s licences, training for air traffic control tasks, registration and ownership issues of aircraft, aviation safety and airport services for aviators.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains pilot training and pilot’s licences, training for air traffic control tasks, registration and ownership issues of aircraft, aviation safety and airport services for aviators.</skos:note>
     <skos:prefLabel xml:lang="en">Aviation</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Aviation</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Letalstvo</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Ilmailu</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <skos:note xml:lang="fi">Tähän palvelualaluokkaan kuuluvat lentokoulutus ja lentolupakirjat, lennonjohtotehtävien koulutus, lentoalusten rekisteri- ja omistusasiat, ilmailun turvallisuus ja lentokenttäpalvelut ilmailijoille.</skos:note>
@@ -3527,7 +3527,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <sh:order>504</sh:order>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1038"/>
     <skos:prefLabel xml:lang="en">Imaging, laboratory and other examination services</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Imaging, laboratory and other examination services</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Storitve slikanja, laboratorijskih in drugih preiskav</skos:prefLabel>
     <skos:note xml:lang="en">This service subclass contains different clinical patient examination services provided at health care service points. Laboratory services associated with scientific research are not included in this class.</skos:note>
     <skos:note xml:lang="sl">This service subclass contains different clinical patient examination services provided at health care service points. Laboratory services associated with scientific research are not included in this class.</skos:note>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -3546,7 +3546,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="fi">Tähän alapalveluluokkaan kuuluvat kehitysvammaisten palvelut, jotka kattavat oikeudet, eri kuntoutusmuodot, sosiaalisen tuen, asumisratkaisut ja oireisiin liittyvän erikoisterveydenhoidon.</skos:note>
     <skos:prefLabel xml:lang="sv">Omsorgen om utvecklingsstörda</skos:prefLabel>
     <skos:prefLabel xml:lang="en">Care for persons with intellectual disabilities</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Care for persons with intellectual disabilities</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Oskrba oseb z motnjami v duševnem razvoju</skos:prefLabel>
     <skos:prefLabel xml:lang="fi">Kehitysvammahuolto</skos:prefLabel>
     <skos:note xml:lang="sv">Till denna serviceundergrupp hör tjänster för utvecklingsstörda, som omfattar rättigheter, olika rehabiliteringsformer, socialt stöd, boendelösningar och symtomanknuten specialiserad sjukvård.</skos:note>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1023"/>
@@ -3554,7 +3554,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1119">
     <skos:prefLabel xml:lang="en">Personnel development</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Personnel development</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Razvoj kadrov</skos:prefLabel>
     <skos:inScheme rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <skos:prefLabel xml:lang="sv">Personalutveckling</skos:prefLabel>
@@ -3571,7 +3571,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
     <skos:note xml:lang="en">This service subclass contains energy supply services in built environment</skos:note>
     <skos:note xml:lang="sl">This service subclass contains energy supply services in built environment</skos:note>
     <skos:prefLabel xml:lang="en">Energy supply</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Energy supply</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Oskrba z energijo</skos:prefLabel>
     <skos:notation>P23.4</skos:notation>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1184"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -3584,7 +3584,7 @@ Luokituksen termejä voi ja on suositeltavaa käyttää myös rajatun aiheen tai
   </rdf:Description>
   <rdf:Description rdf:about="http://urn.fi/URN:NBN:fi:au:ptvl:v1107">
     <skos:prefLabel xml:lang="en">Sector-specific permits and obligations</skos:prefLabel>
-    <skos:prefLabel xml:lang="sl">Sector-specific permits and obligations</skos:prefLabel>
+    <skos:prefLabel xml:lang="sl">Dovoljenja in obveznosti za posamezne panoge</skos:prefLabel>
     <skos:notation>P11.2</skos:notation>
     <skos:broader rdf:resource="http://urn.fi/URN:NBN:fi:au:ptvl:v1105"/>
     <skos:prefLabel xml:lang="sv">Branschspecifika tillstånd och skyldigheter</skos:prefLabel>
