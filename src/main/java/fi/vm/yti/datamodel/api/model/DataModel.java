@@ -69,6 +69,9 @@ public class DataModel extends AbstractModel {
             + "?org skos:prefLabel ?orgLabel . "
             + "?org iow:parentOrganization ?parent . "
             + "?org a foaf:Organization . "
+            + "?parent skos:prefLabel ?parentLabel. "
+            + "?parent iow:parentOrganization ?grandParent. "
+            + "?parent rdf:type foaf:Organization. "
             + "} WHERE { "
             + "GRAPH <urn:yti:servicecategories> { "
             + "?group skos:notation ?code . "
@@ -81,6 +84,11 @@ public class DataModel extends AbstractModel {
             + "?org skos:prefLabel ?orgLabel . "
             + "OPTIONAL { ?org iow:parentOrganization ?parent . } "
             + "VALUES ?org { " + LDHelper.concatUUIDWithReplace(orgList, " ", "<urn:uuid:@this>") + " }"
+            + "}"
+            + "GRAPH <urn:yti:organizations> {"
+            + "?parent a ?parentType . "
+            + "?parent skos:prefLabel ?parentLabel . "
+            + "OPTIONAL { ?parent iow:parentOrganization ?grandParent . } "
             + "}"
             + "}";
 
