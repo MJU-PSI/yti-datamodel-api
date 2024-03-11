@@ -201,16 +201,27 @@ public class SearchIndexManager {
         } else {
             final Map<UUID, Set<Role>> rolesInOrganizations = user.getRolesInOrganizations();
 
-            Set<String> orgIds = rolesInOrganizations.keySet().stream().map(u -> u.toString()).collect(Collectors.toSet());
+            // Define sets to store organizations for user roles ADMIN and DATA_MODEL_EDITOR
+            Set<String> adminAndEditorOrganizations = new HashSet<>();
 
-            // show child organization's incomplete content for main organization users
-            Set<String> childOrganizationIds = orgIds.stream()
+            for (Map.Entry<UUID, Set<Role>> entry : rolesInOrganizations.entrySet()) {
+                String organizationId = entry.getKey().toString();
+                Set<Role> roles = entry.getValue();
+                
+                // Check if the organization has Role.ADMIN or Role.DATA_MODEL_EDITOR
+                if (roles.contains(Role.ADMIN) || roles.contains(Role.DATA_MODEL_EDITOR)) {
+                    adminAndEditorOrganizations.add(organizationId);
+                } 
+            }
+
+            // show child organization's incomplete and draft content for main organization users
+            Set<String> childOrganizationIds = adminAndEditorOrganizations.stream()
                     .map(orgId -> organizationManager.getChildOrganizations(orgId))
                     .flatMap(Collection::stream)
                     .collect(Collectors.toSet());
 
-            orgIds.addAll(childOrganizationIds);
-            request.setIncludeIncompleteFrom(orgIds);
+            adminAndEditorOrganizations.addAll(childOrganizationIds);
+            request.setIncludeIncompleteFrom(adminAndEditorOrganizations);
             return searchModels(request);
         }
     }
