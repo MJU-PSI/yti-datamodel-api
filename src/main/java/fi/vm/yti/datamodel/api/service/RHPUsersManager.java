@@ -47,6 +47,17 @@ public class RHPUsersManager {
         }
     }
 
+    public List<GroupManagementUserDTO> getUsers() {
+
+        String url = properties.getDefaultGroupManagementAPI().replace("public-api","private-api") + "users";
+
+        return clientFactory.create()
+            .target(url)
+            .request(MediaType.APPLICATION_JSON)
+            .get(new GenericType<List<GroupManagementUserDTO>>() {
+            });
+    }
+
     public List<GroupManagementUserRequestDTO> getUserRequests(String userId) {
 
         String url = properties.getPrivateGroupManagementAPI() + "requests";
