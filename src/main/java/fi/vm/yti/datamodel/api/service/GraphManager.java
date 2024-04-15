@@ -1862,6 +1862,14 @@ public class GraphManager {
             languageStatement.remove();
         }
 
+        // OMG: Model.remove() doesnt remove RDFLists
+        while (exportModel.contains(modelResource, LDHelper.curieToProperty("iow:users"))) {
+            Statement usersStatement = exportModel.getProperty(modelResource, LDHelper.curieToProperty("iow:users"));
+            RDFList usersResource = usersStatement.getObject().as(RDFList.class);
+            usersResource.removeList();
+            usersStatement.remove();
+        }
+
         // FIXME: This can be changed to if after data is updated in production
         while (exportModel.contains(modelResource, DCTerms.relation)) {
             Statement relatedStatement = exportModel.getProperty(modelResource, DCTerms.relation);
