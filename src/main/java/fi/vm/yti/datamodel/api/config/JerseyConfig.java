@@ -7,6 +7,8 @@ import io.swagger.v3.oas.annotations.info.Info;
 import io.swagger.v3.oas.annotations.info.License;
 
 import io.swagger.v3.oas.annotations.servers.Server;
+
+import org.glassfish.jersey.media.multipart.MultiPartFeature;
 import org.glassfish.jersey.message.DeflateEncoder;
 import org.glassfish.jersey.message.GZipEncoder;
 import org.glassfish.jersey.server.ResourceConfig;
@@ -56,6 +58,7 @@ public class JerseyConfig extends ResourceConfig {
         // FIXME packages("fi.vm.yti.datamodel.api.endpoint"); should work but it doesn't
         myPackages("fi.vm.yti.datamodel.api.endpoint");
 
+        register(MultiPartFeature.class);
         register(OpenApiResource.class);
         register(EncodingFilter.class);
         register(GZipEncoder.class);

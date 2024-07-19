@@ -14,6 +14,7 @@ import org.apache.jena.query.*;
 import org.apache.jena.rdf.model.*;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFParser;
+import org.apache.jena.riot.RDFParserBuilder;
 import org.apache.jena.riot.RiotException;
 import org.apache.jena.vocabulary.RDF;
 import org.apache.jena.vocabulary.RDFS;
@@ -22,6 +23,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.InputStream;
 import java.net.*;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -32,6 +34,8 @@ import java.util.Map;
 public final class NamespaceManager {
 
     private static Logger logger = LoggerFactory.getLogger(NamespaceManager.class);
+    private final static String FORMAT_RDF = "RDF";
+    private final static String FORMAT_TTL = "TTL";
 
     private final EndpointServices endpointServices;
     private final JenaClient jenaClient;
@@ -262,9 +266,17 @@ public final class NamespaceManager {
         return type;
 
     }
+
+    public boolean resolveNamespace(String namespace,
+                                    String alternativeURL,
+                                    boolean force) {
+        return this.resolveNamespace(namespace, alternativeURL, null, null, force);
+    }
     
     public boolean resolveNamespace(String namespace,
                                     String alternativeURL,
+                                    String format,
+                                    InputStream file,
                                     boolean force) {
 
         if(!namespace.startsWith("http") && (alternativeURL==null || alternativeURL.isEmpty() || !alternativeURL.startsWith("http"))) {
@@ -314,7 +326,7 @@ public final class NamespaceManager {
                     return false;
                 }
 
-                return resolveNamespace(namespace);
+                return resolveNamespace(namespace, format, file);
             }
 
         } catch (Exception ex) {
@@ -324,17 +336,35 @@ public final class NamespaceManager {
         }
     }
 
-
     public boolean resolveNamespace(String namespace){
+        return this.resolveNamespace(namespace, null, null);
+    }
+
+    public boolean resolveNamespace(String namespace, String format, InputStream file){
         logger.info("Resolving namespace: {}", StringUtils.normalizeSpace(namespace));
         var model = ModelFactory.createDefaultModel();
+        
         try{
-            RDFParser.create()
-                    .source(namespace)
-                    .lang(Lang.RDFXML)
-                    .httpAccept(String.join(", ", ACCEPT_TYPES))
-                    .parse(model);
+            RDFParserBuilder parser = RDFParser.create()
+                    .httpAccept(String.join(", ", ACCEPT_TYPES));
+            
+            switch (format) {
+                case FORMAT_RDF:
+                    parser.lang(Lang.RDFXML);
+                    break;
+                case FORMAT_TTL:
+                    parser.lang(Lang.TTL);
+                    break;
+                default: 
+                    parser.lang(Lang.RDFXML);
+                    break;
+            }
 
+            if (file != null) {
+                parser.source(file).parse(model);
+            } else {
+                parser.source(namespace).parse(model);
+            }
             logger.info("Model-size is: " + model.size());
 
             if(model.size() > 0){
@@ -351,5 +381,4 @@ public final class NamespaceManager {
         }
         return false;
     }
-
 }

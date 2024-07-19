@@ -3,6 +3,7 @@
  */
 package fi.vm.yti.datamodel.api.endpoint.model;
 
+import java.io.InputStream;
 import java.util.Map;
 
 import fi.vm.yti.datamodel.api.service.*;
@@ -20,13 +21,17 @@ import org.apache.jena.query.ParameterizedSparqlString;
 import org.apache.jena.rdf.model.ResourceFactory;
 import org.apache.jena.vocabulary.DCTerms;
 import org.apache.jena.vocabulary.RDFS;
+import org.glassfish.jersey.media.multipart.FormDataParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.POST;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
 @Component
@@ -119,5 +124,83 @@ public class ModelRequirementCreator {
         if (!isLocalNamespace) pss.setLiteral("resolved", isResolvedNamespace);
 
         return jerseyClient.constructNonEmptyGraphFromService(pss.toString(), endpointServices.getTempConceptReadSparqlAddress());
+    }
+    
+    @POST
+    @Consumes(MediaType.MULTIPART_FORM_DATA)
+    @Produces("application/ld+json")
+    @Operation(description = "Create namespace object from file")
+    public Response newRequiredModelFromFile(
+      @Parameter(description = "namespace") @QueryParam("namespace") String namespace,
+      @Parameter(description = "prefix") @QueryParam("prefix") String prefix,
+      @Parameter(description = "label") @QueryParam("label") String label,
+      @Parameter(description = "lang") @QueryParam("lang") String lang,
+      @FormDataParam("format") final String format,
+      @FormDataParam("file") final InputStream file
+     ) {
+
+        if (file == null) {
+            return Response.status(Response.Status.BAD_REQUEST).entity("File is empty").build();
+        }
+
+        if (namespace == null || namespace.isEmpty() || (namespace.startsWith("http") && !(namespace.endsWith("#") || namespace.endsWith("/")))) {
+            return jerseyResponseManager.invalidIRI();
+        }
+
+        IRI namespaceIRI;
+        try {
+            namespaceIRI = idManager.constructIRI(namespace);
+        } catch (IRIException e) {
+            return jerseyResponseManager.invalidIRI();
+        }
+
+        boolean isResolvedNamespace = true;
+        boolean isLocalNamespace = true;
+
+        if (!graphManager.isExistingServiceGraph(namespace)) {
+            try {
+                isResolvedNamespace = namespaceManager.resolveNamespace(namespace, null, format, file, true);
+                isLocalNamespace = false;
+            } catch (Exception e) {
+                return Response.status(Response.Status.INTERNAL_SERVER_ERROR).entity("File processing error").build();
+            }
+        }
+
+        String queryString;
+        ParameterizedSparqlString pss = new ParameterizedSparqlString();
+        pss.setNsPrefixes(LDHelper.PREFIX_MAP);
+        queryString = "CONSTRUCT  { "
+            + "?g a ?type . "
+            + "?g rdfs:label ?label . "
+            + "?g dcap:preferredXMLNamespaceName ?namespace . "
+            + "?g dcap:preferredXMLNamespacePrefix ?prefix . "
+            + (isLocalNamespace ? "" : "?g iow:isResolved ?resolved . ")
+            + "} WHERE { }";
+
+        String type = RDFS.Resource.getURI();
+
+        if (LDHelper.PREFIX_MAP.containsKey(prefix)) {
+            namespace = LDHelper.PREFIX_MAP.get(prefix);
+            type = DCTerms.Standard.getURI();
+        } else if (LDHelper.PREFIX_MAP.containsValue(namespace)) {
+            final String nsFinal = namespace;
+            type = DCTerms.Standard.getURI();
+            prefix = LDHelper.PREFIX_MAP.entrySet().stream()
+                    .filter(o -> o.getValue().equals(nsFinal))
+                    .map(Map.Entry::getKey)
+                    .findFirst()
+                    .get();
+        }
+
+        pss.setCommandText(queryString);
+        pss.setIri("g", namespace);
+        pss.setLiteral("label", ResourceFactory.createLangLiteral(label, lang));
+        pss.setIri("type", type);
+        pss.setLiteral("namespace", namespace);
+        pss.setLiteral("prefix", prefix);
+        if (!isLocalNamespace) pss.setLiteral("resolved", isResolvedNamespace);
+
+        return jerseyClient.constructNonEmptyGraphFromService(pss.toString(), endpointServices.getTempConceptReadSparqlAddress());
+
     }
 }
